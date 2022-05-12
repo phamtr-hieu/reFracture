@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
 {
     //public PlayerInput playerInput;
     private Rigidbody2D rb;
+    [SerializeField] LayerMask ground;
 
     #region Vectors
     [SerializeField] private Vector2 moveInput;
@@ -15,10 +16,17 @@ public class Character : MonoBehaviour
     #region Floats
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float checkRadius;
     #endregion
 
+    [SerializeField] private float jumpButtonTimer;
+    [SerializeField] private float maxJumpButtonTimer;
+
     #region Bools
-    [SerializeField] private bool _jump;
+
+    [SerializeField] private Transform GroundCheck;
+    public bool _jump;
+    [SerializeField] private bool onGround;
     #endregion
 
     // Start is called before the first frame update
@@ -37,6 +45,14 @@ public class Character : MonoBehaviour
         #region Jump
         if(_jump)
         {
+            jumpButtonTimer += Time.deltaTime;
+        }
+        if(jumpButtonTimer >= maxJumpButtonTimer)
+        {
+            _jump = false;
+        }
+        if(_jump)
+        {
             rb.velocity = Vector2.up *jumpForce;
         }
         #endregion
@@ -44,6 +60,9 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
+        #region Ground Check
+        onGround = Physics2D.OverlapCircle(GroundCheck.position,checkRadius,ground);
+        #endregion
         /*#region Move
         if(moveInput.x !=0)
         {
@@ -59,15 +78,23 @@ public class Character : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
 	{
-        if(context.started)
+        if(context.started && onGround)
         {
             _jump = true;
+            
         } 
         else if(context.canceled)
         {
             _jump = false;
+            jumpButtonTimer = 0;
         }
 
-		
 	}
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(GroundCheck.position, checkRadius );
+    }
+
+    
 }
