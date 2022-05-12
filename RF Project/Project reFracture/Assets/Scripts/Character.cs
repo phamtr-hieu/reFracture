@@ -33,18 +33,17 @@ public class Character : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {  
         #region Move
-        transform.position += new Vector3(moveInput.x, 0, 0) * Time.deltaTime * moveSpeed;
+        transform.position += new Vector3(moveInput.x,0,0) * Time.deltaTime * moveSpeed;
         #endregion
 
         #region Jump
-        if (_jump)
+        if(_jump)
         {
             jumpButtonTimer += Time.deltaTime;
         }
@@ -73,19 +72,9 @@ public class Character : MonoBehaviour
     }
 
     public void OnMove(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-        if (moveInput.x > 0 && !_facingRight)
-        {
-            flip();
-            _facingRight = true;
-        }
-        else if (moveInput.x < 0 && _facingRight)
-        {
-            flip();
-            _facingRight = false;
-        }
-    }
+	{
+		moveInput = context.ReadValue<Vector2>();
+	}
 
     public void OnJump(InputAction.CallbackContext context)
 	{
@@ -99,7 +88,6 @@ public class Character : MonoBehaviour
             _jump = false;
             jumpButtonTimer = 0;
         }
-    }
 
 	}
 
