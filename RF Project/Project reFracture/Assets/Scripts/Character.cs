@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
     #endregion
 
     #region Bools
-    [SerializeField] private bool _jump;
+    public bool _jump;
     #endregion
 
     // Start is called before the first frame update
