@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
     [SerializeField] float attackTimer = 1.5f;
     float lastAttackTime;
     #endregion
+    [SerializeField] LayerMask ground;
 
     #region Vectors
     [SerializeField] private Vector2 moveInput;
@@ -22,11 +23,19 @@ public class Character : MonoBehaviour
     #region Floats
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float checkRadius;
     #endregion
+
+    [SerializeField] private float jumpButtonTimer;
+    [SerializeField] private float maxJumpButtonTimer;
 
     #region Bools
     public bool _jump;
     private bool _facingRight = true;
+
+    [SerializeField] private Transform GroundCheck;
+    
+    [SerializeField] private bool onGround;
     #endregion
 
     // Start is called before the first frame update
@@ -62,6 +71,9 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
+        #region Ground Check
+        onGround = Physics2D.OverlapCircle(GroundCheck.position,checkRadius,ground);
+        #endregion
         /*#region Move
         if(moveInput.x !=0)
         {
@@ -87,13 +99,14 @@ public class Character : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && onGround)
         {
             _jump = true;
         }
         else if (context.canceled)
-        {
+	    {
             _jump = false;
+            jumpButtonTimer = 0;
         }
     }
 
@@ -114,4 +127,13 @@ public class Character : MonoBehaviour
     {
         this.transform.Rotate(0, 180, 0);
     }
+
+	
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(GroundCheck.position, checkRadius );
+    }
+
+    
 }
