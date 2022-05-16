@@ -8,6 +8,14 @@ public class Character : MonoBehaviour
     //public PlayerInput playerInput;
     private Rigidbody2D rb;
     private Animator anim;
+    [SerializeField] Healthbar healthbar;
+
+    #region Character Stats
+    public float currentMaxHealth;
+    public float healthPoint;
+
+
+    #endregion
 
     #region Attack Vars
     int attackID = 1;
@@ -24,6 +32,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float checkRadius;
+    [SerializeField] public float health = 100;
     #endregion
 
     [SerializeField] private float jumpButtonTimer;
@@ -48,6 +57,12 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (Keyboard.current.slashKey.wasPressedThisFrame)
+		{
+            Debug.Log("took damage");
+            healthbar.TakeDamage(20);
+		}
         #region Move
         transform.position += new Vector3(moveInput.x, 0, 0) * Time.deltaTime * moveSpeed;
         #endregion
