@@ -582,7 +582,7 @@ MonoBehaviour:
     m_Bits: 8
   moveInput: {x: 0, y: 0}
   moveSpeed: 6
-  jumpForce: 4
+  jumpForce: 8
   checkRadius: 0.21
   jumpButtonTimer: 0
   maxJumpButtonTimer: 0
