@@ -17,7 +17,7 @@ public class Idle : StateMachineBehaviour
 	{
 
 
-		if (enemy.PlayerInEnemyRange(animator.GetComponent<Transform>().position))
+		if (enemy.PlayerInEnemyChaseRange(animator.GetComponent<Transform>().position))
 		{
 			animator.SetBool("isChasing", true);
 		}
