@@ -11,6 +11,8 @@ public class Walk : StateMachineBehaviour
 		enemy = animator.GetComponent<Enemy>();
 		GameObject player = enemy.player;
 
+		
+
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -37,7 +39,20 @@ public class Walk : StateMachineBehaviour
 			animator.SetBool("isAttacking", false);
 		}
 
+		#region Flip
+		if (pos.x < enemy.player.transform.position.x && enemy.facingLeft)
+		{
+			enemy.Flip();
+			enemy.facingLeft = false;
+		}
+		else if (pos.x > enemy.player.transform.position.x && !enemy.facingLeft)
+		{
+			enemy.Flip();
+			enemy.facingLeft = true;
+		}
+		#endregion
 	}
+
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	//{

@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float enemyDamage;
 	[SerializeField] Transform hitboxPos;
 	[SerializeField] Vector2 hitboxSize;
+
+	public bool facingLeft = true;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -70,5 +72,9 @@ public class Enemy : MonoBehaviour
 		Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
 	}
 
+	public void Flip()
+	{
+		this.transform.Rotate(0, 180, 0);
+	}
 
 }

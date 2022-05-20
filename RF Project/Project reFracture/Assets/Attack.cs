@@ -33,6 +33,19 @@ public class Attack : StateMachineBehaviour
 		{
             animator.SetBool("isAttacking", false);
         }
+
+        #region Flip
+        if (pos.x < enemy.player.transform.position.x && enemy.facingLeft)
+        {
+            enemy.Flip();
+            enemy.facingLeft = false;
+        }
+        else if (pos.x > enemy.player.transform.position.x && !enemy.facingLeft)
+        {
+            enemy.Flip();
+            enemy.facingLeft = true;
+        }
+        #endregion
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
