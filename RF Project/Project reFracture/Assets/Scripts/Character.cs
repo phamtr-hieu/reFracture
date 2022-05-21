@@ -40,6 +40,7 @@ public class Character : MonoBehaviour
 
     #region Bools
     public bool _jump;
+    [SerializeField] bool jumpTimerStart;
     private bool _facingRight = true;
 
     [SerializeField] private Transform GroundCheck;
@@ -68,10 +69,22 @@ public class Character : MonoBehaviour
         #endregion
 
         #region Jump
-        if (_jump)
+        if(jumpTimerStart)
+		{
+            jumpButtonTimer += Time.deltaTime;
+        }
+
+        if (_jump && jumpButtonTimer <= maxJumpButtonTimer)
         {
             rb.velocity = Vector2.up * jumpForce;
+            //print("jumping");
         }
+        else
+		{
+            jumpButtonTimer = 0;
+            jumpTimerStart = false;
+            _jump = false;
+		}
         #endregion
 
         #region Attack
@@ -117,11 +130,13 @@ public class Character : MonoBehaviour
         if (context.started && onGround)
         {
             _jump = true;
+            jumpTimerStart = true;
         }
         else if (context.canceled)
 	    {
             _jump = false;
-            jumpButtonTimer = 0;
+            //jumpButtonTimer = 0;
+            Debug.Log("jump button released");
         }
     }
 
