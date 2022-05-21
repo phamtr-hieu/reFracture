@@ -77,7 +77,7 @@ public class Character : MonoBehaviour
         if (_jump && jumpButtonTimer <= maxJumpButtonTimer)
         {
             rb.velocity = Vector2.up * jumpForce;
-            print("jumping");
+            //print("jumping");
         }
         else
 		{

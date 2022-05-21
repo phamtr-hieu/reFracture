@@ -127,11 +127,11 @@ GameObject:
   - component: {fileID: 640067326559643996}
   - component: {fileID: 640067326559643997}
   - component: {fileID: 640067326559643986}
+  - component: {fileID: 640067326559643991}
   - component: {fileID: 640067326559643987}
   - component: {fileID: 640067326559643984}
   - component: {fileID: 640067326559643985}
   - component: {fileID: 640067326559643990}
-  - component: {fileID: 640067326559643991}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -248,6 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57959505008d7141abbbc338a9de75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
+  currentMaxHealth: 0
+  healthPoint: 0
   attackTimer: 1.5
   ground:
     serializedVersion: 2
@@ -256,11 +259,28 @@ MonoBehaviour:
   moveSpeed: 6
   jumpForce: 8
   checkRadius: 0.21
+  health: 100
   jumpButtonTimer: 0
   maxJumpButtonTimer: 0
   _jump: 0
+  jumpTimerStart: 0
   GroundCheck: {fileID: 640067326302967122}
   onGround: 0
+--- !u!114 &640067326559643991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640067326559643988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0878d900b275f514cacc9087ad06ef8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  fallMultiplier: 8
+  lowJumpMultiplier: 2
 --- !u!114 &640067326559643987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,21 +484,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &640067326559643991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640067326559643988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0878d900b275f514cacc9087ad06ef8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  fallMultiplier: 8
-  lowJumpMultiplier: 2
 --- !u!1 &640067326933263868
 GameObject:
   m_ObjectHideFlags: 0
