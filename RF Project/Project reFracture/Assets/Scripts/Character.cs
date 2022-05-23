@@ -66,6 +66,7 @@ public class Character : MonoBehaviour
 		}
         #region Move
         transform.position += new Vector3(moveInput.x, 0, 0) * Time.deltaTime * moveSpeed;
+        anim.SetFloat("speed", rb.velocity.x);
         #endregion
 
         #region Jump
@@ -162,7 +163,7 @@ public class Character : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(GroundCheck.position, checkRadius );
+        Gizmos.DrawWireSphere(GroundCheck.position, checkRadius);
     }
 
     
