@@ -66,7 +66,7 @@ public class Character : MonoBehaviour
 		}
         #region Move
         transform.position += new Vector3(moveInput.x, 0, 0) * Time.deltaTime * moveSpeed;
-        anim.SetFloat("speed", rb.velocity.x);
+        anim.SetFloat("moveInput", Mathf.Abs(moveInput.x)) ;
         #endregion
 
         #region Jump
@@ -132,11 +132,14 @@ public class Character : MonoBehaviour
         {
             _jump = true;
             jumpTimerStart = true;
+            anim.SetBool("isJumping", true);
+            print("Jump button pressed");
         }
         else if (context.canceled)
 	    {
             _jump = false;
             //jumpButtonTimer = 0;
+            anim.SetBool("isJumping", false);
             Debug.Log("jump button released");
         }
     }
