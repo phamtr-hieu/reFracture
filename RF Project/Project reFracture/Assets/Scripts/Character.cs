@@ -18,9 +18,11 @@ public class Character : MonoBehaviour
     #endregion
 
     #region Attack Vars
-    int attackID = 1;
+    public PlayerAttackManager attackManager;
+
+    int attackID = 0;
     [SerializeField] float attackTimer = 1.5f;
-    float lastAttackTime;
+    //float lastAttackTime;
     #endregion
     [SerializeField] LayerMask ground;
 
@@ -88,12 +90,12 @@ public class Character : MonoBehaviour
         #endregion
 
         #region Attack
-        lastAttackTime += Time.deltaTime;
-        if (lastAttackTime > attackTimer)
-        {
-            attackID = 1;
-            lastAttackTime = 0;
-        }
+        //lastAttackTime += Time.deltaTime;
+        //if (lastAttackTime > attackTimer)
+        //{
+        //    attackID = 1;
+        //    lastAttackTime = 0;
+        //}
         #endregion
     }
 
@@ -144,12 +146,15 @@ public class Character : MonoBehaviour
     {
         if (context.started)
         {
+            attackID = attackManager.attackQueue[0];
             anim.SetTrigger("attack" + attackID);
             print(attackID);
-            lastAttackTime = 0;
-            attackID++;
-            if (attackID > 3)
-                attackID = 1;
+            attackManager.OnAttack();
+
+            //lastAttackTime = 0;
+            //attackID++;
+            //if (attackID > 3)
+            //    attackID = 1;
         }
     }
 
