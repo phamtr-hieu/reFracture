@@ -10,11 +10,12 @@ public class PlayerAttackManager : MonoBehaviour
     //generate list of random attacks from attack deck
     //(remove attacks as they are drawn from the array)
 
-    public TextMeshProUGUI[] card = new TextMeshProUGUI[6];
+    public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
+    public CardDisplay[] cardDisplays = new CardDisplay[3];
 
     int[] attackList = new int[3];
 
-    [SerializeField] int[] attackQueue = new int[6];
+    public int[] attackQueue = new int[3];
 
     int nextAttackID;
 
@@ -106,6 +107,7 @@ public class PlayerAttackManager : MonoBehaviour
         for(int i = 0; i < attackQueue.Length; i++)
         {
             card[i].text = attackQueue[i].ToString();
+            cardDisplays[i].cardID = attackQueue[i];
         }
     }
 }
