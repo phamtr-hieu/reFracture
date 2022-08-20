@@ -197,6 +197,7 @@ MonoBehaviour:
   atkRange: 3
   timeBtwAttacks: 0
   starttimeBtwAttacks: 0.9
+  flipDistanceOffset: 0
   enemyDamage: 5
   hitboxPos: {fileID: 8149717886572039946}
   hitboxSize: {x: 3, y: 3}

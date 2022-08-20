@@ -40,12 +40,12 @@ public class Walk : StateMachineBehaviour
 		}
 
 		#region Flip
-		if (pos.x < enemy.player.transform.position.x && enemy.facingLeft)
+		if (pos.x  < enemy.player.transform.position.x && enemy.playerToEnemyDistance < 0.01 && enemy.facingLeft)
 		{
 			enemy.Flip();
 			enemy.facingLeft = false;
 		}
-		else if (pos.x > enemy.player.transform.position.x && !enemy.facingLeft)
+		else if (pos.x  > enemy.player.transform.position.x && enemy.playerToEnemyDistance < 0.01 && !enemy.facingLeft)
 		{
 			enemy.Flip();
 			enemy.facingLeft = true;

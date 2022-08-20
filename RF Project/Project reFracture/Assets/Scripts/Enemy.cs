@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
 	void Update()
 	{
 		//print(playerToEnemyDistance);
+		
 	}
 
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
