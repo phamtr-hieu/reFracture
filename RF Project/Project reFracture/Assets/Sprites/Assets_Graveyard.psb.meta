@@ -1,0 +1,1282 @@
+fileFormatVersion: 2
+guid: d7f6e37f9d5d9c0439a0104783d497b9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: floorFG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4420
+      y: 1880
+      width: 3527
+      height: 114
+    spriteID: 8445770e09c281f4cb2bf4dc3d16b1ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3604, y: 1591}
+  - name: floorFG2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2597
+      width: 4961
+      height: 114
+    spriteID: fbafd73aec563d443b4087715129438d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2308}
+  - name: trees1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 3067
+      height: 1465
+    spriteID: c639999536272ff419a8f292b4e46d9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1821, y: -921}
+  - name: trees2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6237
+      y: 4
+      width: 1930
+      height: 1213
+    spriteID: 4a52b8648c277264aadef053848c48cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3230, y: -2240}
+  - name: trees3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1477
+      width: 2682
+      height: 1112
+    spriteID: fb0d9c600c17f2342bede6644942b8f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -136, y: 589}
+  - name: bush
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7012
+      y: 2390
+      width: 725
+      height: 189
+    spriteID: f2f3eaf274939c64a8f781b150ab88df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5891, y: -684}
+  - name: fence
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2694
+      y: 1477
+      width: 2856
+      height: 395
+    spriteID: 0aa74bef429be764bb4e4036022ef920
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1591, y: 1028}
+  - name: graves1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3079
+      y: 4
+      width: 3150
+      height: 1102
+    spriteID: d04a896b971820e4ca8caf305b1d32c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2652, y: -2213}
+  - name: graves2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2694
+      y: 1880
+      width: 1718
+      height: 502
+    spriteID: a4a8112c8ad111c4d82d9163de85824f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2549, y: -172}
+  - name: lamp
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2719
+      width: 331
+      height: 817
+    spriteID: 1c3caf0ec9031bf48a276ba4c4395a83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -156, y: 118}
+  - name: floor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2694
+      y: 2390
+      width: 4310
+      height: 180
+    spriteID: b5f8a1d1c48bbf843b59fd8cfdc4216a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2369, y: 2303}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: BG
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4e1e92b0dabd10b4a9072d48b668a75e
+    layerID: 191
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: entrance
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 28156dbc1b53234449987169573d94bc
+    layerID: 187
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: floorFG
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: b8d8f7b2f98c36448917aeb07deb9508
+    layerID: 164
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: floor
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 72cfb33353c000f488217460c7c78be4
+    layerID: 160
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lamp1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: c714e1a8f7e6ff94899aec58ebe18ce6
+    layerID: 243
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lamp2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 7672cbc286e5e854588866e2ebc2dba9
+    layerID: 159
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lamp3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 09d2393dd13e9b643a25a1a932df48c5
+    layerID: 153
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 4456a2f209c2d4642995f0bda19c975c
+    layerID: 152
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 1a1c6218876680847a8cd29b03ff4cd9
+    layerID: 151
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wall1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 363af6322a3a72f42b86c6881c7439b1
+    layerID: 185
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: gateLeft
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 00d1d07e7a505c744b81995a16b4ca59
+    layerID: 238
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: gateRight
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: a8d19f639d8901d4bbf795b82ba32943
+    layerID: 236
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: dca68489214bd94498725c92d4052914
+    layerID: 241
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: f125be2cfd5b31f44954feb132469ed8
+    layerID: 240
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: gate
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 42471d59e252bdd45bb1371d502b0367
+    layerID: 242
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: entranceBG
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: f5121d87983dd6b4887eeec69b13ce0a
+    layerID: 189
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: bg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 7f4999213ac52184496d22ca2c18ebd1
+    layerID: 228
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 96a84f23592c1b44e9e74022d07579dc
+    layerID: 227
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 853c7ab9128db684c9d2617186c7b833
+    layerID: 229
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: crater
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 23f4c2502603f4746b328c0224e92493
+    layerID: 143
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: floor1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 0e13d0542a99914479e0d5e612fe217f
+    layerID: 139
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fgWires
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: d52074be21c67294f9af0314989130ef
+    layerID: 142
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: pillar
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 61ee34ff734d9ee4592708f7b8648fd8
+    layerID: 126
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 60c3b7ce8e6a760479a96cd7f8b48b8b
+    layerID: 114
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: af5acfefd61e40348b948911bd5f2b45
+    layerID: 120
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: c7d57064604ed3447a8d363256e96ddc
+    layerID: 129
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: c5c903ce02354e641b018970d3f8a2eb
+    layerID: 123
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: platform
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 814df8b7f883e9040ab83a6c9768c201
+    layerID: 113
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lamp
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 4411d3e259286914d9b81f2daf2b411b
+    layerID: 116
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: floor2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: efd7323a60549fc489fe9ec428b7a73e
+    layerID: 138
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: pad
+    spriteName: 
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 6f0f2c8c248f0514fac5d7a17b220690
+    layerID: 140
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: craterBG
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 92d4ea55211fbb84f8221fc20540ff06
+    layerID: 149
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: tower1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: c145cda1131f88448978f5192b68286e
+    layerID: 136
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: tower2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 5660d857e80539f4da08d6d355af945d
+    layerID: 135
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: tower3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 373c6c677eef64d41b122455d47a0812
+    layerID: 134
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: tower4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 5bd2c9571c78d7546b0e4e9acd77bc6f
+    layerID: 133
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: tower5
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 8e879cd873c889f40910a2e4664f130a
+    layerID: 132
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: machine
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: e9a1eafadd139574babd85bd02b2a614
+    layerID: 147
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 0963c97f81c83474ba78424ded37d6e2
+    layerID: 200
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 297267b20c64d4a49af422729b7078e0
+    layerID: 130
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreckyard
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3da442fa3290b894cb4ce07bd8565cd0
+    layerID: 110
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: graves
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 2e75037b81d75394694ef0360c92ee15
+    layerID: 88
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: graves2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: c56d184a1b548874c8e209d651853b85
+    layerID: 215
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: floor1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: dde39dca33263544a8ca2fae24032c23
+    layerID: 222
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: floor2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 8124b5fa5f20f6048b5205a262b602cb
+    layerID: 223
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: graves3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 257633c6bb776424cb8b4f61c98311b1
+    layerID: 91
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lamp
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 28689949897faf040b9bc7c8a784cb6f
+    layerID: 171
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 649f0901ece22984b984fc93fbe29259
+    layerID: 198
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 12fe2c8678ce9cc44a5578d0adaf53cb
+    layerID: 104
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 3804ee0ed41d1924689dfe5e88b960dd
+    layerID: 103
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreck4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 40
+    spriteID: e062cc5bb03850a43aaf1f8fd1b0d912
+    layerID: 194
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: wreckyardBG
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 6a23b3e76f93acb42b61fc60ad19d139
+    layerID: 195
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: fg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 51
+    spriteID: d8081f30d1ff5cd4c925d00b8a678c9f
+    layerID: 109
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 51
+    spriteID: ed6b7f62307feaf44a12134d6c13e392
+    layerID: 108
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 51
+    spriteID: ebf88a0c8271bc548b05a3c1fdfb6a8d
+    layerID: 107
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 51
+    spriteID: a4ee69362fa13274db447c3e89a2dd67
+    layerID: 106
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg
+    spriteName: 
+    isGroup: 0
+    parentIndex: 51
+    spriteID: 24907500a276da343b3a3f2e5512bae3
+    layerID: 102
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: graveyard
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: efdeb68bdfb0cda44850f8135ea3cbbc
+    layerID: 76
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: floorFG
+    spriteName: floorFG
+    isGroup: 0
+    parentIndex: 57
+    spriteID: 8445770e09c281f4cb2bf4dc3d16b1ae
+    layerID: 63
+    mosaicPosition: {x: 4420, y: 1880}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: floorFG2
+    spriteName: floorFG2
+    isGroup: 0
+    parentIndex: 57
+    spriteID: fbafd73aec563d443b4087715129438d
+    layerID: 214
+    mosaicPosition: {x: 4, y: 2597}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: trees1
+    spriteName: trees1
+    isGroup: 0
+    parentIndex: 57
+    spriteID: c639999536272ff419a8f292b4e46d9c
+    layerID: 209
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: trees2
+    spriteName: trees2
+    isGroup: 0
+    parentIndex: 57
+    spriteID: 4a52b8648c277264aadef053848c48cd
+    layerID: 211
+    mosaicPosition: {x: 6237, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: trees3
+    spriteName: trees3
+    isGroup: 0
+    parentIndex: 57
+    spriteID: fb0d9c600c17f2342bede6644942b8f0
+    layerID: 212
+    mosaicPosition: {x: 4, y: 1477}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bush
+    spriteName: bush
+    isGroup: 0
+    parentIndex: 57
+    spriteID: f2f3eaf274939c64a8f781b150ab88df
+    layerID: 72
+    mosaicPosition: {x: 7012, y: 2390}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: fence
+    spriteName: fence
+    isGroup: 0
+    parentIndex: 57
+    spriteID: 0aa74bef429be764bb4e4036022ef920
+    layerID: 67
+    mosaicPosition: {x: 2694, y: 1477}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves1
+    spriteName: graves1
+    isGroup: 0
+    parentIndex: 57
+    spriteID: d04a896b971820e4ca8caf305b1d32c3
+    layerID: 213
+    mosaicPosition: {x: 3079, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves2
+    spriteName: graves2
+    isGroup: 0
+    parentIndex: 57
+    spriteID: a4a8112c8ad111c4d82d9163de85824f
+    layerID: 65
+    mosaicPosition: {x: 2694, y: 1880}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lamp
+    spriteName: lamp
+    isGroup: 0
+    parentIndex: 57
+    spriteID: 1c3caf0ec9031bf48a276ba4c4395a83
+    layerID: 52
+    mosaicPosition: {x: 4, y: 2719}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: floor
+    spriteName: floor
+    isGroup: 0
+    parentIndex: 57
+    spriteID: b5f8a1d1c48bbf843b59fd8cfdc4216a
+    layerID: 48
+    mosaicPosition: {x: 2694, y: 2390}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graveyardBG
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 7f5a6168b2fad1040bb74f68639b0aa4
+    layerID: 81
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: fg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 1df8d1e1dcf5fad4db7f3c9295405753
+    layerID: 75
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: f9f699c52abca6b43912f8d201a91a98
+    layerID: 74
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 4c9b56b8b40cbc24c9e64ab185cf750c
+    layerID: 73
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 4722a3d7686c91e4885074f81d42a945
+    layerID: 224
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 133446e1651172e4a9f279167db0a037
+    layerID: 225
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bg3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 3d220c5e10374514985ba35539fd485f
+    layerID: 226
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: church
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 1601da00b345f0a4c8fbbd2314f032c1
+    layerID: 44
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: floor
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 6b6fd195f1cdf0849bb0a3b41bd91d10
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 10370b18f4ca3df4999cd73cc717af49
+    layerID: 41
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 90400cfb626f9c14c9e05e1cb08bb8cf
+    layerID: 40
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: fg3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 77d38a4e47a074442b8c10fc651e98a7
+    layerID: 42
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: stairs
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 2c558338b7ea6844f9a5608ab9571e61
+    layerID: 38
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: bench
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: f53230bd10b2f7649847c7e6d3b9fe0a
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: brokenBench1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 2168b4e67d13f9b409cb23d5a584c2bb
+    layerID: 208
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: brokenBench2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: b4c8e5ceb0f9d49489045c2289f4456a
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: churchBG
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: c9c22c74af728fa4fb84343b4f2764f3
+    layerID: 207
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: treesBG
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 7971488aab037864fbc80786cdf1b995
+    layerID: 201
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: cross
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: a2187396935edde4d9e324e429370d18
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: frontEntrance
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 9de45ff60884e7f47b2283dabf906c26
+    layerID: 29
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: backWall
+    spriteName: 
+    isGroup: 0
+    parentIndex: 76
+    spriteID: 8be1154a792081744b93571b7b233392
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ground
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 47d0c4b695263b24fb1934945ceff78c
+    layerID: 221
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 0
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 81ae15fad35b55a439571697064f09e1
+    layerID: 2
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
