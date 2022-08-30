@@ -17,7 +17,7 @@ public class Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector2 pos = animator.GetComponent<Transform>().position;
+        Vector2 pos = animator.GetComponentInParent<Transform>().position;
         if (enemy.PlayerInEnemyAttackRange(pos) && enemy.timeBtwAttacks <= 0)
         {
             animator.SetBool("isAttacking", true);
@@ -35,12 +35,12 @@ public class Attack : StateMachineBehaviour
         }
 
         #region Flip
-        if (pos.x  < enemy.player.transform.position.x && enemy.playerToEnemyDistance < 0.01 && enemy.facingLeft)
+        if (pos.x  < enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && enemy.facingLeft)
         {
             enemy.Flip();
             enemy.facingLeft = false;
         }
-        else if (pos.x  > enemy.player.transform.position.x && enemy.playerToEnemyDistance < 0.01 && !enemy.facingLeft)
+        else if (pos.x  > enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && !enemy.facingLeft)
         {
             enemy.Flip();
             enemy.facingLeft = true;
