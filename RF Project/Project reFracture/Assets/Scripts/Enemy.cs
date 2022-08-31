@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 	public float starttimeBtwAttacks;
 	[SerializeField] float enemyDamage;
 	[SerializeField] Transform hitboxPos;
+	public Transform enemyPos;
 	[SerializeField] Vector2 hitboxSize;
 
 	public bool facingLeft = true;
@@ -56,6 +57,36 @@ public class Enemy : MonoBehaviour
 		else
 			return false;
 
+	}
+
+	public bool isFacingPlayer(Vector2 enemy, Vector2 player)
+	{
+		if(player.x < enemy.x)
+		{
+			if(facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if(player.x > enemy.x)
+		{
+			if(!facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
 	}
 
 	public void Attack()

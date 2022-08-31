@@ -4,67 +4,59 @@ using UnityEngine;
 
 public class Attack : StateMachineBehaviour
 {
-    Enemy enemy;
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        enemy = animator.GetComponent<Enemy>();
-        GameObject player = enemy.player;
+	Enemy enemy;
+	bool hasAttacked;
+	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+		enemy = animator.GetComponent<Enemy>();
+		GameObject player = enemy.player;
+		hasAttacked = false;
+	}
 
-    }
 
+	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+		animator.SetBool("isChasing", false);
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        Vector2 pos = animator.GetComponentInParent<Transform>().position;
-        if (enemy.PlayerInEnemyAttackRange(pos) && enemy.timeBtwAttacks <= 0)
-        {
-            animator.SetBool("isAttacking", true);
-            enemy.Attack();
-            enemy.timeBtwAttacks = enemy.starttimeBtwAttacks;
-        }
-        else
-        {
-            enemy.timeBtwAttacks -= Time.deltaTime;
-        }
-
-        if(!enemy.PlayerInEnemyAttackRange(pos))
+		Vector2 pos = enemy.enemyPos.position;
+		if (enemy.PlayerInEnemyAttackRange(pos) && !hasAttacked && enemy.isFacingPlayer(pos, enemy.player.transform.position))
 		{
-            animator.SetBool("isAttacking", false);
-        }
+			enemy.Attack();
+			enemy.timeBtwAttacks = enemy.starttimeBtwAttacks;
+			hasAttacked = true;
+		}
+		else
+		{
+			enemy.timeBtwAttacks -= Time.deltaTime;
+		}
 
-        #region Flip
-        if (pos.x  < enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && enemy.facingLeft)
-        {
-            enemy.Flip();
-            enemy.facingLeft = false;
-        }
-        else if (pos.x  > enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && !enemy.facingLeft)
-        {
-            enemy.Flip();
-            enemy.facingLeft = true;
-        }
-        #endregion
+		if (hasAttacked && enemy.timeBtwAttacks <= 0)
+		{
+			Debug.Log("isAttacking false");
+			animator.SetBool("isAttacking", false);
 
-        
-    }
+		}
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+	}
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
 
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
+	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	//{
+	//    
+	//}
+
+	// OnStateMove is called right after Animator.OnAnimatorMove()
+	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	//{
+	//    // Implement code that processes and affects root motion
+	//}
+
+	// OnStateIK is called right after Animator.OnAnimatorIK()
+	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	//{
+	//    // Implement code that sets up animation IK (inverse kinematics)
+	//}
 }

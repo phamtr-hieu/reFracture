@@ -11,18 +11,18 @@ public class Walk : StateMachineBehaviour
 		enemy = animator.GetComponent<Enemy>();
 		GameObject player = enemy.player;
 
-		
+
 
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		Vector2 pos = animator.GetComponentInParent<Transform>().position;
+		Vector2 pos = enemy.enemyPos.position;
 		if (enemy.PlayerInEnemyChaseRange(pos))
 		{
 			animator.SetBool("isChasing", true);
-			enemy.transform.position = Vector2.MoveTowards(pos, enemy.player.transform.position, enemy.chaseSpeed * Time.deltaTime);
+			enemy.enemyPos.position = Vector2.MoveTowards(pos, enemy.player.transform.position, enemy.chaseSpeed * Time.deltaTime);
 		}
 		else
 		{
@@ -30,22 +30,20 @@ public class Walk : StateMachineBehaviour
 		}
 
 
-		if (enemy.PlayerInEnemyAttackRange(pos))
+		if (enemy.PlayerInEnemyAttackRange(pos) && enemy.isFacingPlayer(pos, enemy.player.transform.position))
 		{
+			animator.SetBool("isChasing", false);
 			animator.SetBool("isAttacking", true);
 		}
-		else
-		{
-			animator.SetBool("isAttacking", false);
-		}
+
 
 		#region Flip
-		if (pos.x  < enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && enemy.facingLeft)
+		if (pos.x < enemy.player.transform.position.x && enemy.playerToEnemyDistance < .1 && enemy.facingLeft)
 		{
 			enemy.Flip();
 			enemy.facingLeft = false;
 		}
-		else if (pos.x  > enemy.player.transform.position.x && enemy.playerToEnemyDistance < 1 && !enemy.facingLeft)
+		else if (pos.x > enemy.player.transform.position.x && enemy.playerToEnemyDistance < .1 && !enemy.facingLeft)
 		{
 			enemy.Flip();
 			enemy.facingLeft = true;
