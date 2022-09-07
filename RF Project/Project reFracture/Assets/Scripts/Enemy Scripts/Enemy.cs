@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+	//Enemy Stat
+	public float healthPoints = 100;
+
 	[SerializeField] Character character;
 	public GameObject player;
 	public float chaseDistance;

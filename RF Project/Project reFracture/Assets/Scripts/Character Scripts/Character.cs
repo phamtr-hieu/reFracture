@@ -19,6 +19,8 @@ public class Character : MonoBehaviour
 
     #region Attack Vars
     public PlayerAttackManager attackManager;
+    public Transform attackPlacement;
+    public Vector2 hitboxSize;
 
     int attackID = 0;
     [SerializeField] float attackTimer = 1.5f;
@@ -172,6 +174,8 @@ public class Character : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, checkRadius);
+
+        Gizmos.DrawWireCube(attackPlacement.position, hitboxSize);
     }
 
     
