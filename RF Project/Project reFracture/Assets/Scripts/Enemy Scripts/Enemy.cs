@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,18 +21,27 @@ public class Enemy : MonoBehaviour
 	public Transform enemyPos;
 	[SerializeField] Vector2 hitboxSize;
 
+	public Slider slider;
+
 	public bool facingLeft = true;
 	// Start is called before the first frame update
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
+		slider.maxValue = healthPoints;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		//print(playerToEnemyDistance);
+		slider.value = healthPoints;
+
+		if (healthPoints <= 0)
+		{
+			OnDeath();
+		}
 		
+
 	}
 
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
@@ -100,6 +110,15 @@ public class Enemy : MonoBehaviour
 			character.healthPoint -= enemyDamage;
 			print("player took damage");
 		}
+	}
+
+	public void OnDeath()
+	{
+
+		Destroy(slider);
+		Destroy(this.gameObject);
+		//print("Enemy Died");
+
 	}
 
 	private void OnDrawGizmos()
