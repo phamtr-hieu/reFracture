@@ -34,7 +34,7 @@ public class Attack : StateMachineBehaviour
 
 		if (hasAttacked && enemy.timeBtwAttacks <= 0)
 		{
-			Debug.Log("isAttacking false");
+			//Debug.Log("isAttacking false");
 			animator.SetBool("isAttacking", false);
 
 		}

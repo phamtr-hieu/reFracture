@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
     public Vector2 hitboxSize;
 
     int attackID = 0;
-    [SerializeField] float attackTimer = 1.5f;
+    //[SerializeField] float attackTimer = 1.5f;
     //float lastAttackTime;
     #endregion
     [SerializeField] LayerMask ground;
