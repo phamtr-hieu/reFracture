@@ -8,7 +8,7 @@ public class DashAttack : StateMachineBehaviour
     [SerializeField] float damage;
     [SerializeField] Vector2 attackPlacement;
     [SerializeField] Vector2 hitbox;
-    [SerializeField] Vector2 dash;
+    [SerializeField] float dashForce;
     [SerializeField] float dashSpeed;
 
     GameObject enemy;
@@ -21,7 +21,15 @@ public class DashAttack : StateMachineBehaviour
         character.hitboxSize = hitbox;
 
         //character.transform.localPosition = new Vector3(dash.x,dash.y) * Time.deltaTime * dashSpeed;
-        character.transform.Translate(dash);
+        if(character._facingRight)
+		{
+            character.transform.position += new Vector3(dashForce, 0);
+        }
+        else
+		{
+            character.transform.position += new Vector3(-dashForce, 0);
+        }
+        
         bool hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
         if (hit)
         {

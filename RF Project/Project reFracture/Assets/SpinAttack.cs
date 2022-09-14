@@ -21,6 +21,7 @@ public class SpinAttack : StateMachineBehaviour
 		character.attackPlacement.localPosition = attackPlacement;
 		character.hitboxSize = hitbox;
 		spinnedTime = spinTime;
+		character._movable = false;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -35,7 +36,7 @@ public class SpinAttack : StateMachineBehaviour
 				//Debug.Log("attack hit enemy");
 			}
 		}
-		animator.SetBool("attack3", true);
+		//animator.SetBool("attack3", true);
 		//if(spinnedTime <= 0)
 		//{
 		//	animator.SetBool("attack3", false);
@@ -51,7 +52,7 @@ public class SpinAttack : StateMachineBehaviour
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		
+		character._movable = true;
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove()
