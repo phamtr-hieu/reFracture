@@ -10,7 +10,7 @@ public class SpinAttack : StateMachineBehaviour
 	[SerializeField] float spinnedTime;
 	[SerializeField] Vector2 attackPlacement;
 	[SerializeField] Vector2 hitbox;
-	[SerializeField] bool _spinning = false;
+	//[SerializeField] bool _spinning = false;
 
 	GameObject enemy;
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

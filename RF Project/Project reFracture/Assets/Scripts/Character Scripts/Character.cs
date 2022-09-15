@@ -37,6 +37,7 @@ public class Character : MonoBehaviour
 	[SerializeField] private float jumpForce;
 	[SerializeField] private float checkRadius;
 	[SerializeField] public float health = 100;
+	[SerializeField] float lastAtkAnimLength;
 	#endregion
 
 	[SerializeField] private float jumpButtonTimer;
@@ -47,6 +48,7 @@ public class Character : MonoBehaviour
 	[SerializeField] bool jumpTimerStart;
 	public bool _facingRight = true;
 	public bool _movable = true;
+	bool countAnimLength;
 
 	[SerializeField] private Transform GroundCheck;
 
@@ -97,6 +99,21 @@ public class Character : MonoBehaviour
 		#endregion
 
 		#region Attack
+		if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Card"))
+		{
+			lastAtkAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
+			countAnimLength = true;
+		}
+		if(countAnimLength)
+		{
+			lastAtkAnimLength -= Time.deltaTime;
+		}
+		if(lastAtkAnimLength <=0)
+		{
+			countAnimLength = false;
+		}
+		
+
 		//lastAttackTime += Time.deltaTime;
 		//if (lastAttackTime > attackTimer)
 		//{
@@ -154,12 +171,12 @@ public class Character : MonoBehaviour
 
 	public void OnAttack(InputAction.CallbackContext context)
 	{
-		if (context.started)
+		if (context.started && lastAtkAnimLength <= 0)
 		{
 			attackID = attackManager.attackQueue[0];
 			anim.SetTrigger("attack" + attackID);
-			print(attackID);
 			attackManager.OnAttack();
+			//print(attackID);
 
 			//lastAttackTime = 0;
 			//attackID++;
@@ -182,5 +199,8 @@ public class Character : MonoBehaviour
 		Gizmos.DrawWireCube(attackPlacement.position, hitboxSize);
 	}
 
-
+	IEnumerator WaitForAnimToAttack()
+	{
+		yield return new WaitForSeconds(lastAtkAnimLength);
+	}
 }

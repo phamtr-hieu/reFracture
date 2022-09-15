@@ -124,14 +124,14 @@ TextureImporter:
         width: 1080
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f8a48c96f5cde4a805334ab97b1d7c
-      internalID: 390392880
+      spriteID: c1e252188942ee94ebac61666879108b
+      internalID: 1948694676
       vertices: []
       indices: 
       edges: []
@@ -145,14 +145,14 @@ TextureImporter:
         width: 1080
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aa5ef8605d1d7441a8aa517e4ea5c29
-      internalID: -961734442
+      spriteID: 7fa96e4e39d52734d952bb536fd3dc65
+      internalID: 1070747287
       vertices: []
       indices: 
       edges: []
@@ -168,8 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animWolfIdleStrip_1: -961734442
-      animWolfIdleStrip_0: 390392880
+      animWolfIdleStrip_1: 1070747287
+      animWolfIdleStrip_0: 1948694676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

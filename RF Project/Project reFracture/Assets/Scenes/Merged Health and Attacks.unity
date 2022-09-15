@@ -749,7 +749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409592200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -0.62, z: 0}
+  m_LocalPosition: {x: -2.87, y: -1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1426,7 +1426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660082733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.552927, y: -2.97078, z: -10}
+  m_LocalPosition: {x: -10.56, y: -0.7899995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1882,8 +1882,8 @@ GameObject:
   m_Component:
   - component: {fileID: 764712658}
   - component: {fileID: 764712657}
-  - component: {fileID: 764712659}
   - component: {fileID: 764712656}
+  - component: {fileID: 764712659}
   - component: {fileID: 764712660}
   - component: {fileID: 764712661}
   m_Layer: 0
@@ -1954,7 +1954,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 390392880, guid: 6b38f1913d89d484d82a85d39cfc6512, type: 3}
+  m_Sprite: {fileID: 1948694676, guid: 6b38f1913d89d484d82a85d39cfc6512, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1973,7 +1973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764712655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.96, y: -6.4, z: 0}
+  m_LocalPosition: {x: 29.96, y: -5.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2022,8 +2022,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.46951008, y: -0.2502079}
-  m_Size: {x: 3.2003574, y: 5.0019903}
+  m_Offset: {x: -0.94809437, y: -0.7479367}
+  m_Size: {x: 2.051752, y: 5.959161}
   m_Direction: 0
 --- !u!50 &764712661
 Rigidbody2D:
@@ -2411,7 +2411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936569241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0029277802, y: -0.14921999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4758,10 +4758,13 @@ MonoBehaviour:
   jumpForce: 8
   checkRadius: 0.21
   health: 100
+  lastAtkAnimLength: 0
   jumpButtonTimer: 0
   maxJumpButtonTimer: 0.5
   _jump: 0
   jumpTimerStart: 0
+  _facingRight: 1
+  _movable: 1
   GroundCheck: {fileID: 1999797002}
   onGround: 0
 --- !u!4 &1912745377
@@ -4772,7 +4775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912745368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.55, y: -7.32, z: 0}
+  m_LocalPosition: {x: -10.56, y: -4.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

@@ -258,7 +258,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 37921feb2e0c0a84ca9689da68fd2531, type: 2}
-  m_Tag: 
+  m_Tag: Card
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -270,7 +270,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: QuickAttack
+  m_Name: SmashAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -286,8 +286,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
-  m_Tag: 
+  m_Motion: {fileID: 7400000, guid: 12e5dc7cc9f1eae4792a7a51e737d2a5, type: 2}
+  m_Tag: Card
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -442,7 +442,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 78802995f77e39b44a9295ebe2cce410, type: 2}
-  m_Tag: 
+  m_Tag: Card
   m_SpeedParameter: moveInput
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -681,6 +681,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 538781714729996715}
     m_Position: {x: 160, y: -210, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 7060887228448687161}
+    m_Position: {x: 195, y: -145, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -7912318043953411131}
@@ -737,7 +740,6 @@ MonoBehaviour:
   spinnedTime: 0
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 3, y: 1}
-  _spinning: 0
 --- !u!1101 &5506031363066292480
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -819,6 +821,32 @@ AnimatorTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 1
+--- !u!1102 &7060887228448687161
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Run
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: d8cb50a2752384544a4eb05db54a6b67, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &8443904345546993602
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

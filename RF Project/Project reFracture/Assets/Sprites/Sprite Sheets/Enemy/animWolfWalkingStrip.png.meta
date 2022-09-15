@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,17 +121,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
+        width: 1014
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338f3d09acb13ed4ab5d947c9409b1d7
-      internalID: 1004249070
+      spriteID: c738486fee964f648a82a85dfcd93da2
+      internalID: 33962661
       vertices: []
       indices: 
       edges: []
@@ -140,19 +140,19 @@ TextureImporter:
       name: animWolfWalkingStrip_1
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1014
         y: 0
-        width: 1080
+        width: 1014
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15b12d56e15e0c5429368ad2f81b643a
-      internalID: -1181614530
+      spriteID: 66c81ed694fe7264d9368e4281fdde52
+      internalID: 1469017846
       vertices: []
       indices: 
       edges: []
@@ -161,19 +161,19 @@ TextureImporter:
       name: animWolfWalkingStrip_2
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 2028
         y: 0
-        width: 1080
+        width: 1014
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a15abf85260a3554187db6f262e727aa
-      internalID: -128244837
+      spriteID: 679b101417c78f1458970c9b8fb1689d
+      internalID: 2130952822
       vertices: []
       indices: 
       edges: []
@@ -182,19 +182,19 @@ TextureImporter:
       name: animWolfWalkingStrip_3
       rect:
         serializedVersion: 2
-        x: 3240
+        x: 3042
         y: 0
-        width: 1080
+        width: 1014
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 071456ecd2c2f4640b05a2c164ca652d
-      internalID: 1955162355
+      spriteID: 0094dddeb483cde44b9281013c7b6a34
+      internalID: -38002948
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animWolfWalkingStrip_3: 1955162355
-      animWolfWalkingStrip_0: 1004249070
-      animWolfWalkingStrip_1: -1181614530
-      animWolfWalkingStrip_2: -128244837
+      animWolfWalkingStrip_3: -38002948
+      animWolfWalkingStrip_0: 33962661
+      animWolfWalkingStrip_1: 1469017846
+      animWolfWalkingStrip_2: 2130952822
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
