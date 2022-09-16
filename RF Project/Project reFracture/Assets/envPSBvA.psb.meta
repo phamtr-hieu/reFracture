@@ -689,8 +689,8 @@ ScriptedImporter:
       x: 4
       y: 5033
       width: 18454
-      height: 3635
-    spriteID: 89129bb956f1607408d547a9d942ca2f
+      height: 2836
+    spriteID: 44770d88932a76443ab2f3f53aa9a21d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -700,6 +700,153 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 5033}
+  - name: glow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 18466
+      y: 5033
+      width: 14079
+      height: 2327
+    spriteID: cb19062ac89352b4f8c94cd6db81d337
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14512, y: 3898}
+  - name: lamp gates
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 29805
+      y: 3788
+      width: 2916
+      height: 869
+    spriteID: fb97b2327fbb91a40b7b188567538565
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14826, y: 2927}
+  - name: lamp crater
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32286
+      y: 4
+      width: 359
+      height: 797
+    spriteID: 85599404d0d70f94fb80314c0993ba56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 18839, y: -1739}
+  - name: lampwreck1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14773
+      y: 7877
+      width: 359
+      height: 797
+    spriteID: 9667fb9d39e6e70468bb2e6797699b0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5424, y: 6466}
+  - name: lampwreck2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26660
+      y: 3809
+      width: 360
+      height: 798
+    spriteID: b27fe0c465d60e44596a91b29dd30a5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 17934, y: 2117}
+  - name: lampyard1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14773
+      y: 8682
+      width: 331
+      height: 817
+    spriteID: 23fbce42fda9c9240b52d567c28c0a87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9304, y: 5864}
+  - name: lampyard2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15112
+      y: 8682
+      width: 331
+      height: 817
+    spriteID: 1c3230a4ed2d81f418480d28c4ed4c72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11074, y: 5878}
   - name: chruchstairs1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -707,8 +854,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30330
-      y: 3429
+      x: 31059
+      y: 1548
       width: 1116
       height: 311
     spriteID: 1b60b7e7528636744945fb33c3e7b09e
@@ -720,7 +867,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 27669, y: 623}
+    uvTransform: {x: 28398, y: -1258}
   - name: chruchstairs2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -728,8 +875,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30337
-      y: 6322
+      x: 30330
+      y: 3307
       width: 836
       height: 340
     spriteID: 82f87b11f615ff14dbc1358e5693d393
@@ -741,7 +888,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 26860, y: 3512}
+    uvTransform: {x: 26853, y: 497}
   - name: chruchentrance2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -749,8 +896,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 18466
-      y: 6673
+      x: 14119
+      y: 7877
       width: 646
       height: 1554
     spriteID: ef0d25b3ac90e174dae2d87aa0b0daa3
@@ -762,7 +909,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 15586, y: 3619}
+    uvTransform: {x: 11239, y: 4823}
   - name: chruchentrance1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -791,8 +938,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 31700
-      y: 2018
+      x: 13245
+      y: 7877
       width: 866
       height: 1557
     spriteID: 6866eaf27ec12df4095e3253953dcf69
@@ -804,7 +951,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 31651, y: -1030}
+    uvTransform: {x: 13196, y: 4829}
   - name: chruchfloor
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -813,7 +960,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 29805
-      y: 4191
+      y: 4665
       width: 2930
       height: 277
     spriteID: a1ff8b568c6a9fb40b83f59f5850011d
@@ -825,7 +972,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 29805, y: 1398}
+    uvTransform: {x: 29805, y: 1872}
   - name: chruchbench1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -833,8 +980,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 26660
-      y: 3982
+      x: 12608
+      y: 9288
       width: 255
       height: 186
     spriteID: caa500dc75fa3144f8e0429731423bf1
@@ -846,7 +993,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 25285, y: 919}
+    uvTransform: {x: 11233, y: 6225}
   - name: chruchbench2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -855,7 +1002,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 26660
-      y: 3809
+      y: 4615
       width: 357
       height: 165
     spriteID: 24da4a074079ed847b6e2c5c3fccbd3c
@@ -867,7 +1014,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 25723, y: 756}
+    uvTransform: {x: 25723, y: 1562}
   - name: chruchbench2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -875,8 +1022,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 32433
-      y: 3583
+      x: 26660
+      y: 4788
       width: 308
       height: 165
     spriteID: 3d3d5c8966278734795d22b14b75ffbd
@@ -888,7 +1035,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 30692, y: 530}
+    uvTransform: {x: 24919, y: 1735}
   - name: chruchcross
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -917,8 +1064,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21528
-      y: 5033
+      x: 3066
+      y: 7877
       width: 3160
       height: 1491
     spriteID: 1a5abe798b2956b4183cf228cc60da99
@@ -930,7 +1077,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 21353, y: 2041}
+    uvTransform: {x: 2891, y: 4885}
   - name: graves2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -959,8 +1106,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24696
-      y: 5033
+      x: 6234
+      y: 7877
       width: 3067
       height: 1465
     spriteID: 24fce033ec33e1c4783d91989de78e18
@@ -972,7 +1119,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 21295, y: 2227}
+    uvTransform: {x: 2833, y: 5071}
   - name: graves1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1022,8 +1169,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 31700
-      y: 3583
+      x: 11875
+      y: 9288
       width: 725
       height: 189
     spriteID: 224e03bbdcd60ca40b27469992a16e15
@@ -1035,7 +1182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 27462, y: 773}
+    uvTransform: {x: 7637, y: 6478}
   - name: graveyardtrees1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1064,8 +1211,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 29805
-      y: 3788
+      x: 28195
+      y: 1548
       width: 2856
       height: 395
     spriteID: b7eb21cbe141b024ba898fd682137114
@@ -1077,7 +1224,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 26148, y: 972}
+    uvTransform: {x: 24538, y: -1268}
   - name: graveyard3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1127,8 +1274,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30337
-      y: 5033
+      x: 30330
+      y: 2018
       width: 2117
       height: 1281
     spriteID: 8c318212968c60b49b1c7b30cc9ed571
@@ -1140,7 +1287,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 25979, y: 2407}
+    uvTransform: {x: 25972, y: -608}
   - name: wreck5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1148,8 +1295,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 18466
-      y: 5033
+      x: 4
+      y: 7877
       width: 3054
       height: 1632
     spriteID: 81db2272f122d1c42be3009980fd847c
@@ -1161,7 +1308,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 10626, y: 3407}
+    uvTransform: {x: -7836, y: 6251}
   - name: wreck4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1169,8 +1316,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 27771
-      y: 5033
+      x: 9309
+      y: 7877
       width: 2558
       height: 1618
     spriteID: 18ccf2d13ba06564ebe4f2f0a249ec46
@@ -1182,7 +1329,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 19717, y: 3782}
+    uvTransform: {x: 1255, y: 6626}
   - name: wreck3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1190,8 +1337,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30330
-      y: 2018
+      x: 11875
+      y: 7877
       width: 1362
       height: 1403
     spriteID: 272dcca9b70f77844862f20da2a614c8
@@ -1203,7 +1350,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 21438, y: 724}
+    uvTransform: {x: 2983, y: 6583}
   - name: wreck2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1644,9 +1791,79 @@ ScriptedImporter:
     spriteName: ground
     isGroup: 0
     parentIndex: -1
-    spriteID: 89129bb956f1607408d547a9d942ca2f
-    layerID: 3732
+    spriteID: 44770d88932a76443ab2f3f53aa9a21d
+    layerID: 4414
     mosaicPosition: {x: 4, y: 5033}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: glow
+    spriteName: glow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb19062ac89352b4f8c94cd6db81d337
+    layerID: 4413
+    mosaicPosition: {x: 18466, y: 5033}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lamp gates
+    spriteName: lamp gates
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fb97b2327fbb91a40b7b188567538565
+    layerID: 4412
+    mosaicPosition: {x: 29805, y: 3788}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lamp crater
+    spriteName: lamp crater
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 85599404d0d70f94fb80314c0993ba56
+    layerID: 4411
+    mosaicPosition: {x: 32286, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampwreck1
+    spriteName: lampwreck1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9667fb9d39e6e70468bb2e6797699b0b
+    layerID: 4410
+    mosaicPosition: {x: 14773, y: 7877}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampwreck2
+    spriteName: lampwreck2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b27fe0c465d60e44596a91b29dd30a5a
+    layerID: 4409
+    mosaicPosition: {x: 26660, y: 3809}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampyard1
+    spriteName: lampyard1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 23fbce42fda9c9240b52d567c28c0a87
+    layerID: 4408
+    mosaicPosition: {x: 14773, y: 8682}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampyard2
+    spriteName: lampyard2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1c3230a4ed2d81f418480d28c4ed4c72
+    layerID: 4407
+    mosaicPosition: {x: 15112, y: 8682}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1663,37 +1880,37 @@ ScriptedImporter:
   - name: chruchstairs1
     spriteName: chruchstairs1
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 1b60b7e7528636744945fb33c3e7b09e
     layerID: 4382
-    mosaicPosition: {x: 30330, y: 3429}
+    mosaicPosition: {x: 31059, y: 1548}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchstairs2
     spriteName: chruchstairs2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 82f87b11f615ff14dbc1358e5693d393
     layerID: 4381
-    mosaicPosition: {x: 30337, y: 6322}
+    mosaicPosition: {x: 30330, y: 3307}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchentrance2
     spriteName: chruchentrance2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: ef0d25b3ac90e174dae2d87aa0b0daa3
     layerID: 1887
-    mosaicPosition: {x: 18466, y: 6673}
+    mosaicPosition: {x: 14119, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchentrance1
     spriteName: chruchentrance1
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 673948714ee3a894a9a26268587c2eef
     layerID: 802
     mosaicPosition: {x: 25395, y: 3809}
@@ -1703,57 +1920,57 @@ ScriptedImporter:
   - name: chruchwall
     spriteName: chruchwall
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 6866eaf27ec12df4095e3253953dcf69
     layerID: 812
-    mosaicPosition: {x: 31700, y: 2018}
+    mosaicPosition: {x: 13245, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchfloor
     spriteName: chruchfloor
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: a1ff8b568c6a9fb40b83f59f5850011d
     layerID: 814
-    mosaicPosition: {x: 29805, y: 4191}
+    mosaicPosition: {x: 29805, y: 4665}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchbench1
     spriteName: chruchbench1
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: caa500dc75fa3144f8e0429731423bf1
     layerID: 3111
-    mosaicPosition: {x: 26660, y: 3982}
+    mosaicPosition: {x: 12608, y: 9288}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchbench2
     spriteName: chruchbench2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 24da4a074079ed847b6e2c5c3fccbd3c
     layerID: 3115
-    mosaicPosition: {x: 26660, y: 3809}
+    mosaicPosition: {x: 26660, y: 4615}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchbench2
     spriteName: chruchbench2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 3d3d5c8966278734795d22b14b75ffbd
     layerID: 3116
-    mosaicPosition: {x: 32433, y: 3583}
+    mosaicPosition: {x: 26660, y: 4788}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: chruchcross
     spriteName: chruchcross
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: c64a9d9ab270b68409318b28803b64bd
     layerID: 2670
     mosaicPosition: {x: 26081, y: 3809}
@@ -1763,10 +1980,10 @@ ScriptedImporter:
   - name: chruch
     spriteName: chruch
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 8
     spriteID: 1a5abe798b2956b4183cf228cc60da99
     layerID: 953
-    mosaicPosition: {x: 21528, y: 5033}
+    mosaicPosition: {x: 3066, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1783,7 +2000,7 @@ ScriptedImporter:
   - name: graves2
     spriteName: graves2
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: fe1bc385114ec2845bacabdcff0a772e
     layerID: 4377
     mosaicPosition: {x: 22411, y: 2018}
@@ -1793,17 +2010,17 @@ ScriptedImporter:
   - name: graveyardtrees3
     spriteName: graveyardtrees3
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 24fce033ec33e1c4783d91989de78e18
     layerID: 4367
-    mosaicPosition: {x: 24696, y: 5033}
+    mosaicPosition: {x: 6234, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: graves1
     spriteName: graves1
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 59d7744ff801f6c42beaecfa6f7ec1d9
     layerID: 3526
     mosaicPosition: {x: 28195, y: 4}
@@ -1813,7 +2030,7 @@ ScriptedImporter:
   - name: graveyardtrees2
     spriteName: graveyardtrees2
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 14c4032bdf3b826429c19830703b3ca3
     layerID: 313
     mosaicPosition: {x: 22411, y: 4}
@@ -1823,17 +2040,17 @@ ScriptedImporter:
   - name: graveyardbush
     spriteName: graveyardbush
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 224e03bbdcd60ca40b27469992a16e15
     layerID: 1019
-    mosaicPosition: {x: 31700, y: 3583}
+    mosaicPosition: {x: 11875, y: 9288}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: graveyardtrees1
     spriteName: graveyardtrees1
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 53874f43f585f924fb6cebb768236920
     layerID: 4370
     mosaicPosition: {x: 27115, y: 3788}
@@ -1843,17 +2060,17 @@ ScriptedImporter:
   - name: graveyardwall
     spriteName: graveyardwall
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: b7eb21cbe141b024ba898fd682137114
     layerID: 4371
-    mosaicPosition: {x: 29805, y: 3788}
+    mosaicPosition: {x: 28195, y: 1548}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: graveyard3
     spriteName: graveyard3
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: e92096fe378c9e140987c414594e4b20
     layerID: 2665
     mosaicPosition: {x: 19077, y: 3650}
@@ -1863,7 +2080,7 @@ ScriptedImporter:
   - name: graveyard2
     spriteName: graveyard2
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: b66e2cc65e9a92f428fd5803eea85c85
     layerID: 2664
     mosaicPosition: {x: 27115, y: 2018}
@@ -1873,10 +2090,10 @@ ScriptedImporter:
   - name: graveyard1
     spriteName: graveyard1
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 20
     spriteID: 8c318212968c60b49b1c7b30cc9ed571
     layerID: 2663
-    mosaicPosition: {x: 30337, y: 5033}
+    mosaicPosition: {x: 30330, y: 2018}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1893,37 +2110,37 @@ ScriptedImporter:
   - name: wreck5
     spriteName: wreck5
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 31
     spriteID: 81db2272f122d1c42be3009980fd847c
     layerID: 2648
-    mosaicPosition: {x: 18466, y: 5033}
+    mosaicPosition: {x: 4, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: wreck4
     spriteName: wreck4
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 31
     spriteID: 18ccf2d13ba06564ebe4f2f0a249ec46
     layerID: 2600
-    mosaicPosition: {x: 27771, y: 5033}
+    mosaicPosition: {x: 9309, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: wreck3
     spriteName: wreck3
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 31
     spriteID: 272dcca9b70f77844862f20da2a614c8
     layerID: 3634
-    mosaicPosition: {x: 30330, y: 2018}
+    mosaicPosition: {x: 11875, y: 7877}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: wreck2
     spriteName: wreck2
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 31
     spriteID: 76ed118b526b91242bc7f5c153e300e4
     layerID: 3597
     mosaicPosition: {x: 22411, y: 3809}
@@ -1933,7 +2150,7 @@ ScriptedImporter:
   - name: wreck1
     spriteName: wreck1
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 31
     spriteID: 9396aa0800315914e9f7914595f54eb8
     layerID: 1010
     mosaicPosition: {x: 19077, y: 4}
