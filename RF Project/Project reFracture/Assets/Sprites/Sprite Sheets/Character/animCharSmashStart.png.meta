@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,18 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -121,17 +109,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e4fcae4845285940810485afe5dd253
-      internalID: 751849837
+      spriteID: 326d6baa367377a46968645a1baadea9
+      internalID: 1842894059
       vertices: []
       indices: 
       edges: []
@@ -140,19 +128,19 @@ TextureImporter:
       name: animCharSmashStart_1
       rect:
         serializedVersion: 2
-        x: 2489
+        x: 1245
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6774722502831f478f6ede4ccc6ca66
-      internalID: 686528124
+      spriteID: 06872fc18544e69478959c00b1ad543f
+      internalID: -393330744
       vertices: []
       indices: 
       edges: []
@@ -161,19 +149,19 @@ TextureImporter:
       name: animCharSmashStart_2
       rect:
         serializedVersion: 2
-        x: 4978
+        x: 2490
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe57f0edb4c54d468ba7d1614bfebf2
-      internalID: -497174357
+      spriteID: 56d9a3f1bffa75e47927ff65f3a27714
+      internalID: 1973477630
       vertices: []
       indices: 
       edges: []
@@ -182,19 +170,19 @@ TextureImporter:
       name: animCharSmashStart_3
       rect:
         serializedVersion: 2
-        x: 7467
+        x: 3735
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3206c9b94f00cc945be6c57d5c9cb614
-      internalID: 441164927
+      spriteID: 6c76c1b3487616649918e28ce94af129
+      internalID: -1250584895
       vertices: []
       indices: 
       edges: []
@@ -203,19 +191,19 @@ TextureImporter:
       name: animCharSmashStart_4
       rect:
         serializedVersion: 2
-        x: 9956
+        x: 4980
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a569ada8228db6f469af0a5236de5395
-      internalID: 699794509
+      spriteID: 9170c42443cf60b41bff0d5cbc600c54
+      internalID: 695863639
       vertices: []
       indices: 
       edges: []
@@ -224,19 +212,19 @@ TextureImporter:
       name: animCharSmashStart_5
       rect:
         serializedVersion: 2
-        x: 12445
+        x: 6225
         y: 0
-        width: 2489
-        height: 1800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1245
+        height: 900
+      alignment: 9
+      pivot: {x: 0.8, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6642d175d6b13c4aa9e1a181cf5e08e
-      internalID: -2002419527
+      spriteID: 68fde578439495b408715180cff49b3f
+      internalID: 1502028150
       vertices: []
       indices: 
       edges: []
@@ -252,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animCharSmashStart_3: 441164927
-      animCharSmashStart_2: -497174357
-      animCharSmashStart_4: 699794509
-      animCharSmashStart_1: 686528124
-      animCharSmashStart_0: 751849837
-      animCharSmashStart_5: -2002419527
+      animCharSmashStart_3: -1250584895
+      animCharSmashStart_2: 1973477630
+      animCharSmashStart_4: 695863639
+      animCharSmashStart_1: -393330744
+      animCharSmashStart_0: 1842894059
+      animCharSmashStart_5: 1502028150
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

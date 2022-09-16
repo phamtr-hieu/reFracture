@@ -119,10 +119,10 @@ TextureImporter:
       name: animCharFalldownStrip2_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 19
-        width: 806
-        height: 1034
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: animCharFalldownStrip2_1
       rect:
         serializedVersion: 2
-        x: 959
-        y: 534
-        width: 5
-        height: 9
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,27 +153,6 @@ TextureImporter:
       bones: []
       spriteID: d220d1cea0cd1c34895c85d0e68b99bd
       internalID: -1646238947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animCharFalldownStrip2_2
-      rect:
-        serializedVersion: 2
-        x: 1196
-        y: 19
-        width: 832
-        height: 1026
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 499f1cdb502dee44baba74aa2ec2ae5f
-      internalID: 937090188
       vertices: []
       indices: 
       edges: []
@@ -189,7 +168,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animCharFalldownStrip2_2: 937090188
       animCharFalldownStrip2_0: 1283250452
       animCharFalldownStrip2_1: -1646238947
   spritePackingTag: 
