@@ -1,0 +1,1713 @@
+fileFormatVersion: 2
+guid: 352e1b98233b99c48a35c4f9194ddb2d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: lampgates1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 13658
+      width: 427
+      height: 949
+    spriteID: 9c5c36f476dc596409179963275cf1b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15693, y: 13248}
+  - name: lampgates2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 14615
+      width: 427
+      height: 949
+    spriteID: bd7dafde0da2a8e44aa744384198ee48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15693, y: 14205}
+  - name: gatesfg1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6720
+      y: 6987
+      width: 991
+      height: 734
+    spriteID: 4b5315b21c3e9ea41bae4a2d0e5d40a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -8036, y: 6247}
+  - name: gatesfg2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7841
+      y: 6466
+      width: 1135
+      height: 960
+    spriteID: b86a0ac3a85daf349b3fd8e4b3eae071
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -9781, y: 5668}
+  - name: lampwreckfg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13993
+      y: 4038
+      width: 629
+      height: 916
+    spriteID: e6e379681e70d604fbcaefea557e248d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4452, y: 2629}
+  - name: graves1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4932
+      y: 6555
+      width: 354
+      height: 556
+    spriteID: 04cbb003ce26d374b93d4c45a2731e5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -3386, y: 5131}
+  - name: graves2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11473
+      y: 5936
+      width: 457
+      height: 675
+    spriteID: 468f4693489c3b7459d50fc1981b4d33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3794, y: 4567}
+  - name: graves3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2922
+      y: 7338
+      width: 326
+      height: 371
+    spriteID: 0d13e7a554f44a34db9501a21da2fc8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5631, y: 5840}
+  - name: graves4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11938
+      y: 5936
+      width: 323
+      height: 395
+    spriteID: d4b68002d3f51bb47a7e536635899e68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2854, y: 4432}
+  - name: tree1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14763
+      y: 2892
+      width: 1328
+      height: 2028
+    spriteID: ba536b97f9fc0c24c9058aa87be97284
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9416, y: 285}
+  - name: tree2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6720
+      y: 5048
+      width: 1113
+      height: 1931
+    spriteID: 11f317412827f29449c3d4f950a51b7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2839, y: 2485}
+  - name: bush1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5341
+      y: 6840
+      width: 1048
+      height: 519
+    spriteID: ea5a733cc52e46940bf64179e1379c46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3189, y: 4231}
+  - name: bush2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3672
+      y: 7395
+      width: 562
+      height: 312
+    spriteID: 6ffbb9aca68c5c840a9eff5682d813c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2865, y: 4556}
+  - name: wires
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 9540
+      width: 488
+      height: 1457
+    spriteID: 42596ca3d77e52d41945787c304aea57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -13241, y: 9300}
+  - name: churchfg1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2003
+      y: 6555
+      width: 911
+      height: 1158
+    spriteID: 923516eb7ed26b64cbb3166c396c2649
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 238, y: 3736}
+  - name: churchfg2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9209
+      y: 6639
+      width: 493
+      height: 727
+    spriteID: 7cc5fe558b1090440af7290885748a1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9209, y: 3729}
+  - name: gatesfloorFG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10028
+      y: 5048
+      width: 3716
+      height: 338
+    spriteID: 5e0dbaa3e61f78c42b3e4ab60af66e08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4860, y: 4494}
+  - name: yardFG1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12380
+      y: 5737
+      width: 3527
+      height: 114
+    spriteID: 38f675c29bbe9b14c97ce9e9bbdeafce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 8593, y: 3054}
+  - name: yardFG2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4191
+      y: 4763
+      width: 3527
+      height: 114
+    spriteID: ec12704cb92ea6f4c9550f634f21e374
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3424, y: 2080}
+  - name: mist
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 15496
+      height: 2880
+    spriteID: d14a515c474e1e04cac4e7419b6ff0c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2990, y: -259}
+  - name: padground
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11974
+      y: 4038
+      width: 2011
+      height: 672
+    spriteID: 8279454c2530be541adbd5945feb3c39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1060, y: 4038}
+  - name: pad1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10028
+      y: 5936
+      width: 895
+      height: 453
+    spriteID: 7ef148d9bdab23a4c957412840972fd0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1482, y: 5622}
+  - name: pad2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4247
+      y: 7195
+      width: 894
+      height: 455
+    spriteID: 416ccf002d5cf5c41a72b6417b77865f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7263, y: 6883}
+  - name: Craterwreck4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3672
+      y: 6555
+      width: 567
+      height: 832
+    spriteID: e67f346712766394a9fb23b897f2380b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7347, y: 6063}
+  - name: Craterwreck3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15508
+      y: 1614
+      width: 836
+      height: 1114
+    spriteID: baf3a85eb2142ee468b5d8568684d689
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4834, y: 440}
+  - name: Craterwreck2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7731
+      width: 670
+      height: 1801
+    spriteID: 168e062bde83dbd428fd57156babd1a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12729, y: 7320}
+  - name: Craterwreck1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7841
+      y: 5048
+      width: 1360
+      height: 1410
+    spriteID: a5edce8f54db21744a999489221c9054
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5713, y: 4463}
+  - name: Craterdirt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5341
+      y: 5048
+      width: 1371
+      height: 1784
+    spriteID: 52106fd7d3596df4aa5fdcb995f3e149
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7706, y: 5016}
+  - name: battery
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2003
+      y: 5048
+      width: 1661
+      height: 1499
+    spriteID: ab3122cfd089c134dbe45353904f16e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -9628, y: 5048}
+  - name: batteryb
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3672
+      y: 5048
+      width: 1661
+      height: 1499
+    spriteID: 90a20d5abf48f724584ed4f87e2ed807
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7959, y: 5048}
+  - name: Crater2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4247
+      y: 6555
+      width: 677
+      height: 632
+    spriteID: 3a3cc80eb94d0714d878e4960d851a1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -6977, y: 6147}
+  - name: Crater1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 12306
+      width: 582
+      height: 714
+    spriteID: a978095f96c6156478de250fed07619e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12997, y: 11981}
+  - name: Crater
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11974
+      y: 2892
+      width: 2781
+      height: 1138
+    spriteID: bb5c725762acc1643b986c20b1d370a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1153, y: 2531}
+  - name: tower1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5048
+      width: 1991
+      height: 2675
+    spriteID: 2cf3b0b78899572459199caf91467606
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -11293, y: 3979}
+  - name: tower2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15508
+      y: 4
+      width: 821
+      height: 1602
+    spriteID: 780e92dba11a1af4bb423e834efb9c67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4259, y: -1079}
+  - name: tower3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9209
+      y: 5048
+      width: 811
+      height: 1583
+    spriteID: 0298cc935793af840929be5094ebbe54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -3356, y: 3737}
+  - name: tower4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 682
+      y: 7731
+      width: 686
+      height: 1273
+    spriteID: d4bdab317d5d21b4690e86d4e9be31fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -11674, y: 6448}
+  - name: tower5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2922
+      y: 6555
+      width: 638
+      height: 775
+    spriteID: 7aff65759c1e24140abd362225d6449c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -8733, y: 5433}
+  - name: gatewall1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 13028
+      width: 668
+      height: 622
+    spriteID: 0956c1b9b871464459136a462054c55b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15347, y: 12114}
+  - name: gates1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9710
+      y: 6639
+      width: 305
+      height: 924
+    spriteID: bf0b5d6525998b04bb86f2c3e9acb3c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7003, y: 5725}
+  - name: gateborder
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 11005
+      width: 541
+      height: 1293
+    spriteID: 984cd5270fc1f4a45b3879ab9414a678
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -16620, y: 10089}
+  - name: gatewall2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10931
+      y: 5936
+      width: 534
+      height: 616
+    spriteID: e7c0a748eea3f1e46b4bf3d28d83a4b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5175, y: 5019}
+  - name: gatewall3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 15572
+      width: 648
+      height: 616
+    spriteID: 7d9b19dd6900444479fad5e86715cab3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -17139, y: 14655}
+  - name: Layer 184 copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 8691
+      y: 2892
+      width: 3275
+      height: 1834
+    spriteID: 275ae1199fd5cce4abe740d2e0a80902
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -6398, y: 2132}
+  - name: gatebushes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12380
+      y: 5394
+      width: 3231
+      height: 335
+    spriteID: 785b682fa18c412489bebb68657f4204
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2177, y: 4496}
+  - name: gates2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10023
+      y: 6639
+      width: 305
+      height: 924
+    spriteID: 0d4f79c756bbc1543b2f8d0b27399753
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7017, y: 5725}
+  - name: gatebg3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10028
+      y: 5394
+      width: 2344
+      height: 534
+    spriteID: db987bf5d740c044c8623bda366c4913
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4218, y: 4585}
+  - name: gatebg2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4191
+      y: 2892
+      width: 4492
+      height: 1863
+    spriteID: 586ba528ebbc17841a9f6f9d37c7b5d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -9615, y: 2032}
+  - name: gatebg1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2892
+      width: 4179
+      height: 2148
+    spriteID: c07e497e8d60dc341871310d4b61733a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -14176, y: 2202}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: FG
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 548a42f3c2d77934a9b35897061d8ac4
+    layerID: 1062
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: lampgates1
+    spriteName: lampgates1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9c5c36f476dc596409179963275cf1b8
+    layerID: 3897
+    mosaicPosition: {x: 4, y: 13658}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampgates2
+    spriteName: lampgates2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bd7dafde0da2a8e44aa744384198ee48
+    layerID: 3763
+    mosaicPosition: {x: 4, y: 14615}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatesfg1
+    spriteName: gatesfg1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4b5315b21c3e9ea41bae4a2d0e5d40a7
+    layerID: 1906
+    mosaicPosition: {x: 6720, y: 6987}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatesfg2
+    spriteName: gatesfg2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b86a0ac3a85daf349b3fd8e4b3eae071
+    layerID: 1467
+    mosaicPosition: {x: 7841, y: 6466}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lampwreckfg
+    spriteName: lampwreckfg
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e6e379681e70d604fbcaefea557e248d
+    layerID: 4351
+    mosaicPosition: {x: 13993, y: 4038}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves1
+    spriteName: graves1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 04cbb003ce26d374b93d4c45a2731e5c
+    layerID: 1066
+    mosaicPosition: {x: 4932, y: 6555}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves2
+    spriteName: graves2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 468f4693489c3b7459d50fc1981b4d33
+    layerID: 1065
+    mosaicPosition: {x: 11473, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves3
+    spriteName: graves3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0d13e7a554f44a34db9501a21da2fc8a
+    layerID: 1067
+    mosaicPosition: {x: 2922, y: 7338}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: graves4
+    spriteName: graves4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d4b68002d3f51bb47a7e536635899e68
+    layerID: 1069
+    mosaicPosition: {x: 11938, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tree1
+    spriteName: tree1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ba536b97f9fc0c24c9058aa87be97284
+    layerID: 1060
+    mosaicPosition: {x: 14763, y: 2892}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tree2
+    spriteName: tree2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 11f317412827f29449c3d4f950a51b7e
+    layerID: 1059
+    mosaicPosition: {x: 6720, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bush1
+    spriteName: bush1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ea5a733cc52e46940bf64179e1379c46
+    layerID: 1043
+    mosaicPosition: {x: 5341, y: 6840}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bush2
+    spriteName: bush2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6ffbb9aca68c5c840a9eff5682d813c6
+    layerID: 1045
+    mosaicPosition: {x: 3672, y: 7395}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: wires
+    spriteName: wires
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 42596ca3d77e52d41945787c304aea57
+    layerID: 3646
+    mosaicPosition: {x: 4, y: 9540}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: churchfg1
+    spriteName: churchfg1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 923516eb7ed26b64cbb3166c396c2649
+    layerID: 1046
+    mosaicPosition: {x: 2003, y: 6555}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: churchfg2
+    spriteName: churchfg2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7cc5fe558b1090440af7290885748a1c
+    layerID: 1883
+    mosaicPosition: {x: 9209, y: 6639}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatesfloorFG
+    spriteName: gatesfloorFG
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5e0dbaa3e61f78c42b3e4ab60af66e08
+    layerID: 2686
+    mosaicPosition: {x: 10028, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: yardFG1
+    spriteName: yardFG1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 38f675c29bbe9b14c97ce9e9bbdeafce
+    layerID: 4399
+    mosaicPosition: {x: 12380, y: 5737}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: yardFG2
+    spriteName: yardFG2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ec12704cb92ea6f4c9550f634f21e374
+    layerID: 3142
+    mosaicPosition: {x: 4191, y: 4763}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mist
+    spriteName: mist
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d14a515c474e1e04cac4e7419b6ff0c7
+    layerID: 1070
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: padground
+    spriteName: padground
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8279454c2530be541adbd5945feb3c39
+    layerID: 3725
+    mosaicPosition: {x: 11974, y: 4038}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pad1
+    spriteName: pad1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7ef148d9bdab23a4c957412840972fd0
+    layerID: 3723
+    mosaicPosition: {x: 10028, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pad2
+    spriteName: pad2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 416ccf002d5cf5c41a72b6417b77865f
+    layerID: 3735
+    mosaicPosition: {x: 4247, y: 7195}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Crater
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3dcef5578f21f0e429ce87cffda1a6dd
+    layerID: 4392
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Craterwreck4
+    spriteName: Craterwreck4
+    isGroup: 0
+    parentIndex: 24
+    spriteID: e67f346712766394a9fb23b897f2380b
+    layerID: 1451
+    mosaicPosition: {x: 3672, y: 6555}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Craterwreck3
+    spriteName: Craterwreck3
+    isGroup: 0
+    parentIndex: 24
+    spriteID: baf3a85eb2142ee468b5d8568684d689
+    layerID: 3670
+    mosaicPosition: {x: 15508, y: 1614}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Craterwreck2
+    spriteName: Craterwreck2
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 168e062bde83dbd428fd57156babd1a3
+    layerID: 1453
+    mosaicPosition: {x: 4, y: 7731}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Craterwreck1
+    spriteName: Craterwreck1
+    isGroup: 0
+    parentIndex: 24
+    spriteID: a5edce8f54db21744a999489221c9054
+    layerID: 1454
+    mosaicPosition: {x: 7841, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Craterdirt
+    spriteName: Craterdirt
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 52106fd7d3596df4aa5fdcb995f3e149
+    layerID: 1464
+    mosaicPosition: {x: 5341, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: battery
+    spriteName: battery
+    isGroup: 0
+    parentIndex: 24
+    spriteID: ab3122cfd089c134dbe45353904f16e8
+    layerID: 3761
+    mosaicPosition: {x: 2003, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: batteryb
+    spriteName: batteryb
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 90a20d5abf48f724584ed4f87e2ed807
+    layerID: 3762
+    mosaicPosition: {x: 3672, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Crater2
+    spriteName: Crater2
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 3a3cc80eb94d0714d878e4960d851a1b
+    layerID: 3743
+    mosaicPosition: {x: 4247, y: 6555}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Crater1
+    spriteName: Crater1
+    isGroup: 0
+    parentIndex: 24
+    spriteID: a978095f96c6156478de250fed07619e
+    layerID: 3739
+    mosaicPosition: {x: 4, y: 12306}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Crater
+    spriteName: Crater
+    isGroup: 0
+    parentIndex: 24
+    spriteID: bb5c725762acc1643b986c20b1d370a6
+    layerID: 3675
+    mosaicPosition: {x: 11974, y: 2892}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tower1
+    spriteName: tower1
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 2cf3b0b78899572459199caf91467606
+    layerID: 1463
+    mosaicPosition: {x: 4, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tower2
+    spriteName: tower2
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 780e92dba11a1af4bb423e834efb9c67
+    layerID: 3650
+    mosaicPosition: {x: 15508, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tower3
+    spriteName: tower3
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 0298cc935793af840929be5094ebbe54
+    layerID: 3651
+    mosaicPosition: {x: 9209, y: 5048}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tower4
+    spriteName: tower4
+    isGroup: 0
+    parentIndex: 24
+    spriteID: d4bdab317d5d21b4690e86d4e9be31fb
+    layerID: 3654
+    mosaicPosition: {x: 682, y: 7731}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tower5
+    spriteName: tower5
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 7aff65759c1e24140abd362225d6449c
+    layerID: 3653
+    mosaicPosition: {x: 2922, y: 6555}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gate
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 97f75f14dbde17f4884be0f49363d1fb
+    layerID: 1408
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: gatewall1
+    spriteName: gatewall1
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 0956c1b9b871464459136a462054c55b
+    layerID: 4357
+    mosaicPosition: {x: 4, y: 13028}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gates1
+    spriteName: gates1
+    isGroup: 0
+    parentIndex: 40
+    spriteID: bf0b5d6525998b04bb86f2c3e9acb3c0
+    layerID: 3764
+    mosaicPosition: {x: 9710, y: 6639}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gateborder
+    spriteName: gateborder
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 984cd5270fc1f4a45b3879ab9414a678
+    layerID: 4355
+    mosaicPosition: {x: 4, y: 11005}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatewall2
+    spriteName: gatewall2
+    isGroup: 0
+    parentIndex: 40
+    spriteID: e7c0a748eea3f1e46b4bf3d28d83a4b8
+    layerID: 4356
+    mosaicPosition: {x: 10931, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatewall3
+    spriteName: gatewall3
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 7d9b19dd6900444479fad5e86715cab3
+    layerID: 4358
+    mosaicPosition: {x: 4, y: 15572}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 184 copy
+    spriteName: Layer 184 copy
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 275ae1199fd5cce4abe740d2e0a80902
+    layerID: 3988
+    mosaicPosition: {x: 8691, y: 2892}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebushes
+    spriteName: gatebushes
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 785b682fa18c412489bebb68657f4204
+    layerID: 3980
+    mosaicPosition: {x: 12380, y: 5394}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gates2
+    spriteName: gates2
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 0d4f79c756bbc1543b2f8d0b27399753
+    layerID: 3767
+    mosaicPosition: {x: 10023, y: 6639}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg3
+    spriteName: gatebg3
+    isGroup: 0
+    parentIndex: 40
+    spriteID: db987bf5d740c044c8623bda366c4913
+    layerID: 3778
+    mosaicPosition: {x: 10028, y: 5394}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg2
+    spriteName: gatebg2
+    isGroup: 0
+    parentIndex: 40
+    spriteID: 586ba528ebbc17841a9f6f9d37c7b5d0
+    layerID: 2698
+    mosaicPosition: {x: 4191, y: 2892}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg1
+    spriteName: gatebg1
+    isGroup: 0
+    parentIndex: 40
+    spriteID: c07e497e8d60dc341871310d4b61733a
+    layerID: 2744
+    mosaicPosition: {x: 4, y: 2892}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
