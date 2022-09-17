@@ -104,8 +104,9 @@ public class Enemy : MonoBehaviour
 
 	public void Attack()
 	{
-		bool hit = Physics2D.OverlapBox(hitboxPos.position,hitboxSize,0);
-		if(hit)
+		RaycastHit2D hit = Physics2D.BoxCast(hitboxPos.position, hitboxSize,0,transform.position);
+		Debug.LogWarning("Enemy hit:" + hit);
+		if (hit)
 		{
 			character.healthPoint -= enemyDamage;
 			print("player took damage");

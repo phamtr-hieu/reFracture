@@ -199,6 +199,18 @@ public class Character : MonoBehaviour
 		Gizmos.DrawWireCube(attackPlacement.position, hitboxSize);
 	}
 
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Enemy"))
+		{
+			healthPoint -= 5;
+			gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
+		}
+
+	}
+
+
+
 	IEnumerator WaitForAnimToAttack()
 	{
 		yield return new WaitForSeconds(lastAtkAnimLength);
