@@ -104,15 +104,15 @@ public class Character : MonoBehaviour
 			lastAtkAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
 			countAnimLength = true;
 		}
-		if(countAnimLength)
+		if (countAnimLength)
 		{
 			lastAtkAnimLength -= Time.deltaTime;
 		}
-		if(lastAtkAnimLength <=0)
+		if (lastAtkAnimLength <= 0)
 		{
 			countAnimLength = false;
 		}
-		
+
 
 		//lastAttackTime += Time.deltaTime;
 		//if (lastAttackTime > attackTimer)
@@ -139,12 +139,12 @@ public class Character : MonoBehaviour
 	public void OnMove(InputAction.CallbackContext context)
 	{
 		moveInput = context.ReadValue<Vector2>();
-		if (moveInput.x > 0 && !_facingRight)
+		if (moveInput.x > 0 && !_facingRight && _movable)
 		{
 			flip();
 			_facingRight = true;
 		}
-		else if (moveInput.x < 0 && _facingRight)
+		else if (moveInput.x < 0 && _facingRight && _movable)
 		{
 			flip();
 			_facingRight = false;
@@ -158,14 +158,14 @@ public class Character : MonoBehaviour
 			_jump = true;
 			jumpTimerStart = true;
 			anim.SetBool("isJumping", true);
-			print("Jump button pressed");
+
 		}
 		else if (context.canceled)
 		{
 			_jump = false;
 			//jumpButtonTimer = 0;
 			anim.SetBool("isJumping", false);
-			Debug.Log("jump button released");
+
 		}
 	}
 

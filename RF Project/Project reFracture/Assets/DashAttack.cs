@@ -30,11 +30,11 @@ public class DashAttack : StateMachineBehaviour
             character.transform.position += new Vector3(-dashForce, 0);
         }
         
-        bool hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
-        if (hit)
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize,0);
+        if (hit.CompareTag("Enemy"))
         {
             enemy.GetComponent<Enemy>().healthPoints -= damage;
-            //Debug.Log("attack hit enemy");
+            Debug.Log("Dash Attack hit enemy");
         }
     }
 

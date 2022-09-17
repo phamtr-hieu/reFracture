@@ -6,8 +6,6 @@ public class SpinAttack : StateMachineBehaviour
 {
 	Character character;
 	[SerializeField] float damage;
-	[SerializeField] float spinTime = 3;
-	[SerializeField] float spinnedTime;
 	[SerializeField] Vector2 attackPlacement;
 	[SerializeField] Vector2 hitbox;
 	//[SerializeField] bool _spinning = false;
@@ -20,20 +18,19 @@ public class SpinAttack : StateMachineBehaviour
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		character.attackPlacement.localPosition = attackPlacement;
 		character.hitboxSize = hitbox;
-		spinnedTime = spinTime;
 		character._movable = false;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		spinnedTime -= Time.deltaTime;
-		bool hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+		Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+		if (hit.CompareTag("Enemy"))
 		{
 			if (hit)
 			{
 				enemy.GetComponent<Enemy>().healthPoints -= damage;
-				//Debug.Log("attack hit enemy");
+				Debug.Log("Spin attack hit enemy");
 			}
 		}
 		//animator.SetBool("attack3", true);

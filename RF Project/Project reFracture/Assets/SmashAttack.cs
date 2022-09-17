@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuickAttack : StateMachineBehaviour
+public class SmashAttack : StateMachineBehaviour
 {
     Character character;
     [SerializeField] float damage;
@@ -17,12 +17,13 @@ public class QuickAttack : StateMachineBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
+        character._movable = false;
 
-        bool hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
-        if (hit)
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        if (hit.CompareTag("Enemy"))
         {
             enemy.GetComponent<Enemy>().healthPoints -= damage;
-            //Debug.Log("attack hit enemy");
+            Debug.Log("Smash attack hit enemy");
         }
     }
 
@@ -35,7 +36,7 @@ public class QuickAttack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        character._movable = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
