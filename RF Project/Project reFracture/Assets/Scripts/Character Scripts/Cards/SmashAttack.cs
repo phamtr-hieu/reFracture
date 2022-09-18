@@ -12,6 +12,7 @@ public class SmashAttack : StateMachineBehaviour
 	[SerializeField] float knockbackTime;
 	[SerializeField] float animTimer;
 	[SerializeField] float timerOffset;
+	bool damageDealt = false;
 	IEnumerator coroutine;
 
 	GameObject enemy;
@@ -25,7 +26,7 @@ public class SmashAttack : StateMachineBehaviour
 		character._movable = false;
 		animTimer = stateInfo.length;
 		animTimer -= timerOffset;
-		
+		damageDealt = false;
 
 	}
 
@@ -39,10 +40,12 @@ public class SmashAttack : StateMachineBehaviour
 			Debug.Log(hit);
 			if (hit != null)
 			{
-				if (hit.CompareTag("Enemy") && enemy != null)
+				if (hit.CompareTag("Enemy") && enemy != null && !damageDealt )
 				{
 					enemy.GetComponent<Enemy>().healthPoints -= damage;
+					enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0), ForceMode2D.Impulse);
 					Debug.Log("Smash attack hit enemy");
+					damageDealt = true;
 				}
 			}
 			
