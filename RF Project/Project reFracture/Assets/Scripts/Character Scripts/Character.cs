@@ -208,6 +208,11 @@ public class Character : MonoBehaviour
 		}
 
 	}
+	public IEnumerator Stopping(float time)
+	{
+		yield return new WaitForSeconds(time);
+		rb.velocity = Vector2.zero;
+	}
 
 
 

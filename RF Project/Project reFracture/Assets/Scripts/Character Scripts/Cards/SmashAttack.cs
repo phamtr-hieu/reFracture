@@ -9,8 +9,10 @@ public class SmashAttack : StateMachineBehaviour
 	[SerializeField] Vector2 attackPlacement;
 	[SerializeField] Vector2 hitbox;
 	[SerializeField] float knockbackForce;
+	[SerializeField] float knockbackTime;
 	[SerializeField] float animTimer;
 	[SerializeField] float timerOffset;
+	IEnumerator coroutine;
 
 	GameObject enemy;
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -23,13 +25,13 @@ public class SmashAttack : StateMachineBehaviour
 		character._movable = false;
 		animTimer = stateInfo.length;
 		animTimer -= timerOffset;
+		
 
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		
 		animTimer -= Time.deltaTime;
 		if(animTimer <= 0)
 		{
@@ -43,8 +45,21 @@ public class SmashAttack : StateMachineBehaviour
 					Debug.Log("Smash attack hit enemy");
 				}
 			}
+			
+			//Knockback direction
+			if(character._facingRight)
+			{
+				character.GetComponent<Rigidbody2D>().AddForce(new Vector2(-knockbackForce, 0), ForceMode2D.Impulse);
+			}
+			else if(!character._facingRight)
+			{
+				character.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0), ForceMode2D.Impulse);
+			}
 
-			character.GetComponent<Rigidbody2D>().AddForce(new Vector2(-knockbackForce, 0), ForceMode2D.Force);
+			//Stopping
+			coroutine = character.Stopping(knockbackTime);
+			character.StartCoroutine(coroutine);
+			
 			character._movable = true;
 		}
 	}
@@ -53,6 +68,7 @@ public class SmashAttack : StateMachineBehaviour
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		animTimer = 0;
+		
 		
 	}
 
