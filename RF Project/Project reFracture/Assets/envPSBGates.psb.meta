@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 483c071b44dc2b0468809445e2ffa8bd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: groundFGgates
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4191
+      y: 2001
+      width: 1432
+      height: 131
+    spriteID: 707b23b53317dab409ab388799df35fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12831, y: 1208}
+  - name: gateRight
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7918
+      y: 4
+      width: 223
+      height: 1134
+    spriteID: 2c720c50862d99f48842691708baf7b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -9024, y: -912}
+  - name: gatewall3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6985
+      y: 4
+      width: 648
+      height: 616
+    spriteID: e6d96a0c9c733a4469a15b64bd6234c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -10158, y: -913}
+  - name: Layer 44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4191
+      y: 1670
+      width: 653
+      height: 323
+    spriteID: 9a7d14b63a8e1fd4da76f9e658f6af66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12944, y: 760}
+  - name: gates2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6985
+      y: 628
+      width: 305
+      height: 924
+    spriteID: 0f179f8f56d49ac409346b70fe8c28d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -10055, y: -286}
+  - name: gates1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7298
+      y: 628
+      width: 305
+      height: 924
+    spriteID: 393bbb7cab7dd5046a8e967a461c846a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -9415, y: -286}
+  - name: gateLeft
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7641
+      y: 4
+      width: 269
+      height: 1134
+    spriteID: 96768862b814e544ab3936a36d6f9d26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -8983, y: -912}
+  - name: gatewall2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4573
+      width: 1289
+      height: 622
+    spriteID: 569fc00d76297384aa214ff971be5f4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15347, y: 3659}
+  - name: treeFG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5823
+      y: 4
+      width: 1154
+      height: 1695
+    spriteID: 9e087d550a1809c4e991e15d503db023
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -11387, y: -895}
+  - name: Layer 184 copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4191
+      y: 4
+      width: 1624
+      height: 1658
+    spriteID: f17208bc66eeb4b44b845653f7948431
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -10898, y: -756}
+  - name: gatebushes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5823
+      y: 1707
+      width: 1919
+      height: 323
+    spriteID: c316c1802472ff74694bf767e080705d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -8734, y: 809}
+  - name: gatebg3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4031
+      width: 2344
+      height: 534
+    spriteID: 9fe4f29ce8bfe2f428797332300c214e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -14242, y: 3222}
+  - name: gatebg2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2160
+      width: 4492
+      height: 1863
+    spriteID: 94897a1affaec754db1e49ec081397e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -13802, y: 1300}
+  - name: gatebg1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 4179
+      height: 2148
+    spriteID: ad695dcd65a14f849872fbe0891f7d2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -14176, y: -686}
+  - name: treesBG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4504
+      y: 2160
+      width: 3497
+      height: 1858
+    spriteID: 331a241b31434ef449837230c9b5a2cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -10676, y: 1693}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: gate
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 9e5236fd51df8b44d8913c4871768ec2
+    layerID: 1408
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: groundFGgates
+    spriteName: groundFGgates
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 707b23b53317dab409ab388799df35fd
+    layerID: 4427
+    mosaicPosition: {x: 4191, y: 2001}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gateRight
+    spriteName: gateRight
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2c720c50862d99f48842691708baf7b1
+    layerID: 4448
+    mosaicPosition: {x: 7918, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatewall3
+    spriteName: gatewall3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e6d96a0c9c733a4469a15b64bd6234c5
+    layerID: 4358
+    mosaicPosition: {x: 6985, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 44
+    spriteName: Layer 44
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9a7d14b63a8e1fd4da76f9e658f6af66
+    layerID: 4458
+    mosaicPosition: {x: 4191, y: 1670}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gates2
+    spriteName: gates2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0f179f8f56d49ac409346b70fe8c28d2
+    layerID: 3767
+    mosaicPosition: {x: 6985, y: 628}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gates1
+    spriteName: gates1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 393bbb7cab7dd5046a8e967a461c846a
+    layerID: 3764
+    mosaicPosition: {x: 7298, y: 628}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gateLeft
+    spriteName: gateLeft
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 96768862b814e544ab3936a36d6f9d26
+    layerID: 4426
+    mosaicPosition: {x: 7641, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatewall2
+    spriteName: gatewall2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 569fc00d76297384aa214ff971be5f4f
+    layerID: 4356
+    mosaicPosition: {x: 4, y: 4573}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: treeFG
+    spriteName: treeFG
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9e087d550a1809c4e991e15d503db023
+    layerID: 4459
+    mosaicPosition: {x: 5823, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 184 copy
+    spriteName: Layer 184 copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f17208bc66eeb4b44b845653f7948431
+    layerID: 3988
+    mosaicPosition: {x: 4191, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebushes
+    spriteName: gatebushes
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c316c1802472ff74694bf767e080705d
+    layerID: 3980
+    mosaicPosition: {x: 5823, y: 1707}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg3
+    spriteName: gatebg3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9fe4f29ce8bfe2f428797332300c214e
+    layerID: 3778
+    mosaicPosition: {x: 4, y: 4031}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg2
+    spriteName: gatebg2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 94897a1affaec754db1e49ec081397e8
+    layerID: 2698
+    mosaicPosition: {x: 4, y: 2160}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gatebg1
+    spriteName: gatebg1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ad695dcd65a14f849872fbe0891f7d2c
+    layerID: 2744
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: treesBG
+    spriteName: treesBG
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 331a241b31434ef449837230c9b5a2cf
+    layerID: 4456
+    mosaicPosition: {x: 4504, y: 2160}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
