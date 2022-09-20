@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
-    public Sprite[] cards = new Sprite[3];
+    public Sprite[] cards = new Sprite[4];
     public int cardID = 0;
     public Image display;
 
@@ -17,6 +17,10 @@ public class CardDisplay : MonoBehaviour
     private void Update()
     {
         if (cardID >= 0)
+		{
             display.sprite = DisplayCard(cardID);
+        }
+        
+            
     }
 }

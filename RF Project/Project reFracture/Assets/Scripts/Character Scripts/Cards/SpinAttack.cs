@@ -19,7 +19,7 @@ public class SpinAttack : StateMachineBehaviour
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		character.attackPlacement.localPosition = attackPlacement;
 		character.hitboxSize = hitbox;
-		//character._movable = false;
+		character._flipable = false;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -55,7 +55,7 @@ public class SpinAttack : StateMachineBehaviour
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		character._movable = true;
+		character._flipable = true;
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove()

@@ -48,11 +48,13 @@ public class Character : MonoBehaviour
 	[SerializeField] bool jumpTimerStart;
 	public bool _facingRight = true;
 	public bool _movable = true;
-	bool countAnimLength;
+	public bool _flipable = true;
+	[SerializeField] bool countAnimLength;
 
 	[SerializeField] private Transform GroundCheck;
 
 	[SerializeField] private bool onGround;
+	[SerializeField] bool attackable = true;
 	#endregion
 
 	// Start is called before the first frame update
@@ -66,11 +68,7 @@ public class Character : MonoBehaviour
 	void Update()
 	{
 
-		if (Keyboard.current.slashKey.wasPressedThisFrame)
-		{
-			Debug.Log("took damage");
-			healthbar.TakeDamage(20);
-		}
+
 		#region Move
 		if (_movable)
 		{
@@ -98,28 +96,18 @@ public class Character : MonoBehaviour
 		}
 		#endregion
 
-		#region Attack
+		#region Animation Time Counting
+
 		if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Card"))
 		{
 			lastAtkAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
-			countAnimLength = true;
-		}
-		if (countAnimLength)
-		{
-			lastAtkAnimLength -= Time.deltaTime;
+			attackable = false;
+			StartCoroutine("WaitForAnimToAttack");
 		}
 		if (lastAtkAnimLength <= 0)
 		{
 			countAnimLength = false;
 		}
-
-
-		//lastAttackTime += Time.deltaTime;
-		//if (lastAttackTime > attackTimer)
-		//{
-		//    attackID = 1;
-		//    lastAttackTime = 0;
-		//}
 		#endregion
 	}
 
@@ -141,13 +129,20 @@ public class Character : MonoBehaviour
 		moveInput = context.ReadValue<Vector2>();
 		if (moveInput.x > 0 && !_facingRight && _movable)
 		{
-			flip();
-			_facingRight = true;
+			if (_flipable)
+			{
+				flip();
+				_facingRight = true;
+			}
 		}
 		else if (moveInput.x < 0 && _facingRight && _movable)
 		{
-			flip();
-			_facingRight = false;
+			if (_flipable)
+			{
+				flip();
+				_facingRight = false;
+			}
+
 		}
 	}
 
@@ -171,17 +166,13 @@ public class Character : MonoBehaviour
 
 	public void OnAttack(InputAction.CallbackContext context)
 	{
-		if (context.started && lastAtkAnimLength <= 0)
+		if (context.started && attackable)
 		{
-			attackID = attackManager.attackQueue[0];
-			anim.SetTrigger("attack" + attackID);
-			attackManager.OnAttack();
-			//print(attackID);
+				attackID = attackManager.attackQueue[0];
+				anim.SetTrigger("attack" + attackID);
+				attackManager.OnAttack();
 
-			//lastAttackTime = 0;
-			//attackID++;
-			//if (attackID > 3)
-			//    attackID = 1;
+
 		}
 	}
 
@@ -203,8 +194,9 @@ public class Character : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Enemy"))
 		{
-			healthPoint -= 5;
-			gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
+			Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.gameObject.GetComponent<Collider2D>());
+			//healthPoint -= 5;
+			//gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
 		}
 
 	}
@@ -218,6 +210,7 @@ public class Character : MonoBehaviour
 
 	IEnumerator WaitForAnimToAttack()
 	{
-		yield return new WaitForSeconds(lastAtkAnimLength);
+		yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+		attackable = true ;
 	}
 }

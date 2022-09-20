@@ -362,6 +362,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
   - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
   - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: 67646de617d00714784f33d68b288894, type: 3}
   cardID: 0
   display: {fileID: 2025308103}
 --- !u!1 &95642681 stripped
@@ -910,6 +911,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
   - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
   - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: 67646de617d00714784f33d68b288894, type: 3}
   cardID: 0
   display: {fileID: 1544815295}
 --- !u!1 &371445167 stripped
@@ -1473,7 +1475,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.0000063180923, y: 0.00000020861626}
   m_SizeDelta: {x: 0, y: -0.000049978}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2185,7 +2187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &764712656
 Animator:
   serializedVersion: 4
@@ -2266,7 +2268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764712655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.48, y: -2.5, z: 0}
+  m_LocalPosition: {x: 132.93, y: -23.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2290,7 +2292,7 @@ MonoBehaviour:
   healthPoints: 100
   character: {fileID: 1912745376}
   player: {fileID: 1912745368}
-  chaseDistance: 8
+  chaseDistance: 12
   playerToEnemyDistance: 0
   chaseSpeed: 8
   atkRange: 4
@@ -6451,6 +6453,7 @@ MonoBehaviour:
   - {fileID: 1403581009}
   - {fileID: 1806177166}
   - {fileID: 536154069}
+  - {fileID: 536154069}
   cardDisplays:
   - {fileID: 71981958}
   - {fileID: 369083172}
@@ -6922,6 +6925,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
   - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
   - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: 67646de617d00714784f33d68b288894, type: 3}
   cardID: 0
   display: {fileID: 1201782903}
 --- !u!1 &1954634995 stripped

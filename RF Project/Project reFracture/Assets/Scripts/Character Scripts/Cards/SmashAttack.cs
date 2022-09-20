@@ -24,6 +24,7 @@ public class SmashAttack : StateMachineBehaviour
 		character.attackPlacement.localPosition = attackPlacement;
 		character.hitboxSize = hitbox;
 		character._movable = false;
+		character._flipable = false;
 		animTimer = stateInfo.length;
 		animTimer -= timerOffset;
 		damageDealt = false;
@@ -63,7 +64,7 @@ public class SmashAttack : StateMachineBehaviour
 			coroutine = character.Stopping(knockbackTime);
 			character.StartCoroutine(coroutine);
 			
-			character._movable = true;
+			
 		}
 	}
 
@@ -71,8 +72,9 @@ public class SmashAttack : StateMachineBehaviour
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		animTimer = 0;
-		
-		
+		character._movable = true;
+		character._flipable = true;
+
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove()

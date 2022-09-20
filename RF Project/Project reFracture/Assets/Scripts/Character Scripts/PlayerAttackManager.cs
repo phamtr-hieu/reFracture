@@ -13,9 +13,9 @@ public class PlayerAttackManager : MonoBehaviour
     public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
     public CardDisplay[] cardDisplays = new CardDisplay[3];
 
-    int[] attackList = new int[3];
+    int[] attackList = new int[4];
 
-    public int[] attackQueue = new int[3];
+    public int[] attackQueue = new int[4];
 
     int nextAttackID;
 
@@ -27,6 +27,7 @@ public class PlayerAttackManager : MonoBehaviour
         attackList[0] = 1;
         attackList[1] = 2;
         attackList[2] = 3;
+        attackList[3] = 4;
 
         //sets all attacks to 0 (no attacks)
         for (int i = 0; i < attackQueue.Length; i++)
