@@ -49,7 +49,7 @@ public class Character : MonoBehaviour
 	public bool _facingRight = true;
 	public bool _movable = true;
 	public bool _flipable = true;
-	[SerializeField] bool countAnimLength;
+	
 
 	[SerializeField] private Transform GroundCheck;
 
@@ -104,10 +104,7 @@ public class Character : MonoBehaviour
 			attackable = false;
 			StartCoroutine("WaitForAnimToAttack");
 		}
-		if (lastAtkAnimLength <= 0)
-		{
-			countAnimLength = false;
-		}
+		
 		#endregion
 	}
 
