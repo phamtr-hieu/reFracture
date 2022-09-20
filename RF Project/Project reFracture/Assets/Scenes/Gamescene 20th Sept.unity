@@ -2526,7 +2526,7 @@ GameObject:
   - component: {fileID: 764712661}
   m_Layer: 0
   m_Name: Doggy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   atkRange: 4
   timeBtwAttacks: 0
   starttimeBtwAttacks: 0
-  enemyDamage: 40
+  enemyDamage: 8
   hitboxPos: {fileID: 409592201}
   enemyPos: {fileID: 764712658}
   hitboxSize: {x: 1.57, y: 1.17}
@@ -8548,7 +8548,6 @@ MonoBehaviour:
   _facingRight: 1
   _movable: 1
   _flipable: 1
-  countAnimLength: 0
   GroundCheck: {fileID: 1999797002}
   onGround: 0
   attackable: 1

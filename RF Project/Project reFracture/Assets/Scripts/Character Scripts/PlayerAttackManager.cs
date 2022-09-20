@@ -10,6 +10,7 @@ public class PlayerAttackManager : MonoBehaviour
 
 	//generate list of random attacks from attack deck
 	//(remove attacks as they are drawn from the array)
+	GameObject character;
 	public int numberOfCards;
 	public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
 	public CardDisplay[] cardDisplays = new CardDisplay[3];
@@ -22,6 +23,7 @@ public class PlayerAttackManager : MonoBehaviour
 
 	private void Start()
 	{
+		character = GameObject.FindGameObjectWithTag("Player");
 		//setting player's possible attacks 
 		// 0 = null
 		//todo: optimize and automate this process based on some datasheet
@@ -45,7 +47,11 @@ public class PlayerAttackManager : MonoBehaviour
 		DisplayAttackID();
 		if (UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame)
 		{
-			SceneManager.LoadScene(0);
+			ResetGame();
+		}
+		if(character.GetComponent<Character>().healthPoint <= 0		)
+		{
+			ResetGame();
 		}
 
 
@@ -118,5 +124,10 @@ public class PlayerAttackManager : MonoBehaviour
 			card[i].text = attackQueue[i].ToString();
 			cardDisplays[i].cardID = attackQueue[i];
 		}
+	}
+
+	void ResetGame()
+	{
+		SceneManager.LoadScene(0);
 	}
 }
