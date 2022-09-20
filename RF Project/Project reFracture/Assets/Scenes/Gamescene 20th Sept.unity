@@ -379,9 +379,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
-  - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
-  - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: d3c8c87643c78a240a836882fc2e3bee, type: 3}
+  - {fileID: 21300000, guid: e522c5c98da84ea408c10678608e6acc, type: 3}
+  - {fileID: 21300000, guid: 1d7a628fea11674408a1668cd6379c48, type: 3}
+  - {fileID: 21300000, guid: 49e9f45cbbf3d8d4da6e0dc734f9f8b2, type: 3}
   cardID: 0
   display: {fileID: 2025308103}
 --- !u!1 &95642681 stripped
@@ -1100,9 +1101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
-  - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
-  - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: d3c8c87643c78a240a836882fc2e3bee, type: 3}
+  - {fileID: 21300000, guid: e522c5c98da84ea408c10678608e6acc, type: 3}
+  - {fileID: 21300000, guid: 1d7a628fea11674408a1668cd6379c48, type: 3}
+  - {fileID: 21300000, guid: 49e9f45cbbf3d8d4da6e0dc734f9f8b2, type: 3}
   cardID: 0
   display: {fileID: 1544815295}
 --- !u!1 &371445167 stripped
@@ -2000,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660082733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.7, y: -8.299999, z: -10}
+  m_LocalPosition: {x: 68.35, y: -13.769999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8208,6 +8210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429f27eb10d84eb4dbbccb15a1e07ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfCards: 0
   card:
   - {fileID: 1403581009}
   - {fileID: 1806177166}
@@ -8270,7 +8273,7 @@ GameObject:
   - component: {fileID: 1912745370}
   - component: {fileID: 1912745369}
   - component: {fileID: 1912745378}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8557,7 +8560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912745368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.7, y: -12.5, z: 0}
+  m_LocalPosition: {x: 68.35, y: -17.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8683,9 +8686,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 21300000, guid: 6c4e2585cf91d5f4a9d7fda1298c0482, type: 3}
-  - {fileID: 21300000, guid: 67cf7d5dda7167c43b6b04a04c724d5d, type: 3}
-  - {fileID: 21300000, guid: 556b48642c25ff94eb5e642a01961f22, type: 3}
+  - {fileID: 21300000, guid: d3c8c87643c78a240a836882fc2e3bee, type: 3}
+  - {fileID: 21300000, guid: e522c5c98da84ea408c10678608e6acc, type: 3}
+  - {fileID: 21300000, guid: 1d7a628fea11674408a1668cd6379c48, type: 3}
+  - {fileID: 21300000, guid: 49e9f45cbbf3d8d4da6e0dc734f9f8b2, type: 3}
   cardID: 0
   display: {fileID: 1201782903}
 --- !u!1 &1954634995 stripped

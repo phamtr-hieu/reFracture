@@ -16,7 +16,7 @@ public class CardDisplay : MonoBehaviour
 
     private void Update()
     {
-        if (cardID >= 0)
+        if (cardID > 0)
 		{
             display.sprite = DisplayCard(cardID);
         }

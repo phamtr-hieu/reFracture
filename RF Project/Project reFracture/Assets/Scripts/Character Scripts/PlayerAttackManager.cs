@@ -9,7 +9,7 @@ public class PlayerAttackManager : MonoBehaviour
 
     //generate list of random attacks from attack deck
     //(remove attacks as they are drawn from the array)
-
+    public int numberOfCards;
     public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
     public CardDisplay[] cardDisplays = new CardDisplay[3];
 
@@ -42,6 +42,7 @@ public class PlayerAttackManager : MonoBehaviour
     private void Update()
     {
         DisplayAttackID();
+        
     }
 
     public void OnAttack()
@@ -68,7 +69,7 @@ public class PlayerAttackManager : MonoBehaviour
     void GenerateNextAttack()
     {
         //todo: add sorting system to cycle through a list of attacks without repeating
-        nextAttackID = Random.Range(1, 4);
+        nextAttackID = Random.Range(1, 5);
     }
 
     void SortAttackStackID(int attackID)
@@ -107,6 +108,7 @@ public class PlayerAttackManager : MonoBehaviour
     {
         for(int i = 0; i < attackQueue.Length; i++)
         {
+            //Debug.LogWarning(i);
             card[i].text = attackQueue[i].ToString();
             cardDisplays[i].cardID = attackQueue[i];
         }
