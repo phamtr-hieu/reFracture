@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 500d0947ddce1d642ac877ccdb3a46c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animCharSmashStrip11_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3102
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f36a9e9800aa1646a8c476b0ba26e10
+      internalID: 777935165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_1
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 3102
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d01106befc3b284e95596c9049d6f9e
+      internalID: 570752877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_2
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 3102
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6245b8216672df94abe3e402440071b3
+      internalID: -880356242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2068
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5789548b57904d244b22c04dff1bb220
+      internalID: 517484415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_4
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 2068
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34f671d9121e9042a2140957dddd12c
+      internalID: -1506722345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_5
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 2068
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13c0f0e6b3831144b6d77dd5f534a4f
+      internalID: -1919622876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7318d0c389d53044f8bfd86131e5ebb8
+      internalID: 663876683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_7
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 1034
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2dca9692ad9f848ae2df15087bd72b
+      internalID: 802391893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_8
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 1034
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148b0006f3ab76c4282f6f4703de189f
+      internalID: -98997224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2132
+        height: 1029
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d8d7a79f80343468295eca997474ac
+      internalID: 1268882802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_10
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 0
+        width: 2132
+        height: 1027
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e0c31081bf45146bb5f42222744b04
+      internalID: -1714726438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animCharSmashStrip11_11
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 0
+        width: 2132
+        height: 1034
+      alignment: 9
+      pivot: {x: 0.4, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf0a521dbaa13d48a9db46d97340d15
+      internalID: -1529106649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      animCharSmashStrip11_0: 777935165
+      animCharSmashStrip11_2: -880356242
+      animCharSmashStrip11_5: -1919622876
+      animCharSmashStrip11_6: 663876683
+      animCharSmashStrip11_3: 517484415
+      animCharSmashStrip11_4: -1506722345
+      animCharSmashStrip11_7: 802391893
+      animCharSmashStrip11_8: -98997224
+      animCharSmashStrip11_9: 1268882802
+      animCharSmashStrip11_11: -1529106649
+      animCharSmashStrip11_1: 570752877
+      animCharSmashStrip11_10: -1714726438
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
