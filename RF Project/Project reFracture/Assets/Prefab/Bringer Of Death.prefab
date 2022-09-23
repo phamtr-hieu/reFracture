@@ -108,7 +108,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e5ac7596fd9044285ff9b4bb443de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 100
   character: {fileID: 0}
   player: {fileID: 0}
   chaseDistance: 8
@@ -197,8 +198,9 @@ MonoBehaviour:
   atkRange: 3
   timeBtwAttacks: 0
   starttimeBtwAttacks: 0.9
-  flipDistanceOffset: 0
   enemyDamage: 5
   hitboxPos: {fileID: 8149717886572039946}
+  enemyPos: {fileID: 0}
   hitboxSize: {x: 3, y: 3}
+  slider: {fileID: 0}
   facingLeft: 1

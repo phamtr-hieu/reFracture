@@ -67,8 +67,6 @@ public class Character : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
-
 		#region Move
 		if (_movable)
 		{
@@ -95,6 +93,8 @@ public class Character : MonoBehaviour
 			_jump = false;
 			anim.SetBool("isJumping", false);
 		}
+
+		anim.SetFloat("fallVelocity", rb.velocity.y);
 		#endregion
 
 		#region Animation Time Counting
