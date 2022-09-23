@@ -93,6 +93,7 @@ public class Character : MonoBehaviour
 			jumpButtonTimer = 0;
 			jumpTimerStart = false;
 			_jump = false;
+			anim.SetBool("isJumping", false);
 		}
 		#endregion
 
