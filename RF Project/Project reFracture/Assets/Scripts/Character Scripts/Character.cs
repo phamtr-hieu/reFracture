@@ -105,8 +105,14 @@ public class Character : MonoBehaviour
 			attackable = false;
 			StartCoroutine("WaitForAnimToAttack");
 		}
-		
+
 		#endregion
+
+		if(Keyboard.current.jKey.isPressed)
+		{
+			anim.SetTrigger("attack4");
+		}
+		
 	}
 
 	void FixedUpdate()

@@ -32,7 +32,7 @@ public class SpinAttack : StateMachineBehaviour
 			if (hit.CompareTag("Enemy") && enemy != null)
 			{
 
-				enemy.GetComponent<Enemy>().healthPoints -= damage;
+				enemy.GetComponent<Enemy>().TakeDamage(damage,0.1f);
 				Debug.Log("Spin attack hit enemy");
 
 			}

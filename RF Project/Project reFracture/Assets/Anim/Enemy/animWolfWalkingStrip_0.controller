@@ -152,7 +152,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: Bite
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -188,13 +188,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: isHitted
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -282,19 +288,19 @@ AnimatorStateMachine:
     m_Position: {x: 470, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8630660646584758780}
-    m_Position: {x: 505, y: 355, z: 0}
+    m_Position: {x: 690, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3663920677168092915}
-    m_Position: {x: 540, y: 420, z: 0}
+    m_Position: {x: 240, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1301729480390378983}
-    m_Position: {x: 575, y: 485, z: 0}
+    m_Position: {x: 910, y: 290, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 410, y: 0, z: 0}
   m_EntryPosition: {x: 30, y: 130, z: 0}
   m_ExitPosition: {x: 890, y: 100, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

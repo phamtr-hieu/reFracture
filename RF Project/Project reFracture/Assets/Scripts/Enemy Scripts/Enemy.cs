@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
 	//Enemy Stat
-	public float healthPoints = 100;
+	public float healthPoints = 1000;
 
 	[SerializeField] Character character;
 	public GameObject player;
@@ -20,16 +20,23 @@ public class Enemy : MonoBehaviour
 	[SerializeField] Transform hitboxPos;
 	public Transform enemyPos;
 	[SerializeField] Vector2 hitboxSize;
+	[SerializeField] Animator anim;
 
 	public Slider slider;
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] DamageFlashing damageFlashing;
 
 	public bool facingLeft = true;
 	// Start is called before the first frame update
 	void Start()
 	{
+		anim.GetComponent<Animator>();
 		player = GameObject.FindGameObjectWithTag("Player");
+		damageFlashing.GetComponent<DamageFlashing>();
 		slider.maxValue = healthPoints;
 	}
+
+	
 
 	// Update is called once per frame
 	void Update()
@@ -40,6 +47,8 @@ public class Enemy : MonoBehaviour
 		{
 			OnDeath();
 		}
+
+		
 		
 
 	}
@@ -127,9 +136,28 @@ public class Enemy : MonoBehaviour
 		Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
 	}
 
+	public void TakeDamage(float damage, float damageFlash)
+	{
+		if (this != null)
+		{
+			healthPoints -= damage;
+			damageFlashing.DamageFlash(0.1f, sr.material);
+			//sr.color = Color.red;
+			//IEnumerator coroutine;
+			//coroutine = DamageFlash(damageFlash);
+			//StartCoroutine(coroutine);
+			
+		}
+	}
+
 	public void Flip()
 	{
 		this.transform.Rotate(0, 180, 0);
 	}
 
+	//IEnumerator DamageFlash(float second)
+	//{
+	//	yield return new WaitForSeconds(second);
+	//	sr.color = Color.white;
+	//}
 }

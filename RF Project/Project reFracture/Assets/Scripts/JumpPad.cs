@@ -11,10 +11,7 @@ public class JumpPad : StateMachineBehaviour
     {
         jumpPad = GameObject.FindGameObjectWithTag("Jump Pad");
         jumpPad.GetComponent<JumpPadScript>().jumpPadOn = true;
-        if(jumpPad.GetComponent<JumpPadScript>().playerLaunched)
-		{
-            animator.Play("JumpPad");
-		}
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,7 +24,6 @@ public class JumpPad : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         jumpPad.GetComponent<JumpPadScript>().jumpPadOn = false ;
-        jumpPad.GetComponent<JumpPadScript>().playerLaunched = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
