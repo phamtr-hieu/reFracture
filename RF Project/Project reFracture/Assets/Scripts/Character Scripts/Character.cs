@@ -185,7 +185,10 @@ public class Character : MonoBehaviour
 		this.transform.Rotate(0, 180, 0);
 	}
 
-
+	public void TakeDamage(float damage)
+	{
+		healthPoint -= damage;
+	}
 
 	void OnDrawGizmos()
 	{

@@ -2,36 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DamageFlashing : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sr;
-    [SerializeField] Material flashMat;
-    Coroutine flashCoroutine;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] Material flashMat;
+	[SerializeField] Material ogMat;
+	[SerializeField] public Coroutine flashCoroutine;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void DamageFlash(float duration, Material ogMat)
+	[SerializeField] bool _flashed= true;
+	// Start is called before the first frame update
+	void Start()
 	{
-        if(flashCoroutine!=null)
-		{
-            StopCoroutine(flashCoroutine);
-		}
-        flashCoroutine = StartCoroutine(FlashCoroutine(duration, ogMat));
+		ogMat = sr.material;
+
 	}
 
-    IEnumerator FlashCoroutine(float duration, Material ogMat)
+	// Update is called once per frame
+	void Update()
 	{
-        sr.material = flashMat;
-        yield return new WaitForSeconds(duration);
-        sr.material = ogMat ;
+		
+	}
+
+	public void DamageFlash(float duration)
+	{
+		//if (flashCoroutine != null)
+		//{
+		//	StopCoroutine(flashCoroutine);
+		//}
+
+		if(_flashed)
+		flashCoroutine = StartCoroutine(FlashCoroutine(duration));
+
+
+	}
+
+	IEnumerator FlashCoroutine(float duration)
+	{
+		_flashed = false;
+		sr.material = flashMat;
+		yield return new WaitForSeconds(duration);
+		sr.material = ogMat;
+		_flashed = true;
+		flashCoroutine = null;
+		print("flashed");
 	}
 }

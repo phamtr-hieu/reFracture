@@ -1215,12 +1215,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409592200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.87, y: -1.77, z: 0}
+  m_LocalPosition: {x: -5.44, y: -1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 764712658}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440492323
 GameObject:
@@ -2652,12 +2652,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764712655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 137.59, y: -24, z: 0}
+  m_LocalPosition: {x: 22.05, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 409592201}
   - {fileID: 780139395}
+  - {fileID: 409592201}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2676,16 +2676,18 @@ MonoBehaviour:
   healthPoints: 100
   character: {fileID: 1912745376}
   player: {fileID: 1912745368}
-  chaseDistance: 8
+  chaseDistance: 20
   playerToEnemyDistance: 0
-  chaseSpeed: 8
-  atkRange: 4
+  chaseSpeed: 5
+  atkRange: 20
   timeBtwAttacks: 0
-  starttimeBtwAttacks: 0
+  startTimeBtwAttacks: 10
+  idleTime: 0
+  currentIdleTime: 0
   enemyDamage: 8
   hitboxPos: {fileID: 409592201}
   enemyPos: {fileID: 764712658}
-  hitboxSize: {x: 1.57, y: 1.17}
+  hitboxSize: {x: 7.88, y: 4.43}
   anim: {fileID: 764712656}
   slider: {fileID: 839393730}
   sr: {fileID: 764712657}
@@ -2742,6 +2744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 764712657}
   flashMat: {fileID: 2100000, guid: 565e2e534a7455b4a9291ad7d9ec3b61, type: 2}
+  ogMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _flashed: 1
 --- !u!1 &773251260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7731999136167598488, guid: 59f96c66158e2b140809cd00154a5c8d, type: 3}
@@ -2945,7 +2949,7 @@ RectTransform:
   m_Children:
   - {fileID: 839393729}
   m_Father: {fileID: 764712658}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8677,7 +8681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 0}
-  currentMaxHealth: 100
+  currentMaxHealth: 10000
   healthPoint: 0
   attackManager: {fileID: 1866956542}
   attackPlacement: {fileID: 1066995104}

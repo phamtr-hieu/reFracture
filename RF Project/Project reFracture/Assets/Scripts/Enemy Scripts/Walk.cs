@@ -33,7 +33,7 @@ public class Walk : StateMachineBehaviour
 		if (enemy.PlayerInEnemyAttackRange(pos) && enemy.isFacingPlayer(pos, enemy.player.transform.position))
 		{
 			animator.SetBool("isChasing", false);
-			animator.SetBool("isAttacking", true);
+			enemy.ChooseNextAttack(pos);
 		}
 
 

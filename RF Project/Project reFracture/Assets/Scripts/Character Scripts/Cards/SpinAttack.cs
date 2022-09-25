@@ -26,7 +26,6 @@ public class SpinAttack : StateMachineBehaviour
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
-		Debug.Log(hit);
 		if (hit != null)
 		{
 			if (hit.CompareTag("Enemy") && enemy != null)
