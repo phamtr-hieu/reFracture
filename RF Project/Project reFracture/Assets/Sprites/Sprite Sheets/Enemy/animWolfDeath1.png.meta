@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: 96feccb1be428eb48bd823ea471d9445
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animWolfDeath1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8e0da271facee4cb069d6f526ed4b6
+      internalID: 1486024603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_1
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 3240
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7fe1dde13b19844bb3e99c0df87ff9
+      internalID: 1644632560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_2
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 3240
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad19b708b52ab1418b0af207122070f
+      internalID: 1682671786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_3
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 3240
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e4c066ebff50c4ca0b423871b81c30
+      internalID: 2106315414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_4
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 3240
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d11545098d6874f88dfed177d377ff
+      internalID: -1085338481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884dfc883e6fab74886f19849c217930
+      internalID: -844775790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_6
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 2160
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5404996ddf832a24482bd11e65e2edcb
+      internalID: 1856855294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_7
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 2160
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6d72c606f44174a8e5d3151ce625be
+      internalID: -1578589883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_8
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 2160
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca58d88c35d1b4d49a567ab431bddf3a
+      internalID: -1292428399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_9
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 2160
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5667d6190ba8a4597799ae0f10caa4
+      internalID: -1752237317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00d5ecf182bc944a83641c1c772bc15
+      internalID: 1930073393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_11
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1080
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f85c428e930a9748bcb63f17902e67c
+      internalID: 1215405028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_12
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1080
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef41ad0409d3194f91db1fa841f85d5
+      internalID: 851956654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_13
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 1080
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966e4f5bac47ef040a5e7c65baf9b18e
+      internalID: 768187708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_14
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 1080
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2dec2880a765e48b1f0ce5e610c47b
+      internalID: -1984703126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c103a58ba8206748a28366b1b2f6b7c
+      internalID: 932296009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_16
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 0
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b928955abd07c0445b211dd0a49a73f2
+      internalID: 1118753991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_17
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 0
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31eccb105c26deb448264fed94eeae45
+      internalID: 76324223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_18
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 0
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860d2f2f2fec19f479b7c37e9bfc3b52
+      internalID: -1628511080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animWolfDeath1_19
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 0
+        width: 1014
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328d7aeddd8832e41b6ada4552e35686
+      internalID: -1915521630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      animWolfDeath1_8: -1292428399
+      animWolfDeath1_18: -1628511080
+      animWolfDeath1_11: 1215405028
+      animWolfDeath1_13: 768187708
+      animWolfDeath1_10: 1930073393
+      animWolfDeath1_3: 2106315414
+      animWolfDeath1_12: 851956654
+      animWolfDeath1_9: -1752237317
+      animWolfDeath1_1: 1644632560
+      animWolfDeath1_6: 1856855294
+      animWolfDeath1_19: -1915521630
+      animWolfDeath1_2: 1682671786
+      animWolfDeath1_4: -1085338481
+      animWolfDeath1_5: -844775790
+      animWolfDeath1_17: 76324223
+      animWolfDeath1_16: 1118753991
+      animWolfDeath1_14: -1984703126
+      animWolfDeath1_0: 1486024603
+      animWolfDeath1_15: 932296009
+      animWolfDeath1_7: -1578589883
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
