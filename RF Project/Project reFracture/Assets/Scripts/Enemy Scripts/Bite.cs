@@ -11,8 +11,9 @@ public class Bite : StateMachineBehaviour
 	[SerializeField] float damage;
 	[SerializeField] float lungeDistance;
 	[SerializeField] float waitForAnimTime;
-	
+
 	float waitForAnim;
+	bool _lunged;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -22,6 +23,8 @@ public class Bite : StateMachineBehaviour
 		enemy.hitboxPos.localPosition = hitboxPos;
 		enemy.hitboxSize = hitbox;
 		waitForAnim = waitForAnimTime;
+		_lunged = false;
+		
 	}
 
 
@@ -30,29 +33,22 @@ public class Bite : StateMachineBehaviour
 	{
 		waitForAnim -= Time.deltaTime;
 		Vector2 pos = enemy.transform.position;
-		if (enemy.PlayerInEnemyAttackRange(pos) && enemy.isFacingPlayer(pos, enemy.player.transform.position) && waitForAnim <= 0)
+		if (enemy.PlayerInEnemyAttackRange(pos) && enemy.isFacingPlayer(pos, enemy.player.transform.position) && waitForAnim <= 0 && !_lunged)
 		{
-			
 			Lunge();
-
-
 		}
+
+		IEnumerator coroutine;
+		coroutine = enemy.Stopping(0);
+		enemy.StartCoroutine(coroutine);
+
 	}
 
 	void Lunge()
 	{
-		switch (enemy.transform.InverseTransformDirection(character.transform.position).x)
-		{
-			case > 0:
-				enemy.GetComponent<Rigidbody2D>().velocity = new Vector3(-lungeDistance, 0);
-				break;
-			case < 0:
-				enemy.GetComponent<Rigidbody2D>().velocity = new Vector3(lungeDistance, 0);
-				break;
-			case 0:
-				break;
-		}
-
+		Vector2 dir;
+		dir = enemy.transform.position - character.transform.position;
+		enemy.GetComponent<Rigidbody2D>().velocity = dir.normalized * -lungeDistance;
 
 		RaycastHit2D hit = Physics2D.BoxCast(hitboxPos, hitbox, 0, enemy.transform.position);
 		if (hit)
@@ -60,6 +56,8 @@ public class Bite : StateMachineBehaviour
 			character.GetComponent<Character>().TakeDamage(damage);
 			Debug.Log("Bite hit" + hit + "for" + damage + "damage");
 		}
+
+		_lunged = true;
 	}
 
 	public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

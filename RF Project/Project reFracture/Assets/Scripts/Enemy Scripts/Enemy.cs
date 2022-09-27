@@ -151,18 +151,18 @@ public class Enemy : MonoBehaviour
 
 		switch (playerToEnemyDistance)
 		{
-			case >16:
+			case <=8:
+				int attack = Random.Range(0,2);
+				Debug.Log(attack);
+				if(attack == 0)
+				anim.SetTrigger("Claw");
+				else
 				anim.SetTrigger("Bite");
 				break;
-			case <=8:
-				anim.SetTrigger("Claw");
+			case > 12:
+				anim.SetTrigger("Laser");
 				break;
 		}
-
-
-
-		//anim.SetTrigger("Laser");
-
 	}
 
 	public void OnDeath()
@@ -187,13 +187,18 @@ public class Enemy : MonoBehaviour
 			healthPoints -= damage;
 			damageFlashing.DamageFlash(0.1f);
 
-
 		}
 	}
 
 	public void Flip()
 	{
 		this.transform.Rotate(0, 180, 0);
+	}
+
+	public IEnumerator Stopping(float time)
+	{
+		yield return new WaitForSeconds(time);
+		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 	}
 
 

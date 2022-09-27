@@ -20,7 +20,7 @@ public class JumpPadScript : MonoBehaviour
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
-		if(collision.gameObject.CompareTag("Player")&& jumpPadOn &&collision.gameObject.GetComponent<Character>()._jump)
+		if(collision.gameObject.CompareTag("Player")&& jumpPadOn && collision.gameObject.GetComponent<Character>()._jump)
 		{
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumpForce);
             print("Player launched from Jump Pad");

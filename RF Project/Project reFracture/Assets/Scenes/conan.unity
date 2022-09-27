@@ -1215,7 +1215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409592200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.44, y: -1.96, z: 0}
+  m_LocalPosition: {x: -10.13, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2676,6 +2676,7 @@ MonoBehaviour:
   healthPoints: 100
   character: {fileID: 1912745376}
   player: {fileID: 1912745368}
+  point: {x: 0, y: 0, z: 0}
   chaseDistance: 20
   playerToEnemyDistance: 0
   chaseSpeed: 5
@@ -2687,7 +2688,7 @@ MonoBehaviour:
   enemyDamage: 8
   hitboxPos: {fileID: 409592201}
   enemyPos: {fileID: 764712658}
-  hitboxSize: {x: 7.88, y: 4.43}
+  hitboxSize: {x: 14.01, y: 2.61}
   anim: {fileID: 764712656}
   slider: {fileID: 839393730}
   sr: {fileID: 764712657}
