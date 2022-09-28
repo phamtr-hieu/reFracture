@@ -256,8 +256,8 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.9854766
   m_TransitionOffset: 0
-  m_ExitTime: 0
-  m_HasExitTime: 0
+  m_ExitTime: 1
+  m_HasExitTime: 1
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -297,6 +297,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isJumping
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: onGround
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9187166203151278726}
@@ -362,7 +365,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.016265098
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -592,6 +595,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: fallVelocity
     m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: onGround
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -1040,10 +1049,10 @@ AnimatorStateMachine:
     m_Position: {x: 490, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8909244272758803634}
-    m_Position: {x: 460, y: 180, z: 0}
+    m_Position: {x: 410, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 889406876649535698}
-    m_Position: {x: 170, y: 70, z: 0}
+    m_Position: {x: -240, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2089184882840134887}
     m_Position: {x: 660, y: 90, z: 0}
@@ -1095,7 +1104,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -260, y: -370, z: 0}
-  m_EntryPosition: {x: 30, y: 180, z: 0}
+  m_EntryPosition: {x: -270, y: 280, z: 0}
   m_ExitPosition: {x: 930, y: 90, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 889406876649535698}
@@ -1180,8 +1189,7 @@ MonoBehaviour:
   damage: 10
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 3, y: 1}
-  dashForce: 30
-  dashSpeed: 5
+  dashForce: 25
 --- !u!1109 &6264068662440288868
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -1280,7 +1288,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: fallVelocity
-    m_EventTreshold: -20
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2089184882840134887}
   m_Solo: 0

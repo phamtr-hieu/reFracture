@@ -9,49 +9,60 @@ public class DashAttack : StateMachineBehaviour
     [SerializeField] Vector2 attackPlacement;
     [SerializeField] Vector2 hitbox;
     [SerializeField] float dashForce;
-    [SerializeField] float dashSpeed;
+    //[SerializeField] float dashSpeed;
+
+    float gravity;
 
     GameObject enemy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         character = animator.GetComponent<Character>();
+
+        gravity = character.GetComponent<Rigidbody2D>().gravityScale;
+        character.GetComponent<Rigidbody2D>().gravityScale = 0;
+
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
 
-        if(enemy != null)
-        Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(),enemy.GetComponent<Collider2D>(), true);
+        if (enemy != null)
+            Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(), true);
+
+        IEnumerator stopping = character.Stopping(0.35f);
+        character.StartCoroutine(stopping);
 
         //character.transform.localPosition = new Vector3(dash.x,dash.y) * Time.deltaTime * dashSpeed;
-        if(character._facingRight)
-		{
+        if (character._facingRight)
+        {
             character.GetComponent<Rigidbody2D>().velocity = new Vector3(dashForce, 0);
         }
         else
-		{
+        {
             character.GetComponent<Rigidbody2D>().velocity = new Vector3(-dashForce, 0);
         }
-        
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize,0); 
+
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
         Debug.Log(hit);
-        if(hit != null)
-		{
+        if (hit != null)
+        {
             if (hit.CompareTag("Enemy") && enemy != null)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(damage,0.5f);
+                enemy.GetComponent<Enemy>().TakeDamage(damage, 0.5f);
                 Debug.Log("Dash Attack hit enemy");
             }
         }
-        
+
     }
-    
+
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(enemy != null)
-        Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(), false);
+        character.GetComponent<Rigidbody2D>().gravityScale = gravity;
+
+        if (enemy != null)
+            Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(), false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
