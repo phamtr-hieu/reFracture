@@ -9885,7 +9885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e5ac7596fd9044285ff9b4bb443de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 1
+  healthPoints: 150
   chaseDistance: 20
   playerToEnemyDistance: 0
   chaseSpeed: 5
@@ -17273,7 +17273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 60
-  jumpPadOn: 0
+  jumpPadOn: 1
 --- !u!61 &1326075693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22169,7 +22169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 0}
-  currentMaxHealth: 10000
+  currentMaxHealth: 100
   healthPoint: 0
   attackManager: {fileID: 1866956542}
   attackPlacement: {fileID: 1066995104}
