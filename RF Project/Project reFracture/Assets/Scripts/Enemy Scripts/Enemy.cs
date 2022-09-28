@@ -6,15 +6,10 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-	//Enemy Stat
-	public float healthPoints;
-
-	[SerializeField] Character character;
-	public GameObject player;
-
-
-	[SerializeField] Vector3 point;
 	#region Floats
+	//Enemy Stat
+	[Header("Enemy Stats")]
+	public float healthPoints;
 	public float chaseDistance;
 	public float playerToEnemyDistance;
 	public float chaseSpeed;
@@ -24,8 +19,23 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float idleTime;
 	[SerializeField] float currentIdleTime;
 	[SerializeField] float enemyDamage;
+
+	[Header("Attacks Cooldowns")]
+	[SerializeField] float MaxClawCooldown;
+	[SerializeField] float _clawCooldown;
+	[Space]
+	[SerializeField] float MaxBiteCooldown;
+	[SerializeField] float _biteCooldown;
+	[Space]
+	[SerializeField] float MaxLaserCooldown;
+	[SerializeField] float MinLaserCooldown;
+	[SerializeField] float _laserCooldown;
+	[Space]
+
 	#endregion
 
+	[SerializeField] Character character;
+	public GameObject player;
 
 	[SerializeField] public Transform hitboxPos;
 	public Transform enemyPos;
@@ -51,7 +61,7 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		point = transform.InverseTransformDirection(character.transform.position);
+
 		slider.value = healthPoints;
 
 		if (healthPoints <= 0)
@@ -65,12 +75,23 @@ public class Enemy : MonoBehaviour
 		}
 
 		//Countdown Idle time
-		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-		{
-			idleTime -= Time.deltaTime;
-		}
+		//if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+		//{
+		//	idleTime -= Time.deltaTime;
+		//}
 
-		
+		#region Cooldown Handling
+		if (_clawCooldown > 0)
+			_clawCooldown -= Time.deltaTime;
+
+		if (_biteCooldown > 0)
+			_biteCooldown -= Time.deltaTime;
+
+		if (_laserCooldown > 0)
+			_laserCooldown -= Time.deltaTime;
+		#endregion
+
+
 	}
 
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
@@ -148,28 +169,47 @@ public class Enemy : MonoBehaviour
 	{
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
-
-		switch (playerToEnemyDistance)
+		if (playerToEnemyDistance < 6 && _clawCooldown <= 0)
 		{
-			case <=8:
-				int attack = Random.Range(0,2);
-				Debug.Log(attack);
-				if(attack == 0)
-				anim.SetTrigger("Claw");
-				else
-				anim.SetTrigger("Bite");
-				break;
-			case > 12:
-				anim.SetTrigger("Laser");
-				break;
+			anim.SetTrigger("Claw");
+			_clawCooldown = Random.Range(0, MaxClawCooldown);
+			return;
 		}
+		if (playerToEnemyDistance >= 8 && playerToEnemyDistance <= 12 && _biteCooldown <= 0)
+		{
+			anim.SetTrigger("Bite");
+			_biteCooldown = Random.Range(0, MaxBiteCooldown);
+			return;
+		}
+		if (playerToEnemyDistance >= 12 && playerToEnemyDistance <= 14)
+		{
+			anim.SetTrigger("Laser");
+			_laserCooldown = Random.Range(MinLaserCooldown, MaxLaserCooldown);
+			return;
+		}
+
+		//switch (playerToEnemyDistance)
+		//{
+		//	case <=8 && playerToEnemyDistance <=12:
+		//		int attack = Random.Range(0,2);
+		//		Debug.Log(attack);
+		//		if(attack == 0)
+		//		anim.SetTrigger("Claw");
+		//		else
+		//		anim.SetTrigger("Bite");
+		//		break;
+		//	case > 12:
+		//		anim.SetTrigger("Laser");
+		//		break;
+		//}
 	}
 
 	public void OnDeath()
 	{
-
+		anim.SetTrigger("Die");
 		Destroy(slider);
-		Destroy(this.gameObject);
+		print(anim.GetCurrentAnimatorStateInfo(0).length);
+		Destroy(this.gameObject, 7);
 		//print("Enemy Died");
 
 	}
