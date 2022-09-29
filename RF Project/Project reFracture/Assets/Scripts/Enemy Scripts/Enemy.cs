@@ -6,25 +6,10 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-    //Enemy Stat
-    public float healthPoints;
-
-    [SerializeField] Character character;
-    public GameObject player;
 
 
-    [SerializeField] Vector3 point;
-    #region Floats
-    public float chaseDistance;
-    public float playerToEnemyDistance;
-    public float chaseSpeed;
-    public float atkRange;
-    public float timeBtwAttacks;
-    public float startTimeBtwAttacks;
-    [SerializeField] float idleTime;
-    [SerializeField] float currentIdleTime;
-    [SerializeField] float enemyDamage;
-    #endregion
+
+
 	#region Floats
 	//Enemy Stat
 	[Header("Enemy Stats")]
@@ -56,53 +41,46 @@ public class Enemy : MonoBehaviour
 	[SerializeField] Character character;
 	public GameObject player;
 
-    [SerializeField] public Transform hitboxPos;
-    public Transform enemyPos;
-    [SerializeField] public Vector2 hitboxSize;
-    [SerializeField] Animator anim;
-    public Slider slider;
-    [SerializeField] SpriteRenderer sr;
-    [SerializeField] DamageFlashing damageFlashing;
+	[SerializeField] public Transform hitboxPos;
+	public Transform enemyPos;
+	[SerializeField] public Vector2 hitboxSize;
+	[SerializeField] Animator anim;
+	public Slider slider;
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] DamageFlashing damageFlashing;
 
-    public bool facingLeft = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        damageFlashing.GetComponent<DamageFlashing>();
-        slider.maxValue = healthPoints;
-        currentIdleTime = idleTime;
-    }
+	public bool facingLeft = true;
+	// Start is called before the first frame update
+	void Start()
+	{
+		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag("Player");
+		damageFlashing.GetComponent<DamageFlashing>();
+		slider.maxValue = healthPoints;
+		currentIdleTime = idleTime;
+		slider.value = healthPoints;
+	}
 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        point = transform.InverseTransformDirection(character.transform.position);
-        slider.value = healthPoints;
-	// Update is called once per frame
 	void Update()
 	{
 
 		slider.value = healthPoints;
 
-        if (healthPoints <= 0)
-        {
-            OnDeath();
-        }
+		if (healthPoints <= 0)
+		{
+			OnDeath();
+		}
 
-        if (Keyboard.current.slashKey.isPressed)
-        {
-            TakeDamage(0.01f, 0.1f);
-        }
+		if (Keyboard.current.slashKey.isPressed)
+		{
+			TakeDamage(0.01f, 0.1f);
+		}
 
-        //Countdown Idle time
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-        {
-            idleTime -= Time.deltaTime;
-        }
+		//Countdown Idle time
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+		{
+			idleTime -= Time.deltaTime;
+		}
 		//Countdown Idle time
 		//if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
 		//{
@@ -122,112 +100,79 @@ public class Enemy : MonoBehaviour
 
 
 	}
-
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
 	{
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-    }
-
-    public bool PlayerInEnemyChaseRange(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
-
-
-        if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
-        {
-            return true;
-        }
-        else
-            return false;
+		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
+		{
+			return true;
+		}
+		else
+			return false;
 
 
 
-    }
+	}
 
-    public bool PlayerInEnemyAttackRange(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
+	public bool PlayerInEnemyAttackRange(Vector2 enemy)
+	{
+		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-        if (playerToEnemyDistance <= atkRange && currentIdleTime <= 0)
-        {
-            return true;
-        }
-        else
-            return false;
+		if (playerToEnemyDistance <= atkRange && currentIdleTime <= 0)
+		{
+			return true;
+		}
+		else
+			return false;
 
-    }
+	}
 
-    public bool isFacingPlayer(Vector2 enemy, Vector2 player)
-    {
-        if (player.x < enemy.x)
-        {
-            if (facingLeft)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else if (player.x > enemy.x)
-        {
-            if (!facingLeft)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return true;
-        }
-    }
+	public bool isFacingPlayer(Vector2 enemy, Vector2 player)
+	{
+		if (player.x < enemy.x)
+		{
+			if (facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if (player.x > enemy.x)
+		{
+			if (!facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
+	}
 
-    public void Attack()
-    {
-        //RaycastHit2D hit = Physics2D.BoxCast(hitboxPos.position, hitboxSize, 0, transform.position);
-        //Debug.LogWarning("Enemy hit:" + hit);
-        //if (hit)
-        //{
-        //	character.healthPoint -= enemyDamage;
-        //	print("player took damage");
-        //}
-    }
+	public void Attack()
+	{
+		//RaycastHit2D hit = Physics2D.BoxCast(hitboxPos.position, hitboxSize, 0, transform.position);
+		//Debug.LogWarning("Enemy hit:" + hit);
+		//if (hit)
+		//{
+		//	character.healthPoint -= enemyDamage;
+		//	print("player took damage");
+		//}
+	}
 
-    public void ChooseNextAttack(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
-
-        switch (playerToEnemyDistance)
-        {
-
-            case <= 8:
-                int attack = Random.Range(0, 2);
-                Debug.Log(attack);
-                if (attack == 0)
-                    anim.SetTrigger("Claw");
-                else
-                    anim.SetTrigger("Bite");
-                break;
-            case > 12:
-                anim.SetTrigger("Laser");
-                break;
-        }
-    }
-
-    public void OnDeath()
-    {
-
-        Destroy(slider);
-        Destroy(this.gameObject);
-        //print("Enemy Died");
+	public void ChooseNextAttack(Vector2 enemy)
+	{
 		if (playerToEnemyDistance < 6 && _clawCooldown <= 0)
 		{
 			anim.SetTrigger("Claw");
@@ -246,22 +191,9 @@ public class Enemy : MonoBehaviour
 			_laserCooldown = Random.Range(MinLaserCooldown, MaxLaserCooldown);
 			return;
 		}
-
-		//switch (playerToEnemyDistance)
-		//{
-		//	case <=8 && playerToEnemyDistance <=12:
-		//		int attack = Random.Range(0,2);
-		//		Debug.Log(attack);
-		//		if(attack == 0)
-		//		anim.SetTrigger("Claw");
-		//		else
-		//		anim.SetTrigger("Bite");
-		//		break;
-		//	case > 12:
-		//		anim.SetTrigger("Laser");
-		//		break;
-		//}
 	}
+
+
 
 	public void OnDeath()
 	{
@@ -271,34 +203,39 @@ public class Enemy : MonoBehaviour
 		Destroy(this.gameObject, 7);
 		//print("Enemy Died");
 
-    }
+	}
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
-        //Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
-    }
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
+		//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
+	}
 
-    public void TakeDamage(float damage, float damageFlash)
-    {
-        if (this != null)
-        {
-            healthPoints -= damage;
-            damageFlashing.DamageFlash(0.1f);
+	public void TakeDamage(float damage, float damageFlash)
+	{
+		if (this != null)
+		{
+			healthPoints -= damage;
+			damageFlashing.DamageFlash(0.1f);
 
-        }
-    }
+		}
+	}
 
-    public void Flip()
-    {
-        this.transform.Rotate(0, 180, 0);
-    }
+	public void Flip()
+	{
+		this.transform.Rotate(0, 180, 0);
+	}
 
-    public IEnumerator Stopping(float time)
-    {
-        yield return new WaitForSeconds(time);
-        this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
+	public IEnumerator Stopping(float time)
+	{
+		yield return new WaitForSeconds(time);
+		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+	}
+
+
 
 
 }
+
+
+
