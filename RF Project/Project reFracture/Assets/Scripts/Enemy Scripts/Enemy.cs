@@ -10,11 +10,23 @@ public class Enemy : MonoBehaviour
     public float healthPoints;
     public float maxHealth;
 
-    [SerializeField] Character character;
+	[Header("Attacks Cooldowns")]
+	[SerializeField] float MaxClawCooldown;
+	[SerializeField] float _clawCooldown;
+	[Space]
+	[SerializeField] float MaxBiteCooldown;
+	[SerializeField] float _biteCooldown;
+	[Space]
+	[SerializeField] float MaxLaserCooldown;
+	[SerializeField] float MinLaserCooldown;
+	[SerializeField] float _laserCooldown;
+	[Space]
+
+	[SerializeField] Character character;
     public GameObject player;
 
 
-    [SerializeField] Vector3 point;
+    
     #region Floats
     public float chaseDistance;
     public float playerToEnemyDistance;
@@ -52,57 +64,10 @@ public class Enemy : MonoBehaviour
 
 
 
-	#region Floats
-	//Enemy Stat
-	[Header("Enemy Stats")]
-	public float healthPoints;
-	public float chaseDistance;
-	public float playerToEnemyDistance;
-	public float chaseSpeed;
-	public float atkRange;
-	public float timeBtwAttacks;
-	public float startTimeBtwAttacks;
-	[SerializeField] float idleTime;
-	[SerializeField] float currentIdleTime;
-	[SerializeField] float enemyDamage;
+	
 
-	[Header("Attacks Cooldowns")]
-	[SerializeField] float MaxClawCooldown;
-	[SerializeField] float _clawCooldown;
-	[Space]
-	[SerializeField] float MaxBiteCooldown;
-	[SerializeField] float _biteCooldown;
-	[Space]
-	[SerializeField] float MaxLaserCooldown;
-	[SerializeField] float MinLaserCooldown;
-	[SerializeField] float _laserCooldown;
-	[Space]
-
-	#endregion
-
-	[SerializeField] Character character;
-	public GameObject player;
-
-	[SerializeField] public Transform hitboxPos;
-	public Transform enemyPos;
-	[SerializeField] public Vector2 hitboxSize;
-	[SerializeField] Animator anim;
-	public Slider slider;
-	[SerializeField] SpriteRenderer sr;
-	[SerializeField] DamageFlashing damageFlashing;
-
-	public bool facingLeft = true;
-	// Start is called before the first frame update
-	void Start()
-	{
-		anim = GetComponent<Animator>();
-		player = GameObject.FindGameObjectWithTag("Player");
-		damageFlashing.GetComponent<DamageFlashing>();
-		slider.maxValue = healthPoints;
-		currentIdleTime = idleTime;
-		slider.value = healthPoints;
-	}
-
+	
+	
 	void Update()
 	{
 
