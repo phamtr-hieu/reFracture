@@ -6,6 +6,48 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
+    //Enemy Stat
+    public float healthPoints;
+    public float maxHealth;
+
+    [SerializeField] Character character;
+    public GameObject player;
+
+
+    [SerializeField] Vector3 point;
+    #region Floats
+    public float chaseDistance;
+    public float playerToEnemyDistance;
+    public float chaseSpeed;
+    public float atkRange;
+    public float timeBtwAttacks;
+    public float startTimeBtwAttacks;
+    [SerializeField] float idleTime;
+    [SerializeField] float currentIdleTime;
+    [SerializeField] float enemyDamage;
+    #endregion
+
+
+    [SerializeField] public Transform hitboxPos;
+    public Transform enemyPos;
+    [SerializeField] public Vector2 hitboxSize;
+    [SerializeField] Animator anim;
+    public Slider slider;
+    [SerializeField] SpriteRenderer sr;
+    [SerializeField] DamageFlashing damageFlashing;
+
+    public bool facingLeft = true;
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        damageFlashing.GetComponent<DamageFlashing>();
+        slider.maxValue = healthPoints;
+        currentIdleTime = idleTime;
+
+        maxHealth = healthPoints;
+    }
 
 
 
@@ -231,7 +273,6 @@ public class Enemy : MonoBehaviour
 		yield return new WaitForSeconds(time);
 		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 	}
-
 
 
 
