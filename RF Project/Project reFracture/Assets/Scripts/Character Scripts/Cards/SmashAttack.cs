@@ -15,9 +15,6 @@ public class SmashAttack : StateMachineBehaviour
     bool damageDealt = false;
     IEnumerator coroutine;
 
-    float gravity;
-    Rigidbody2D rb;
-
     GameObject enemy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -26,19 +23,12 @@ public class SmashAttack : StateMachineBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
-
         character._movable = false;
         character._flipable = false;
-        character._attacking = true;
-
         animTimer = stateInfo.length;
         animTimer -= timerOffset;
         damageDealt = false;
 
-        rb = character.GetComponent<Rigidbody2D>();
-        gravity = rb.gravityScale;
-        rb.gravityScale = 0;
-        rb.velocity = Vector2.zero;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -84,9 +74,7 @@ public class SmashAttack : StateMachineBehaviour
         animTimer = 0;
         character._movable = true;
         character._flipable = true;
-        character._attacking = false;
 
-        rb.gravityScale = gravity;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

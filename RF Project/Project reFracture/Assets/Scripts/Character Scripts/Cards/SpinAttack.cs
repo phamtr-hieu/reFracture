@@ -9,10 +9,8 @@ public class SpinAttack : StateMachineBehaviour
     [SerializeField] Vector2 attackPlacement;
     [SerializeField] Vector2 hitbox;
     [SerializeField] float flyForce;
-    [SerializeField] float tickRate;
 
-    float timer = 0;
-    int frameTimer = 0;
+    int timer = 0;
 
     //[SerializeField] bool _spinning = false;
 
@@ -25,9 +23,6 @@ public class SpinAttack : StateMachineBehaviour
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
         character._flipable = false;
-        character._attacking = true;
-
-        timer = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -35,10 +30,9 @@ public class SpinAttack : StateMachineBehaviour
     {
         Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
 
-        timer += Time.deltaTime;
-        frameTimer++;
+        timer++;
 
-        if (frameTimer % tickRate == 0)
+        if (timer % 12 == 0)
         {
             if (hit != null)
             {
@@ -71,7 +65,6 @@ public class SpinAttack : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         character._flipable = true;
-        character._attacking = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

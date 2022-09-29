@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
-using Cinemachine;
 
 public class Character : MonoBehaviour
 {
     //public PlayerInput playerInput;
     private Rigidbody2D rb;
-
     private Animator anim;
     [SerializeField] Healthbar healthbar;
 
     #region Character Stats
     public float currentMaxHealth;
     public float healthPoint;
+
 
     #endregion
 
@@ -49,8 +48,7 @@ public class Character : MonoBehaviour
     public bool _facingRight = true;
     public bool _movable = true;
     public bool _flipable = true;
-    public bool _invulnerable = false;
-    public bool _attacking = false;
+
 
     [SerializeField] private Transform GroundCheck;
 
@@ -58,19 +56,11 @@ public class Character : MonoBehaviour
     [SerializeField] bool attackable = true;
     #endregion
 
-    #region damage stuff
-    [SerializeField] GameObject damageVolume;
-    CinemachineImpulseSource impulse;
-    #endregion
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        impulse = GetComponent<CinemachineImpulseSource>();
     }
 
     // Update is called once per frame
@@ -117,6 +107,10 @@ public class Character : MonoBehaviour
 
         #endregion
 
+        if (Keyboard.current.jKey.isPressed)
+        {
+            anim.SetTrigger("attack4");
+        }
 
     }
 
@@ -157,39 +151,31 @@ public class Character : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (_movable)
+        if (context.started && onGround)
         {
-            if (context.started && onGround)
-            {
-                _jump = true;
-                jumpTimerStart = true;
-                rb.velocity = Vector2.up * jumpForce;
+            _jump = true;
+            jumpTimerStart = true;
+            rb.velocity = Vector2.up * jumpForce;
 
-                anim.SetBool("isJumping", true);
+            anim.SetBool("isJumping", true);
 
-            }
-            else if (context.canceled)
-            {
-                _jump = false;
-                jumpButtonTimer = 0;
-                anim.SetBool("isJumping", false);
-
-            }
         }
+        else if (context.canceled)
+        {
+            _jump = false;
+            jumpButtonTimer = 0;
+            anim.SetBool("isJumping", false);
 
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-
-        if (!_attacking)
+        if (context.started && attackable)
         {
-            if (context.started && attackable)
-            {
-                attackID = attackManager.attackQueue[0];
-                anim.SetTrigger("attack" + attackID);
-                attackManager.OnAttack();
-            }
+            attackID = attackManager.attackQueue[0];
+            anim.SetTrigger("attack" + attackID);
+            attackManager.OnAttack();
         }
     }
 
@@ -200,28 +186,7 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-
-        if (!_invulnerable)
-        {
-            healthPoint -= damage;
-            anim.SetTrigger("isHurt");
-            impulse.GenerateImpulse();
-            StartCoroutine(Damaged(0.5f));
-
-            GetComponent<DamageFlashing>().DamageFlash(0.1f);
-        }
-
-    }
-
-    IEnumerator Damaged(float t)
-    {
-        damageVolume.SetActive(true);
-        _movable = false;
-
-        yield return new WaitForSeconds(t);
-
-        damageVolume.SetActive(false);
-        _movable = true;
+        healthPoint -= damage;
     }
 
     void OnDrawGizmos()

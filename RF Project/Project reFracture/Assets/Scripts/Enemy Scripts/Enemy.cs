@@ -6,13 +6,14 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-    //Enemy Stat
-    public float healthPoints;
+	//Enemy Stat
+	public float healthPoints;
 
-    [SerializeField] Character character;
-    public GameObject player;
+	[SerializeField] Character character;
+	public GameObject player;
 
 
+<<<<<<< HEAD
     [SerializeField] Vector3 point;
     #region Floats
     public float chaseDistance;
@@ -29,6 +30,10 @@ public class Enemy : MonoBehaviour
 	//Enemy Stat
 	[Header("Enemy Stats")]
 	public float healthPoints;
+=======
+	[SerializeField] Vector3 point;
+	#region Floats
+>>>>>>> parent of 4400224 (postfx and player attacks)
 	public float chaseDistance;
 	public float playerToEnemyDistance;
 	public float chaseSpeed;
@@ -38,6 +43,10 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float idleTime;
 	[SerializeField] float currentIdleTime;
 	[SerializeField] float enemyDamage;
+<<<<<<< HEAD
+=======
+	#endregion
+>>>>>>> parent of 4400224 (postfx and player attacks)
 
 	[Header("Attacks Cooldowns")]
 	[SerializeField] float MaxClawCooldown;
@@ -56,27 +65,28 @@ public class Enemy : MonoBehaviour
 	[SerializeField] Character character;
 	public GameObject player;
 
-    [SerializeField] public Transform hitboxPos;
-    public Transform enemyPos;
-    [SerializeField] public Vector2 hitboxSize;
-    [SerializeField] Animator anim;
-    public Slider slider;
-    [SerializeField] SpriteRenderer sr;
-    [SerializeField] DamageFlashing damageFlashing;
+	[SerializeField] public Transform hitboxPos;
+	public Transform enemyPos;
+	[SerializeField] public Vector2 hitboxSize;
+	[SerializeField] Animator anim;
+	public Slider slider;
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] DamageFlashing damageFlashing;
 
-    public bool facingLeft = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        damageFlashing.GetComponent<DamageFlashing>();
-        slider.maxValue = healthPoints;
-        currentIdleTime = idleTime;
-    }
+	public bool facingLeft = true;
+	// Start is called before the first frame update
+	void Start()
+	{
+		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag("Player");
+		damageFlashing.GetComponent<DamageFlashing>();
+		slider.maxValue = healthPoints;
+		currentIdleTime = idleTime;
+	}
 
 
 
+<<<<<<< HEAD
     // Update is called once per frame
     void Update()
     {
@@ -86,18 +96,25 @@ public class Enemy : MonoBehaviour
 	void Update()
 	{
 
+=======
+	// Update is called once per frame
+	void Update()
+	{
+		point = transform.InverseTransformDirection(character.transform.position);
+>>>>>>> parent of 4400224 (postfx and player attacks)
 		slider.value = healthPoints;
 
-        if (healthPoints <= 0)
-        {
-            OnDeath();
-        }
+		if (healthPoints <= 0)
+		{
+			OnDeath();
+		}
 
-        if (Keyboard.current.slashKey.isPressed)
-        {
-            TakeDamage(0.01f, 0.1f);
-        }
+		if (Keyboard.current.slashKey.isPressed)
+		{
+			TakeDamage(0.01f, 0.1f);
+		}
 
+<<<<<<< HEAD
         //Countdown Idle time
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
@@ -121,6 +138,15 @@ public class Enemy : MonoBehaviour
 		#endregion
 
 
+=======
+		//Countdown Idle time
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+		{
+			idleTime -= Time.deltaTime;
+		}
+
+		
+>>>>>>> parent of 4400224 (postfx and player attacks)
 	}
 
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
@@ -128,103 +154,97 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-    }
-
-    public bool PlayerInEnemyChaseRange(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
-
-
-        if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
-        {
-            return true;
-        }
-        else
-            return false;
+		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
+		{
+			return true;
+		}
+		else
+			return false;
 
 
 
-    }
+	}
 
-    public bool PlayerInEnemyAttackRange(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
+	public bool PlayerInEnemyAttackRange(Vector2 enemy)
+	{
+		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-        if (playerToEnemyDistance <= atkRange && currentIdleTime <= 0)
-        {
-            return true;
-        }
-        else
-            return false;
+		if (playerToEnemyDistance <= atkRange && currentIdleTime <= 0)
+		{
+			return true;
+		}
+		else
+			return false;
 
-    }
+	}
 
-    public bool isFacingPlayer(Vector2 enemy, Vector2 player)
-    {
-        if (player.x < enemy.x)
-        {
-            if (facingLeft)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else if (player.x > enemy.x)
-        {
-            if (!facingLeft)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return true;
-        }
-    }
+	public bool isFacingPlayer(Vector2 enemy, Vector2 player)
+	{
+		if (player.x < enemy.x)
+		{
+			if (facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if (player.x > enemy.x)
+		{
+			if (!facingLeft)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
+	}
 
-    public void Attack()
-    {
-        //RaycastHit2D hit = Physics2D.BoxCast(hitboxPos.position, hitboxSize, 0, transform.position);
-        //Debug.LogWarning("Enemy hit:" + hit);
-        //if (hit)
-        //{
-        //	character.healthPoint -= enemyDamage;
-        //	print("player took damage");
-        //}
-    }
+	public void Attack()
+	{
+		//RaycastHit2D hit = Physics2D.BoxCast(hitboxPos.position, hitboxSize, 0, transform.position);
+		//Debug.LogWarning("Enemy hit:" + hit);
+		//if (hit)
+		//{
+		//	character.healthPoint -= enemyDamage;
+		//	print("player took damage");
+		//}
+	}
 
-    public void ChooseNextAttack(Vector2 enemy)
-    {
-        playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
+	public void ChooseNextAttack(Vector2 enemy)
+	{
+		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
-        switch (playerToEnemyDistance)
-        {
 
-            case <= 8:
-                int attack = Random.Range(0, 2);
-                Debug.Log(attack);
-                if (attack == 0)
-                    anim.SetTrigger("Claw");
-                else
-                    anim.SetTrigger("Bite");
-                break;
-            case > 12:
-                anim.SetTrigger("Laser");
-                break;
-        }
-    }
+		switch (playerToEnemyDistance)
+		{
+			case <=8:
+				int attack = Random.Range(0,2);
+				Debug.Log(attack);
+				if(attack == 0)
+				anim.SetTrigger("Claw");
+				else
+				anim.SetTrigger("Bite");
+				break;
+			case > 12:
+				anim.SetTrigger("Laser");
+				break;
+		}
+	}
 
-    public void OnDeath()
-    {
+	public void OnDeath()
+	{
 
+<<<<<<< HEAD
         Destroy(slider);
         Destroy(this.gameObject);
         //print("Enemy Died");
@@ -269,36 +289,40 @@ public class Enemy : MonoBehaviour
 		Destroy(slider);
 		print(anim.GetCurrentAnimatorStateInfo(0).length);
 		Destroy(this.gameObject, 7);
+=======
+		Destroy(slider);
+		Destroy(this.gameObject);
+>>>>>>> parent of 4400224 (postfx and player attacks)
 		//print("Enemy Died");
 
-    }
+	}
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
-        //Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
-    }
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
+		//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
+	}
 
-    public void TakeDamage(float damage, float damageFlash)
-    {
-        if (this != null)
-        {
-            healthPoints -= damage;
-            damageFlashing.DamageFlash(0.1f);
+	public void TakeDamage(float damage, float damageFlash)
+	{
+		if (this != null)
+		{
+			healthPoints -= damage;
+			damageFlashing.DamageFlash(0.1f);
 
-        }
-    }
+		}
+	}
 
-    public void Flip()
-    {
-        this.transform.Rotate(0, 180, 0);
-    }
+	public void Flip()
+	{
+		this.transform.Rotate(0, 180, 0);
+	}
 
-    public IEnumerator Stopping(float time)
-    {
-        yield return new WaitForSeconds(time);
-        this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
+	public IEnumerator Stopping(float time)
+	{
+		yield return new WaitForSeconds(time);
+		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+	}
 
 
 }

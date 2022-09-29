@@ -15,8 +15,6 @@ public class Blink : StateMachineBehaviour
 		character = animator.GetComponent<Character>();
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 
-		//character._attacking = true;
-
 		//character.transform.localPosition = new Vector3(dash.x,dash.y) * Time.deltaTime * dashSpeed;
 		if (character._facingRight)
 		{
@@ -29,11 +27,6 @@ public class Blink : StateMachineBehaviour
 
 
 
-	}
-
-	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-	{
-		//character._attacking = false;
 	}
 
 
