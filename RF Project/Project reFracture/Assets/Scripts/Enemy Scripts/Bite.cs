@@ -47,7 +47,7 @@ public class Bite : StateMachineBehaviour
 	void Lunge()
 	{
 		Vector2 dir;
-		dir = enemy.transform.position - character.transform.position;
+		dir = new Vector2(enemy.transform.position.x - character.transform.position.x, enemy.transform.position.y)  ;
 		enemy.GetComponent<Rigidbody2D>().velocity = dir.normalized * -lungeDistance;
 
 		RaycastHit2D hit = Physics2D.BoxCast(hitboxPos, hitbox, 0, enemy.transform.position);

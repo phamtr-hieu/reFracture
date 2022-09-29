@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinAttack : StateMachineBehaviour
+public class ThrustAttack : StateMachineBehaviour
 {
+
     Character character;
     [SerializeField] float damage;
     [SerializeField] Vector2 attackPlacement;
     [SerializeField] Vector2 hitbox;
-    [SerializeField] float flyForce;
-    [SerializeField] float tickRate;
+    [SerializeField] float beginTime, endTime, tickRate;
 
     float timer = 0;
     int frameTimer = 0;
 
-    //[SerializeField] bool _spinning = false;
-
     GameObject enemy;
+
+    Rigidbody2D rb;
+    float gravity;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -24,8 +26,15 @@ public class SpinAttack : StateMachineBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
+
         character._flipable = false;
+        character._movable = false;
         character._attacking = true;
+
+        rb = character.GetComponent<Rigidbody2D>();
+        gravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
 
         timer = 0;
     }
@@ -36,42 +45,34 @@ public class SpinAttack : StateMachineBehaviour
         Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
 
         timer += Time.deltaTime;
+        Debug.Log(timer);
         frameTimer++;
 
-        if (frameTimer % tickRate == 0)
+        if (timer > beginTime && frameTimer % tickRate == 0 && timer < endTime)
         {
+            Debug.Log("thrusting");
+
             if (hit != null)
             {
                 if (hit.CompareTag("Enemy") && enemy != null)
                 {
 
                     enemy.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
-                    Debug.Log("Spin attack hit enemy");
+                    Debug.Log("thrust attack hit enemy");
 
                 }
             }
         }
-
-
-        character.GetComponent<Rigidbody2D>().velocity = new Vector2(0, flyForce);
-        //animator.SetBool("attack3", true);
-        //if(spinnedTime <= 0)
-        //{
-        //	animator.SetBool("attack3", false);
-
-        //}
-        //else if(spinnedTime > 0)
-        //{
-        //	animator.SetBool("attack3", true);
-        //}
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         character._flipable = true;
+        character._movable = true;
         character._attacking = false;
+
+        rb.gravityScale = gravity;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

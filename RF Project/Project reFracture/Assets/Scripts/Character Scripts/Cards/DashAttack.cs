@@ -14,15 +14,22 @@ public class DashAttack : StateMachineBehaviour
     float gravity;
 
     GameObject enemy;
+
+    Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         character = animator.GetComponent<Character>();
 
-        gravity = character.GetComponent<Rigidbody2D>().gravityScale;
-        character.GetComponent<Rigidbody2D>().gravityScale = 0;
+        character._attacking = true;
+
+        rb = character.GetComponent<Rigidbody2D>();
+        gravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
 
         enemy = GameObject.FindGameObjectWithTag("Enemy");
+
         character.attackPlacement.localPosition = attackPlacement;
         character.hitboxSize = hitbox;
 
@@ -59,7 +66,8 @@ public class DashAttack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        character.GetComponent<Rigidbody2D>().gravityScale = gravity;
+        rb.gravityScale = gravity;
+        character._attacking = false;
 
         if (enemy != null)
             Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(), false);
