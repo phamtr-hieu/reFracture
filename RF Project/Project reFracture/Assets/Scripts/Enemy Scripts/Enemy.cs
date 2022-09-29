@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     //Enemy Stat
     public float healthPoints;
+    public float maxHealth;
 
     [SerializeField] Character character;
     public GameObject player;
@@ -44,6 +45,8 @@ public class Enemy : MonoBehaviour
         damageFlashing.GetComponent<DamageFlashing>();
         slider.maxValue = healthPoints;
         currentIdleTime = idleTime;
+
+        maxHealth = healthPoints;
     }
 
 
@@ -77,16 +80,12 @@ public class Enemy : MonoBehaviour
     {
         playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
-
         if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
         {
             return true;
         }
         else
             return false;
-
-
-
     }
 
     public bool PlayerInEnemyAttackRange(Vector2 enemy)
@@ -200,6 +199,5 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(time);
         this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
-
 
 }

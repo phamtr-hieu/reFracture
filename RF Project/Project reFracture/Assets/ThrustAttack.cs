@@ -45,13 +45,10 @@ public class ThrustAttack : StateMachineBehaviour
         Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
 
         timer += Time.deltaTime;
-        Debug.Log(timer);
         frameTimer++;
 
         if (timer > beginTime && frameTimer % tickRate == 0 && timer < endTime)
         {
-            Debug.Log("thrusting");
-
             if (hit != null)
             {
                 if (hit.CompareTag("Enemy") && enemy != null)
