@@ -140,14 +140,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a033d73fa8648744da6b4b33ebc4d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 2
   pushForce: 15
   attackPlacement: {x: 2.25, y: -1.25}
   hitbox: {x: 2.45, y: 5.5}
   dashForce: 6
   beginTime: 0.41666666
   endTime: 0.75
-  tickRate: 5.0000005
+  tickRate: 4
 --- !u!114 &-5935992669417024999
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   damage: 20
   attackPlacement: {x: 1.75, y: 0.44}
   hitbox: {x: 4.77, y: 3}
-  knockbackForce: 2
+  knockbackForce: 60
   knockbackTime: 0.2
   animTimer: 0
   timerOffset: 0.6
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cbeed773aea2f4e98e8330673b46a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 3, y: 1}
   flyForce: 2
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4e200c4ae6e4c40807b7553e98a133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 12
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 9, y: 2}
   dashForce: 25
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc65c82fb5dbd84d82754da495c3edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 3
   attackPlacement: {x: 6, y: 0}
   hitbox: {x: 7, y: 3}
   beginTime: 0.4

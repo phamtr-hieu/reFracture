@@ -123,7 +123,7 @@ public class PlayerAttackManager : MonoBehaviour
         for (int i = 0; i < attackQueue.Length; i++)
         {
             //Debug.LogWarning(i);
-            card[i].text = attackQueue[i].ToString();
+            //card[i].text = attackQueue[i].ToString();
             cardDisplays[i].cardID = attackQueue[i];
         }
     }

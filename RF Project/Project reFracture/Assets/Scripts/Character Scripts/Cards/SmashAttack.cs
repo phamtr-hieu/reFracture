@@ -54,9 +54,13 @@ public class SmashAttack : StateMachineBehaviour
                 if (hit.CompareTag("Enemy") && enemy != null && !damageDealt)
                 {
                     enemy.GetComponent<Enemy>().TakeDamage(damage, 0.5f);
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0), ForceMode2D.Impulse);
                     Debug.Log("Smash attack hit enemy");
                     damageDealt = true;
+
+                    if (character._facingRight)
+                        enemy.GetComponent<Rigidbody2D>().AddForce(Vector2.right * knockbackForce, ForceMode2D.Impulse);
+                    else
+                        enemy.GetComponent<Rigidbody2D>().AddForce(Vector2.left * knockbackForce, ForceMode2D.Impulse);
                 }
             }
 
