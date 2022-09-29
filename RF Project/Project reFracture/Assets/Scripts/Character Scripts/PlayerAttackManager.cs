@@ -53,7 +53,7 @@ public class PlayerAttackManager : MonoBehaviour
         }
         if (character.GetComponent<Character>().healthPoint <= 0)
         {
-            ResetGame();
+            Destroy(character);
         }
 
 

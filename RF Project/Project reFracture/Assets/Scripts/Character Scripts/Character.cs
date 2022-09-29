@@ -39,10 +39,9 @@ public class Character : MonoBehaviour
     [SerializeField] private float checkRadius;
     [SerializeField] public float health = 100;
     [SerializeField] float lastAtkAnimLength;
-    #endregion
-
     [SerializeField] private float jumpButtonTimer;
     [SerializeField] private float maxJumpButtonTimer;
+    #endregion
 
     #region Bools
     public bool _jump;
@@ -112,7 +111,6 @@ public class Character : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Card"))
         {
-            lastAtkAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
             attackable = false;
             StartCoroutine("WaitForAnimToAttack");
         }
