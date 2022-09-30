@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Jump Pad
+  - LoadoutManager
   layers:
   - Default
   - TransparentFX

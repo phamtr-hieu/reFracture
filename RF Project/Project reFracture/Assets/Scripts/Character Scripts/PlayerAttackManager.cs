@@ -11,7 +11,10 @@ public class PlayerAttackManager : MonoBehaviour
     //generate list of random attacks from attack deck
     //(remove attacks as they are drawn from the array)
     GameObject character;
-    [SerializeField] int numberOfCards = 4; //adjust this to fit the number of cards available
+
+    [SerializeField] PlayerLoadout loadout;
+
+    [SerializeField] int numberOfCards = 5; //adjust this to fit the number of cards available
     public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
     public CardDisplay[] cardDisplays = new CardDisplay[3];
 
@@ -19,10 +22,14 @@ public class PlayerAttackManager : MonoBehaviour
 
     public int[] attackQueue = new int[3];
 
+    int currentAttack = 0;
+
     int nextAttackID;
 
     private void Start()
     {
+        loadout = GameObject.FindGameObjectWithTag("LoadoutManager").GetComponent<PlayerLoadout>();
+
         attackList = new int[numberOfCards];
 
         character = GameObject.FindGameObjectWithTag("Player");
@@ -83,7 +90,13 @@ public class PlayerAttackManager : MonoBehaviour
     void GenerateNextAttack()
     {
         //todo: add sorting system to cycle through a list of attacks without repeating
-        nextAttackID = Random.Range(1, numberOfCards + 1);
+        if (currentAttack >= loadout.attackList.Length)
+        {
+            currentAttack = 0;
+        }
+        nextAttackID = loadout.attackList[currentAttack];
+        currentAttack++;
+        
     }
 
     void SortAttackStackID(int attackID)
