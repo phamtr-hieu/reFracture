@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Jump Pad
+  - LoadoutManager
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 

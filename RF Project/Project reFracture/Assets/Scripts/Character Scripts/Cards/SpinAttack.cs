@@ -33,7 +33,7 @@ public class SpinAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
 
         timer += Time.deltaTime;
         frameTimer++;
@@ -52,37 +52,14 @@ public class SpinAttack : StateMachineBehaviour
             }
         }
 
-
         character.GetComponent<Rigidbody2D>().velocity = new Vector2(0, flyForce);
-        //animator.SetBool("attack3", true);
-        //if(spinnedTime <= 0)
-        //{
-        //	animator.SetBool("attack3", false);
-
-        //}
-        //else if(spinnedTime > 0)
-        //{
-        //	animator.SetBool("attack3", true);
-        //}
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         character._flipable = true;
-        character._attacking = false;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
     }
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }

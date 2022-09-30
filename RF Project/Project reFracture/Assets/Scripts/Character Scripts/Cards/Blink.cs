@@ -7,12 +7,12 @@ public class Blink : StateMachineBehaviour
 	Character character;
 	[SerializeField] float blinkDistance;
 
-
 	GameObject enemy;
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		character = animator.GetComponent<Character>();
+		character._attacking = true;
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 
 		//character._attacking = true;
@@ -33,7 +33,8 @@ public class Blink : StateMachineBehaviour
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		//character._attacking = false;
+		IEnumerator endAttack = character.EndAttack();
+		character.StartCoroutine(endAttack);
 	}
 
 
