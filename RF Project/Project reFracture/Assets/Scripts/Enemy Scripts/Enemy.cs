@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-    //Enemy Stat
-    public float healthPoints;
-    public float maxHealth;
+	//Enemy Stat
+	public float healthPoints;
+	public float maxHealth;
 
 	[Header("Attacks Cooldowns")]
 	[SerializeField] float MaxClawCooldown;
@@ -21,45 +21,50 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float MinLaserCooldown;
 	[SerializeField] float _laserCooldown;
 	[Space]
+	[SerializeField] float MaxLightningCooldown;
+	[SerializeField] float MinLightningCooldown;
+	[SerializeField] float _lightningCooldown;
+	[Space]
 
 	[SerializeField] Character character;
-    public GameObject player;
+	public GameObject player;
 
 
-    
-    #region Floats
-    public float chaseDistance;
+
+	#region Floats
+	public float chaseDistance;
 	public float stopDistance;
-    public float playerToEnemyDistance;
-    public float chaseSpeed;
-    public float atkRange;
-    public float timeBtwAttacks;
-    public float startTimeBtwAttacks;
-    [SerializeField] float idleTime;
-    [SerializeField] float currentIdleTime;
-    [SerializeField] float enemyDamage;
-    #endregion
+	public float playerToEnemyDistance;
+	public float chaseSpeed;
+	public float atkRange;
+	public float timeBtwAttacks;
+	public float startTimeBtwAttacks;
+	[SerializeField] float idleTime;
+	[SerializeField] float currentIdleTime;
+	[SerializeField] float enemyDamage;
+	#endregion
 
 
-    [SerializeField] public Transform hitboxPos;
-    public Transform enemyPos;
-    [SerializeField] public Vector2 hitboxSize;
-    [SerializeField] Animator anim;
-    [SerializeField] SpriteRenderer sr;
-    [SerializeField] DamageFlashing damageFlashing;
+	[SerializeField] public Transform hitboxPos;
+	public Transform enemyPos;
+	[SerializeField] public Vector2 hitboxSize;
+	[SerializeField] Animator anim;
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] DamageFlashing damageFlashing;
 
-    public bool facingLeft = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        damageFlashing.GetComponent<DamageFlashing>();
-        currentIdleTime = idleTime;
+	public bool facingLeft = true;
+	// Start is called before the first frame update
+	void Start()
+	{
+		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag("Player");
+		damageFlashing.GetComponent<DamageFlashing>();
+		//slider.maxValue = healthPoints;
+		//currentIdleTime = idleTime;
 
-        maxHealth = healthPoints;
-    }
-	
+		maxHealth = healthPoints;
+	}
+
 	void Update()
 	{
 
@@ -180,48 +185,61 @@ public class Enemy : MonoBehaviour
 		}
 		if (playerToEnemyDistance >= 12 && playerToEnemyDistance <= 14 && _laserCooldown <= 0)
 		{
-			anim.SetTrigger("Laser");
-			_laserCooldown = Random.Range(MinLaserCooldown, MaxLaserCooldown);
+			int dice = Random.Range(0, 2);
+
+			switch (dice)
+			{
+				case 0:
+					anim.SetTrigger("Laser");
+					_laserCooldown = Random.Range(MinLaserCooldown, MaxLaserCooldown);
+					break;
+
+				case 1:
+					anim.SetTrigger("Lightning");
+					_lightningCooldown = Random.Range(MinLightningCooldown, MaxLightningCooldown);
+					break;
+
+			}
 			return;
 		}
 	}
 
-	public void OnDeath()
-	{
-		anim.SetTrigger("Die");
-		print(anim.GetCurrentAnimatorStateInfo(0).length);
-		Destroy(this.gameObject, 7);
-		//print("Enemy Died");
-
-	}
-
-	private void OnDrawGizmos()
-	{
-		Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
-		//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
-	}
-
-	public void TakeDamage(float damage, float damageFlash)
-	{
-		if (this != null)
+		public void OnDeath()
 		{
-			healthPoints -= damage;
-			damageFlashing.DamageFlash(0.1f);
+			anim.SetTrigger("Die");
+			print(anim.GetCurrentAnimatorStateInfo(0).length);
+			Destroy(this.gameObject, 7);
+			//print("Enemy Died");
 
 		}
-	}
 
-	public void Flip()
-	{
-		this.transform.Rotate(0, 180, 0);
-	}
+		private void OnDrawGizmos()
+		{
+			Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
+			//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
+		}
 
-	public IEnumerator Stopping(float time)
-	{
-		yield return new WaitForSeconds(time);
-		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		public void TakeDamage(float damage, float damageFlash)
+		{
+			if (this != null)
+			{
+				healthPoints -= damage;
+				damageFlashing.DamageFlash(0.1f);
+
+			}
+		}
+
+		public void Flip()
+		{
+			this.transform.Rotate(0, 180, 0);
+		}
+
+		public IEnumerator Stopping(float time)
+		{
+			yield return new WaitForSeconds(time);
+			this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
 	}
-}
 
 
 
