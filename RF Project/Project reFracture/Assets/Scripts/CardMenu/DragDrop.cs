@@ -44,7 +44,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("click");
     }
 
 }

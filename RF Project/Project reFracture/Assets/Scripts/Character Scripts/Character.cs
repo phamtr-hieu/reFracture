@@ -41,6 +41,7 @@ public class Character : MonoBehaviour
     [SerializeField] float lastAtkAnimLength;
     [SerializeField] private float jumpButtonTimer;
     [SerializeField] private float maxJumpButtonTimer;
+    public float gravityScale = 4.5f;
     #endregion
 
     #region Bools
@@ -253,5 +254,11 @@ public class Character : MonoBehaviour
     {
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         attackable = true;
+    }
+
+    public IEnumerator EndAttack()
+    {
+        yield return new WaitForSeconds(0.2f);
+        _attacking = false;
     }
 }

@@ -31,7 +31,7 @@ public class SmashAttack : StateMachineBehaviour
         character._flipable = false;
         character._attacking = true;
 
-        animTimer = stateInfo.length;
+        animTimer = stateInfo.length; 
         animTimer -= timerOffset;
         damageDealt = false;
 
@@ -47,7 +47,7 @@ public class SmashAttack : StateMachineBehaviour
         animTimer -= Time.deltaTime;
         if (animTimer <= 0)
         {
-            Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+            Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
             Debug.Log(hit);
             if (hit != null)
             {
@@ -88,9 +88,10 @@ public class SmashAttack : StateMachineBehaviour
         animTimer = 0;
         character._movable = true;
         character._flipable = true;
-        character._attacking = false;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = character.gravityScale;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

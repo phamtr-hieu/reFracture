@@ -41,7 +41,7 @@ public class SlashAttack : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
 
         timer += Time.deltaTime;
         frameTimer++;
@@ -68,8 +68,9 @@ public class SlashAttack : StateMachineBehaviour
     {
         character._movable = true;
         character._flipable = true;
-        character._attacking = false;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = character.gravityScale;
     }
 }

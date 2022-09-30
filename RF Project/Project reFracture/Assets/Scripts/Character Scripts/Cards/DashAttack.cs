@@ -49,7 +49,7 @@ public class DashAttack : StateMachineBehaviour
             character.GetComponent<Rigidbody2D>().velocity = new Vector3(-dashForce, 0);
         }
 
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
         Debug.Log(hit);
         if (hit != null)
         {
@@ -66,8 +66,9 @@ public class DashAttack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rb.gravityScale = gravity;
-        character._attacking = false;
+        rb.gravityScale = character.gravityScale;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
 
         if (enemy != null)
             Physics2D.IgnoreCollision(character.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(), false);

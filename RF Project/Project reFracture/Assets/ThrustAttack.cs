@@ -42,7 +42,7 @@ public class ThrustAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
 
         timer += Time.deltaTime;
         frameTimer++;
@@ -67,9 +67,10 @@ public class ThrustAttack : StateMachineBehaviour
     {
         character._flipable = true;
         character._movable = true;
-        character._attacking = false;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = character.gravityScale;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

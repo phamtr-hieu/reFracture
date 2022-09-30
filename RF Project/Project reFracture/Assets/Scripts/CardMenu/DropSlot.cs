@@ -25,7 +25,6 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     {
         if (eventData.pointerDrag != null)
         {
-            print("dropped");
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             cardData = eventData.pointerDrag.GetComponent<UICardData>();
             WriteCardData();
@@ -34,14 +33,12 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        print("enter");
         if (eventData.pointerDrag != null)
             eventData.pointerDrag.GetComponent<DragDrop>().isInSlot = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        print("exit");
         if (eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<DragDrop>().isInSlot = false;

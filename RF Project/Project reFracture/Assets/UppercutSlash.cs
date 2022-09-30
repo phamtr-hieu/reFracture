@@ -48,7 +48,7 @@ public class UppercutSlash : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0);
+        Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
 
         timer += Time.deltaTime;
         frameTimer++;
@@ -77,10 +77,11 @@ public class UppercutSlash : StateMachineBehaviour
     {
         character._movable = true;
         character._flipable = true;
-        character._attacking = false;
+        IEnumerator endAttack = character.EndAttack();
+        character.StartCoroutine(endAttack);
         hasLeaped = false;
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = character.gravityScale;
     }
 
     void leap()

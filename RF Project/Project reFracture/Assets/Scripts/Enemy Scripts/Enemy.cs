@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     
     #region Floats
     public float chaseDistance;
+	public float stopDistance;
     public float playerToEnemyDistance;
     public float chaseSpeed;
     public float atkRange;
@@ -44,7 +45,6 @@ public class Enemy : MonoBehaviour
     public Transform enemyPos;
     [SerializeField] public Vector2 hitboxSize;
     [SerializeField] Animator anim;
-    public Slider slider;
     [SerializeField] SpriteRenderer sr;
     [SerializeField] DamageFlashing damageFlashing;
 
@@ -55,23 +55,13 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         damageFlashing.GetComponent<DamageFlashing>();
-        slider.maxValue = healthPoints;
         currentIdleTime = idleTime;
 
         maxHealth = healthPoints;
     }
-
-
-
-
-	
-
-	
 	
 	void Update()
 	{
-
-		slider.value = healthPoints;
 
 		if (healthPoints <= 0)
 		{
@@ -112,15 +102,12 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0)
+		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0 && playerToEnemyDistance >= stopDistance)
 		{
 			return true;
 		}
 		else
 			return false;
-
-
-
 	}
 
 	public bool PlayerInEnemyAttackRange(Vector2 enemy)
@@ -134,7 +121,6 @@ public class Enemy : MonoBehaviour
 		}
 		else
 			return false;
-
 	}
 
 	public bool isFacingPlayer(Vector2 enemy, Vector2 player)
@@ -180,19 +166,19 @@ public class Enemy : MonoBehaviour
 
 	public void ChooseNextAttack(Vector2 enemy)
 	{
-		if (playerToEnemyDistance < 6 && _clawCooldown <= 0)
+		if (playerToEnemyDistance < 7 && _clawCooldown <= 0)
 		{
 			anim.SetTrigger("Claw");
 			_clawCooldown = Random.Range(0, MaxClawCooldown);
 			return;
 		}
-		if (playerToEnemyDistance >= 8 && playerToEnemyDistance <= 12 && _biteCooldown <= 0)
+		if (playerToEnemyDistance >= 7 && playerToEnemyDistance <= 12 && _biteCooldown <= 0)
 		{
 			anim.SetTrigger("Bite");
 			_biteCooldown = Random.Range(0, MaxBiteCooldown);
 			return;
 		}
-		if (playerToEnemyDistance >= 12 && playerToEnemyDistance <= 14)
+		if (playerToEnemyDistance >= 12 && playerToEnemyDistance <= 14 && _laserCooldown <= 0)
 		{
 			anim.SetTrigger("Laser");
 			_laserCooldown = Random.Range(MinLaserCooldown, MaxLaserCooldown);
@@ -200,12 +186,9 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-
-
 	public void OnDeath()
 	{
 		anim.SetTrigger("Die");
-		Destroy(slider);
 		print(anim.GetCurrentAnimatorStateInfo(0).length);
 		Destroy(this.gameObject, 7);
 		//print("Enemy Died");
@@ -238,9 +221,6 @@ public class Enemy : MonoBehaviour
 		yield return new WaitForSeconds(time);
 		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 	}
-
-
-
 }
 
 
