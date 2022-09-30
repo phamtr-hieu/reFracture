@@ -8,8 +8,7 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontNames:
-  - Lora
+  fontNames: []
   fallbackFontReferences:
   - {fileID: 12800000, guid: fa2ec6d06d41c2e419613ceaf87b2519, type: 3}
   - {fileID: 12800000, guid: c1276fbd87963e04c8ffc243a5850c30, type: 3}
@@ -17,6 +16,7 @@ TrueTypeFontImporter:
   - {fileID: 12800000, guid: 7583c1889dcaf1a4a8bc95829b086d7d, type: 3}
   - {fileID: 12800000, guid: ed49cbb2b1dfd1749aa1a9746c5d5ec3, type: 3}
   - {fileID: 12800000, guid: f3448ec1fbe0daa4486ffd3c33863d6f, type: 3}
+  - {fileID: 12800000, guid: ae684effebabd1543be6823bdd55ebfb, type: 3}
   - {fileID: 12800000, guid: 2847f0caf261ebc43b9f69f09fe5979b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
