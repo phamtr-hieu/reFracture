@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public void Play()
+	[SerializeField] float animTimer;
+		public void Play()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
@@ -15,18 +16,32 @@ public class SceneManagement : MonoBehaviour
 		Application.Quit();
 	}
 
-	private void Update()
+	
+
+	private void Start()
 	{
-		if(SceneManager.GetActiveScene().buildIndex ==3)
+		
+		if (SceneManager.GetActiveScene().buildIndex == 3)
 		{
-			print("die");
-			Invoke("LoadDeathScene",2.3f);
+			StartCoroutine(LoadDeathScene());
 		}
 	}
 
-	void LoadDeathScene()
+	private void Update()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-	}	
+		animTimer -= Time.deltaTime;
+		
+	}
+
+	IEnumerator LoadDeathScene()
+	{
+		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
+		asyncLoad.allowSceneActivation = false;
+		yield return new WaitForSeconds(animTimer);
+		asyncLoad.allowSceneActivation = true;
+
+
+		
+	}
 
 }

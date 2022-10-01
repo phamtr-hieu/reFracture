@@ -264,6 +264,7 @@ public class Character : MonoBehaviour
 
     public void OnDeath()
 	{
+        _invulnerable = true;
         anim.SetTrigger("isDead");
         Destroy(this, 3.5f);
 	}
