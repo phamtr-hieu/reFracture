@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerAttackManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerAttackManager : MonoBehaviour
     GameObject character;
 
     [SerializeField] PlayerLoadout loadout;
+
+    
+    
 
     [SerializeField] int numberOfCards = 5; //adjust this to fit the number of cards available
     public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
@@ -27,6 +31,7 @@ public class PlayerAttackManager : MonoBehaviour
     int nextAttackID;
 
     bool dying = false;
+    
 
     private void Start()
     {
@@ -56,10 +61,7 @@ public class PlayerAttackManager : MonoBehaviour
     private void Update()
     {
         DisplayAttackID();
-        if (UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame)
-        {
-            ResetGame();
-        }
+       
 
         //Death handling
         
@@ -70,7 +72,6 @@ public class PlayerAttackManager : MonoBehaviour
             dying = true;
 
         }
-
 
     }
 
@@ -149,13 +150,13 @@ public class PlayerAttackManager : MonoBehaviour
         }
     }
 
-    void ResetGame()
+    public void NextScene()
     {
-        SceneManager.LoadScene(0);
-    }
-    
-    void NextScene()
-	{
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
+
+
+
+
 }

@@ -26,5 +26,6 @@ public class SceneLoader : MonoBehaviour
     {
         loadout.WriteAttackList();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        print(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
