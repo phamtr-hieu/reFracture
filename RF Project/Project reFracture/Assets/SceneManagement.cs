@@ -20,7 +20,7 @@ public class SceneManagement : MonoBehaviour
 		if(SceneManager.GetActiveScene().buildIndex ==3)
 		{
 			print("die");
-			Invoke("LoadDeathScene",2);
+			Invoke("LoadDeathScene",2.3f);
 		}
 	}
 

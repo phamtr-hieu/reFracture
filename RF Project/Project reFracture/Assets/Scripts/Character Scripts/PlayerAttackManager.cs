@@ -26,6 +26,8 @@ public class PlayerAttackManager : MonoBehaviour
 
     int nextAttackID;
 
+    bool dying = false;
+
     private void Start()
     {
         loadout = GameObject.FindGameObjectWithTag("LoadoutManager").GetComponent<PlayerLoadout>();
@@ -58,10 +60,14 @@ public class PlayerAttackManager : MonoBehaviour
         {
             ResetGame();
         }
-        if (character.GetComponent<Character>().healthPoint <= 0)
+
+        //Death handling
+        
+        if (character.GetComponent<Character>().healthPoint <= 0 && !dying)
         {
             character.GetComponent<Character>().OnDeath();
             Invoke("NextScene", 3.5f);
+            dying = true;
 
         }
 
