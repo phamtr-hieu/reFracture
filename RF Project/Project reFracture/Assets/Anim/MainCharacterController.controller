@@ -148,6 +148,31 @@ MonoBehaviour:
   beginTime: 0.41666666
   endTime: 0.75
   tickRate: 4
+--- !u!1101 &-6263727836590466317
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 6646503378593790028}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!114 &-5935992669417024999
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,6 +851,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: isDead
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1444,6 +1475,7 @@ AnimatorStateMachine:
   - {fileID: -392020729755015963}
   - {fileID: 1746346869454669860}
   - {fileID: 6928900127469086318}
+  - {fileID: -6263727836590466317}
   m_EntryTransitions:
   - {fileID: 6264068662440288868}
   m_StateMachineTransitions: {}

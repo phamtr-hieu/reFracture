@@ -12,6 +12,7 @@ public class JumpPad : StateMachineBehaviour
         jumpPad = GameObject.FindGameObjectWithTag("Jump Pad");
         jumpPad.GetComponent<JumpPadScript>().jumpPadOn = true;
         
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

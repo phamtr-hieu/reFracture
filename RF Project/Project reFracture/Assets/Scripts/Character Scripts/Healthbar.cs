@@ -10,7 +10,7 @@ public class Healthbar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        character.healthPoint = character.currentMaxHealth;
+        //character.healthPoint = character.currentMaxHealth;
         slider.maxValue = character.healthPoint;
     }
 

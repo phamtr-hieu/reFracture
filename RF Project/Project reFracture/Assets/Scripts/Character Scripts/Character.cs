@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     [SerializeField] Healthbar healthbar;
 
     #region Character Stats
-    public float currentMaxHealth;
+   // public float currentMaxHealth;
     public float healthPoint;
 
     #endregion
@@ -37,7 +37,6 @@ public class Character : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float checkRadius;
-    [SerializeField] public float health = 100;
     [SerializeField] float lastAtkAnimLength;
     [SerializeField] private float jumpButtonTimer;
     [SerializeField] private float maxJumpButtonTimer;
@@ -72,6 +71,7 @@ public class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         impulse = GetComponent<CinemachineImpulseSource>();
+        healthbar.slider.maxValue = healthPoint;
     }
 
     // Update is called once per frame
@@ -261,4 +261,10 @@ public class Character : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         _attacking = false;
     }
+
+    public void OnDeath()
+	{
+        anim.SetTrigger("isDead");
+        Destroy(this, 3.5f);
+	}
 }

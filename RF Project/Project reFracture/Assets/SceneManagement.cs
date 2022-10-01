@@ -7,12 +7,26 @@ public class SceneManagement : MonoBehaviour
 {
     public void Play()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 	public void Quit()
 	{
 		Application.Quit();
 	}
+
+	private void Update()
+	{
+		if(SceneManager.GetActiveScene().buildIndex ==3)
+		{
+			print("die");
+			Invoke("LoadDeathScene",2);
+		}
+	}
+
+	void LoadDeathScene()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+	}	
 
 }

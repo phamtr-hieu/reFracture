@@ -60,7 +60,9 @@ public class PlayerAttackManager : MonoBehaviour
         }
         if (character.GetComponent<Character>().healthPoint <= 0)
         {
-            Destroy(character);
+            character.GetComponent<Character>().OnDeath();
+            Invoke("NextScene", 3.5f);
+
         }
 
 
@@ -144,5 +146,10 @@ public class PlayerAttackManager : MonoBehaviour
     void ResetGame()
     {
         SceneManager.LoadScene(0);
+    }
+    
+    void NextScene()
+	{
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
