@@ -55,7 +55,7 @@ public class DashAttack : StateMachineBehaviour
         {
             if (hit.CompareTag("Enemy") && enemy != null)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(damage, 0.5f);
+                hit.GetComponent<Enemy>().TakeDamage(damage, 0.5f);
                 Debug.Log("Dash Attack hit enemy");
             }
         }

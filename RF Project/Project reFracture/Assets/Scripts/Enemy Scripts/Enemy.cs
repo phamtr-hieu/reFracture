@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class Enemy : MonoBehaviour
 {
 	//Enemy Stat
+	[Header("Settings")]
+	[SerializeField] bool _isViktor;
 
 	[Header("Attacks Cooldowns")]
 	[SerializeField] float MaxClawCooldown;
@@ -24,7 +26,9 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float _lightningCooldown;
 	[Space]
 
-
+	[Header("Spiderling Stats")]
+	[SerializeField] float changeDirTimer;
+	float _changeDirTimer;
 
 	[Header("Stats")]
 	#region Floats
@@ -37,12 +41,11 @@ public class Enemy : MonoBehaviour
 	public float timeBtwAttacks;
 	public float startTimeBtwAttacks;
 	
-	[SerializeField] float enemyDamage;
+
+
 	#endregion
 	[Space]
 
-	[Header("Audios")]
-	[SerializeField] AudioClip _meetingRoar;
 
 	[Header("Others")]
 	[SerializeField] Character character;
@@ -57,6 +60,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] GameObject healthbar;
 
 	public bool facingLeft = true;
+	Vector2 dir;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -66,7 +70,7 @@ public class Enemy : MonoBehaviour
 		//slider.maxValue = healthPoints;
 		//currentIdleTime = idleTime;
 
-		
+
 	}
 
 	void Update()
@@ -77,13 +81,20 @@ public class Enemy : MonoBehaviour
 			OnDeath();
 		}
 
-		if (Keyboard.current.slashKey.isPressed)
+		#region Spiderling Move Handling
+		if (!_isViktor)
 		{
-			TakeDamage(0.01f, 0.1f);
+			_changeDirTimer -= Time.deltaTime;
+			transform.position += new Vector3(dir.x, 0, 0) * Time.deltaTime * chaseSpeed;
+			if (_changeDirTimer <= 0)
+			{
+				ChangeDir();
+				_changeDirTimer = changeDirTimer;
+			}
 		}
-
+		#endregion
 		//Countdown Idle time
-		
+
 		//Countdown Idle time
 		//if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
 		//{
@@ -91,14 +102,17 @@ public class Enemy : MonoBehaviour
 		//}
 
 		#region Cooldown Handling
-		if (_clawCooldown > 0)
-			_clawCooldown -= Time.deltaTime;
+		if (_isViktor)
+		{
+			if (_clawCooldown > 0)
+				_clawCooldown -= Time.deltaTime;
 
-		if (_biteCooldown > 0)
-			_biteCooldown -= Time.deltaTime;
+			if (_biteCooldown > 0)
+				_biteCooldown -= Time.deltaTime;
 
-		if (_laserCooldown > 0)
-			_laserCooldown -= Time.deltaTime;
+			if (_laserCooldown > 0)
+				_laserCooldown -= Time.deltaTime;
+		}
 		#endregion
 
 
@@ -108,10 +122,9 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-		if (playerToEnemyDistance <= chaseDistance  && playerToEnemyDistance >= stopDistance)
+		if (playerToEnemyDistance <= chaseDistance && playerToEnemyDistance >= stopDistance)
 		{
 			healthbar.SetActive(true);
-			AudioSource.PlayClipAtPoint(_meetingRoar, transform.position);
 			return true;
 		}
 		else
@@ -123,7 +136,7 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-		if (playerToEnemyDistance <= atkRange )
+		if (playerToEnemyDistance <= atkRange)
 		{
 			return true;
 		}
@@ -207,42 +220,86 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-		public void OnDeath()
-		{
-			anim.SetTrigger("Die");
-			print(anim.GetCurrentAnimatorStateInfo(0).length);
+	public void OnDeath()
+	{
+
+		anim.SetTrigger("Die");
+		if (_isViktor)
 			Destroy(this.gameObject, 7);
-			//print("Enemy Died");
-
-		}
-
-		private void OnDrawGizmos()
+		else
 		{
+			Destroy(gameObject);
+		}
+		//print("Enemy Died");
+
+
+	}
+
+	private void OnDrawGizmos()
+	{
+		
 			Gizmos.DrawWireCube(hitboxPos.position, hitboxSize);
-			//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
-		}
+		//Gizmos.DrawWireSphere(hitboxPos.position, hitboxSize.x);
+	}
 
-		public void TakeDamage(float damage, float damageFlash)
+	public void TakeDamage(float damage, float damageFlash)
+	{
+		if (this != null)
 		{
-			if (this != null)
-			{
-				healthPoints -= damage;
-				damageFlashing.DamageFlash(0.1f);
+			healthPoints -= damage;
+			damageFlashing.DamageFlash(0.1f);
 
-			}
-		}
-
-		public void Flip()
-		{
-			this.transform.Rotate(0, 180, 0);
-		}
-
-		public IEnumerator Stopping(float time)
-		{
-			yield return new WaitForSeconds(time);
-			this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 	}
+
+	public void Flip()
+	{
+		transform.Rotate(0, 180, 0);
+	}
+
+	public IEnumerator Stopping(float time)
+	{
+		yield return new WaitForSeconds(time);
+		this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+	}
+
+	//private void OnCollisionEnter2D(Collision2D col)
+	//{
+	//	if (col.gameObject.CompareTag("Player") && !_isViktor)
+	//	{
+	//		col.gameObject.GetComponent<Character>().TakeDamage(_damage);
+	//	}
+	//}
+
+	void ChangeDir()
+	{
+
+		int rng;
+		rng = Random.Range(0,2);
+
+		switch (rng)
+		{
+			case 0:
+				dir.x = 1;
+				if (facingLeft)
+				{
+					Flip();
+					facingLeft = false;
+				}
+				break;
+
+			case 1:
+				dir.x = -1;
+				if (!facingLeft)
+				{
+					Flip();
+					facingLeft = true;
+				}
+				break;
+
+		}
+	}
+}
 
 
 

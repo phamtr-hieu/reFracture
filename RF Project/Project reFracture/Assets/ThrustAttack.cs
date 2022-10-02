@@ -56,7 +56,7 @@ public class ThrustAttack : StateMachineBehaviour
                 if (hit.CompareTag("Enemy") && enemy != null)
                 {
 
-                    enemy.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
+                    hit.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
                     Debug.Log("thrust attack hit enemy");
 
                 }

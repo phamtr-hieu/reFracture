@@ -59,9 +59,9 @@ public class Barrier : StateMachineBehaviour
                 {
                     Vector2 dir = enemy.transform.position - character.transform.position;
 
-                    enemy.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
+                    hit.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
 
-                    enemy.GetComponent<Rigidbody2D>().AddForce(dir.normalized * repelForce, ForceMode2D.Impulse);
+                    hit.GetComponent<Rigidbody2D>().AddForce(dir.normalized * repelForce, ForceMode2D.Impulse);
                 }
             }
         }
