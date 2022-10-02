@@ -24,10 +24,10 @@ public class EnemyHealth : MonoBehaviour
             return;
         }
 
-        this.transform.position = enemy.transform.position;
+        //this.transform.position = enemy.transform.position;
 
-        float ratio = 1 - enemy.healthPoints / enemy.maxHealth;
-        anim.Play("EnemyHealthBar", 0, ratio);
+        //float ratio = 1 - enemy.healthPoints / enemy.maxHealth;
+        //anim.Play("EnemyHealthBar", 0, ratio);
 
         
     }

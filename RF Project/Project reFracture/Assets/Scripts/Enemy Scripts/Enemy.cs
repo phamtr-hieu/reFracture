@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
 {
 	//Enemy Stat
 	public float healthPoints;
-	public float maxHealth;
 
 	[Header("Attacks Cooldowns")]
 	[SerializeField] float MaxClawCooldown;
@@ -51,6 +50,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] Animator anim;
 	[SerializeField] SpriteRenderer sr;
 	[SerializeField] DamageFlashing damageFlashing;
+	[SerializeField] GameObject healthbar;
 
 	public bool facingLeft = true;
 	// Start is called before the first frame update
@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
 		//slider.maxValue = healthPoints;
 		//currentIdleTime = idleTime;
 
-		maxHealth = healthPoints;
+		
 	}
 
 	void Update()
@@ -109,6 +109,7 @@ public class Enemy : MonoBehaviour
 
 		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0 && playerToEnemyDistance >= stopDistance)
 		{
+			healthbar.SetActive(true);
 			return true;
 		}
 		else
