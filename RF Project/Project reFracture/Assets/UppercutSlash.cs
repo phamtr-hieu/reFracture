@@ -53,6 +53,11 @@ public class UppercutSlash : StateMachineBehaviour
         timer += Time.deltaTime;
         frameTimer++;
 
+        if (!hasLeaped)
+        {
+            rb.velocity = Vector2.zero;
+        }
+
         if (!hasLeaped && timer > beginTime)
         {
             leap();

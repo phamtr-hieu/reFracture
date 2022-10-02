@@ -44,6 +44,8 @@ public class SmashAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        rb.velocity = Vector2.zero;
+
         animTimer -= Time.deltaTime;
         if (animTimer <= 0)
         {

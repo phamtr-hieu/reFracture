@@ -41,6 +41,8 @@ public class SlashAttack : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        rb.velocity = Vector2.zero;
+
         Collider2D hit = Physics2D.OverlapBox(character.attackPlacement.position, character.hitboxSize, 0, LayerMask.GetMask("Enemy"));
 
         timer += Time.deltaTime;
