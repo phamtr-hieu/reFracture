@@ -120,7 +120,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 80
-  pushForce: 30
+  pushForce: 40
   attackPlacement: {x: 0, y: 0.8}
   hitbox: {x: 9, y: 4.5}
   beginTime: 0.5833333
@@ -1417,7 +1417,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1198689777264598760}
-    m_Position: {x: 60, y: -110, z: 0}
+    m_Position: {x: 60, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8909244272758803634}
     m_Position: {x: 60, y: 170, z: 0}

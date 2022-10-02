@@ -64,9 +64,9 @@ public class UppercutSlash : StateMachineBehaviour
             {
                 if (hit.CompareTag("Enemy") && enemy != null)
                 {
-                    enemy.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
+                    hit.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
 
-                    enemy.GetComponent<Rigidbody2D>().AddForce(Vector2.up * pushForce, ForceMode2D.Impulse);
+                    hit.GetComponent<Rigidbody2D>().AddForce(Vector2.up * pushForce, ForceMode2D.Impulse);
                 }
             }
         }

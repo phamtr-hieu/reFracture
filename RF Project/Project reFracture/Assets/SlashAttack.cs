@@ -52,12 +52,12 @@ public class SlashAttack : StateMachineBehaviour
             {
                 if (hit.CompareTag("Enemy") && enemy != null)
                 {
-                    enemy.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
+                    hit.GetComponent<Enemy>().TakeDamage(damage, 0.1f);
 
                     if(character._facingRight)
-                        enemy.GetComponent<Rigidbody2D>().AddForce(Vector2.right * pushForce, ForceMode2D.Impulse);
+                        hit.GetComponent<Rigidbody2D>().AddForce(Vector2.right * pushForce, ForceMode2D.Impulse);
                     else
-                        enemy.GetComponent<Rigidbody2D>().AddForce(Vector2.left * pushForce, ForceMode2D.Impulse);
+                        hit.GetComponent<Rigidbody2D>().AddForce(Vector2.left * pushForce, ForceMode2D.Impulse);
                 }
             }
         }

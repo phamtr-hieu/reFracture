@@ -10,7 +10,8 @@ public class PlayerLoadout : MonoBehaviour
 	public int[] attackList;
 	[SerializeField] public int attacklistSize = 5;
 	[SerializeField] public DropSlot[] dropSlots = new DropSlot[5];
-	public bool hasLoadout;
+	public bool hasLoadout = false;
+	bool dropSlotFilled;
 
 	private void Awake()
 	{
@@ -35,13 +36,19 @@ public class PlayerLoadout : MonoBehaviour
 
 	void Update()
 	{
-		if (hasLoadout && SceneManager.GetActiveScene().buildIndex == 1) 
+		if(dropSlots  == null)
+		{
+			dropSlotFilled = false;
+		}
+
+		if (hasLoadout && SceneManager.GetActiveScene().buildIndex == 1 && !dropSlotFilled) 
 		{
 			for (int i = 0; i < attacklistSize; i++)
 			{
 				dropSlots[i] = GameObject.Find("dropSlot " + i).GetComponent<DropSlot>();
 				print("Drop slots filled");
 			}
+			dropSlotFilled = true;
 		}
 	}
 
