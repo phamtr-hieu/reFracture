@@ -32,8 +32,6 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         {
             hasData = false;
         }
-
-        
     }
 
     public void OnDrop(PointerEventData eventData)

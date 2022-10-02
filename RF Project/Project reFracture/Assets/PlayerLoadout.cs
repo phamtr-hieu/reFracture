@@ -31,8 +31,6 @@ public class PlayerLoadout : MonoBehaviour
 	void Start()
 	{
 		attackList = new int[attacklistSize];
-
-		
 	}
 
 	void Update()
@@ -55,19 +53,20 @@ public class PlayerLoadout : MonoBehaviour
 			{
 				attackList[i] = dropSlots[i].cardData.cardID;
 			}
+			hasLoadout = true;
 		}
 	}
 
-	public void OverwriteAttackList()
-	{
-		if (dropSlots[0].hasData && dropSlots[1].hasData && dropSlots[2].hasData && dropSlots[3].hasData && dropSlots[4].hasData)
-		{
-			for (int i = 0; i < attacklistSize; i++)
-			{
-				instance.attackList[i] = dropSlots[i].cardData.cardID;
-			}
-			print("Loadout Overwritten");
-		}
+	//public void OverwriteAttackList()
+	//{
+	//	if (dropSlots[0].hasData && dropSlots[1].hasData && dropSlots[2].hasData && dropSlots[3].hasData && dropSlots[4].hasData)
+	//	{
+	//		for (int i = 0; i < attacklistSize; i++)
+	//		{
+	//			instance.attackList[i] = dropSlots[i].cardData.cardID;
+	//		}
+	//		print("Loadout Overwritten");
+	//	}
 
-	}
+	//}
 }

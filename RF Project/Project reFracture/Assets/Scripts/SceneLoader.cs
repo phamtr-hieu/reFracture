@@ -24,17 +24,7 @@ public class SceneLoader : MonoBehaviour
 
 	public void LoadCardsAndNextLevel()
 	{
-		if (!loadout.hasLoadout)
-		{
 			loadout.WriteAttackList();
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		}
-		else
-		{
-			loadout.OverwriteAttackList();
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-			
-		}
-
 	}
 }
