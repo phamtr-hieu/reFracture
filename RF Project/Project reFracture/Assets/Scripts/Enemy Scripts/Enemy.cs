@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] GameObject healthbar;
 
 	public bool facingLeft = true;
+	public bool hasMet = false;
 	Vector2 dir;
 	// Start is called before the first frame update
 	void Start()
@@ -115,6 +116,11 @@ public class Enemy : MonoBehaviour
 		}
 		#endregion
 
+		if(playerToEnemyDistance >= chaseDistance * 2 && hasMet)
+		{
+			anim.SetTrigger("Blink");
+		}
+
 
 	}
 	public bool PlayerInEnemyChaseRange(Vector2 enemy)
@@ -125,6 +131,7 @@ public class Enemy : MonoBehaviour
 		if (playerToEnemyDistance <= chaseDistance && playerToEnemyDistance >= stopDistance)
 		{
 			healthbar.SetActive(true);
+			hasMet = true;
 			return true;
 		}
 		else
@@ -172,6 +179,18 @@ public class Enemy : MonoBehaviour
 		{
 			return true;
 		}
+	}
+
+	public bool PlayerIsTooFarFromEnemy(Vector2 enemy)
+	{
+		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
+
+		if (playerToEnemyDistance >= chaseDistance * 2)
+		{
+			return true;
+		}
+		else
+			return false;
 	}
 
 	public void Attack()
