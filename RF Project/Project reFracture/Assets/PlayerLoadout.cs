@@ -36,10 +36,13 @@ public class PlayerLoadout : MonoBehaviour
 
 	void Update()
 	{
-		if(dropSlots  == null)
-		{
-			dropSlotFilled = false;
-		}
+		for (int i = 0; i < dropSlots.Length; i++)
+        {
+			if(dropSlots[i] == null)
+            {
+				dropSlotFilled = false;
+            }
+        }
 
 		if (hasLoadout && SceneManager.GetActiveScene().buildIndex == 1 && !dropSlotFilled) 
 		{

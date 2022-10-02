@@ -273,7 +273,9 @@ public class Enemy : MonoBehaviour
 
 	public void Flip()
 	{
-		transform.Rotate(0, 180, 0);
+		this.GetComponent<Transform>().Rotate(0, 180, 0);
+		//transform.Rotate(0, 180, 0);
+		print("flip");
 	}
 
 	public IEnumerator Stopping(float time)

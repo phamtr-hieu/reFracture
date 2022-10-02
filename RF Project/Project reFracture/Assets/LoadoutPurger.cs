@@ -11,11 +11,10 @@ public class LoadoutPurger : MonoBehaviour
     {
         cardLoadoutManager = GameObject.FindGameObjectWithTag("LoadoutManager");
         loadout = cardLoadoutManager.GetComponent<PlayerLoadout>();
-
+        loadout.hasLoadout = false;
         for (int i = 0; i < loadout.attackList.Length; i++)
         {
             loadout.attackList[i] = 0;
-            loadout.hasLoadout = false;
         }
     }
 

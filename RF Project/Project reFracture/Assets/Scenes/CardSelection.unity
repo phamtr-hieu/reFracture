@@ -2664,6 +2664,7 @@ MonoBehaviour:
   mouseOffset: {x: 0, y: 0}
   mousePosition: {x: 0, y: 0}
   opacityRate: 0.1
+  constraint: {x: 0.26, y: 0.2}
   isShowing: 0
 --- !u!212 &948809725
 SpriteRenderer:
