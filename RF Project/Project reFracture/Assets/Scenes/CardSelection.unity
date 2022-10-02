@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 69071064}
   - component: {fileID: 69071065}
   m_Layer: 5
-  m_Name: Slash
+  m_Name: Slash (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 89963265}
   - component: {fileID: 89963266}
   m_Layer: 5
-  m_Name: Uppercut
+  m_Name: Uppercut (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 162562065}
   - component: {fileID: 162562066}
   m_Layer: 5
-  m_Name: Blink
+  m_Name: Blink (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,8 +818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 532.3689, y: 381.2283}
+  m_AnchoredPosition: {x: 0, y: -0.00002861}
+  m_SizeDelta: {x: 602.7782, y: 373.1815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259305690
 MonoBehaviour:
@@ -841,15 +841,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Choose 5 ability cards, the cards will be your arsenal.
-
-
-    Cards will
-    be shuffled and randomly queue up as your possible abilities to use against your
-    enemy.
-
-
-'
+  m_text: "Choose 5 ability cards, the cards will be your arsenal.\n\nEach attack
+    uses the first card in your arsenal. \n\nAfter attacking, your arsenal will cycle
+    to another card.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b65dc925cb9865469ff23dae31d30b6, type: 2}
   m_sharedMaterial: {fileID: 3064332752033157419, guid: 1b65dc925cb9865469ff23dae31d30b6, type: 2}
@@ -882,7 +876,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1089,7 +1083,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   hasData: 0
+  cardLoadoutManager: {fileID: 0}
   sequence: 2
+  cards:
+  - {fileID: 1851179591}
+  - {fileID: 1389825744}
+  - {fileID: 756553314}
+  - {fileID: 162562060}
+  - {fileID: 1693852150}
+  - {fileID: 1370238855}
+  - {fileID: 89963260}
+  - {fileID: 69071059}
 --- !u!114 &328835291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,7 +1701,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   hasData: 0
+  cardLoadoutManager: {fileID: 0}
   sequence: 5
+  cards:
+  - {fileID: 1851179591}
+  - {fileID: 1389825744}
+  - {fileID: 756553314}
+  - {fileID: 162562060}
+  - {fileID: 1693852150}
+  - {fileID: 1370238855}
+  - {fileID: 89963260}
+  - {fileID: 69071059}
 --- !u!114 &583646254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,7 +1944,7 @@ GameObject:
   - component: {fileID: 756553319}
   - component: {fileID: 756553320}
   m_Layer: 5
-  m_Name: Spin
+  m_Name: Spin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2597,7 +2611,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1209603059}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2789,6 +2803,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 259305689}
+  - {fileID: 1242065481}
   - {fileID: 1092481286}
   m_Father: {fileID: 452261830}
   m_RootOrder: 6
@@ -2967,6 +2982,145 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1242065480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242065481}
+  - component: {fileID: 1242065483}
+  - component: {fileID: 1242065482}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1242065481
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242065480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1209603059}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -300}
+  m_SizeDelta: {x: 532.37, y: 73.6177}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1242065482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242065480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Your arsenal will be ordered according to how you arrange your cards,
+    so choose wisely!
+
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1b65dc925cb9865469ff23dae31d30b6, type: 2}
+  m_sharedMaterial: {fileID: 3064332752033157419, guid: 1b65dc925cb9865469ff23dae31d30b6, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290361785
+  m_fontColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1242065483
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242065480}
+  m_CullTransparentMesh: 1
 --- !u!1 &1279669165
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3224,7 @@ GameObject:
   - component: {fileID: 1370238860}
   - component: {fileID: 1370238861}
   m_Layer: 5
-  m_Name: Barrier
+  m_Name: Barrier (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,7 +3345,7 @@ GameObject:
   - component: {fileID: 1389825749}
   - component: {fileID: 1389825750}
   m_Layer: 5
-  m_Name: Dash
+  m_Name: Dash (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3672,7 +3826,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   hasData: 0
+  cardLoadoutManager: {fileID: 0}
   sequence: 3
+  cards:
+  - {fileID: 1851179591}
+  - {fileID: 1389825744}
+  - {fileID: 756553314}
+  - {fileID: 162562060}
+  - {fileID: 1693852150}
+  - {fileID: 1370238855}
+  - {fileID: 89963260}
+  - {fileID: 69071059}
 --- !u!114 &1688251824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,7 +3890,7 @@ GameObject:
   - component: {fileID: 1693852155}
   - component: {fileID: 1693852156}
   m_Layer: 5
-  m_Name: Thrust
+  m_Name: Thrust (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3967,7 +4131,7 @@ GameObject:
   - component: {fileID: 1851179596}
   - component: {fileID: 1851179597}
   m_Layer: 5
-  m_Name: Smash
+  m_Name: Smash (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4126,7 +4290,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   hasData: 0
+  cardLoadoutManager: {fileID: 0}
   sequence: 4
+  cards:
+  - {fileID: 1851179591}
+  - {fileID: 1389825744}
+  - {fileID: 756553314}
+  - {fileID: 162562060}
+  - {fileID: 1693852150}
+  - {fileID: 1370238855}
+  - {fileID: 89963260}
+  - {fileID: 69071059}
 --- !u!114 &1859092748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4370,7 +4544,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   hasData: 0
+  cardLoadoutManager: {fileID: 0}
   sequence: 1
+  cards:
+  - {fileID: 1851179591}
+  - {fileID: 1389825744}
+  - {fileID: 756553314}
+  - {fileID: 162562060}
+  - {fileID: 1693852150}
+  - {fileID: 1370238855}
+  - {fileID: 89963260}
+  - {fileID: 69071059}
 --- !u!114 &2094952039
 MonoBehaviour:
   m_ObjectHideFlags: 0
