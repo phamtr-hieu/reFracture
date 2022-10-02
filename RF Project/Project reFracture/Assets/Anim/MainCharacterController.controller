@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a033d73fa8648744da6b4b33ebc4d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
   pushForce: 15
   attackPlacement: {x: 2.25, y: -1.25}
   hitbox: {x: 2.45, y: 5.5}
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c87f6446dc4613449fbe5e357eda106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  pushForce: 15
+  damage: 80
+  pushForce: 30
   attackPlacement: {x: 0, y: 0.8}
   hitbox: {x: 9, y: 4.5}
   beginTime: 0.5833333
@@ -1399,10 +1399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a51fd0293560a14ab753051b9d1fbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 100
   attackPlacement: {x: 1.75, y: 0.44}
   hitbox: {x: 4.77, y: 3}
-  knockbackForce: 60
+  knockbackForce: 80
   knockbackTime: 0.2
   animTimer: 0
   timerOffset: 0.6
@@ -1482,7 +1482,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -210, y: -240, z: 0}
   m_EntryPosition: {x: -220, y: 330, z: 0}
-  m_ExitPosition: {x: 930, y: 90, z: 0}
+  m_ExitPosition: {x: -50, y: -480, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 889406876649535698}
 --- !u!1101 &4639736705161761393
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cbeed773aea2f4e98e8330673b46a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 3, y: 1}
   flyForce: 2
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4e200c4ae6e4c40807b7553e98a133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 12
+  damage: 50
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 9, y: 2}
   dashForce: 25
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc65c82fb5dbd84d82754da495c3edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 6
   attackPlacement: {x: 6, y: 0}
   hitbox: {x: 7, y: 3}
   beginTime: 0.4

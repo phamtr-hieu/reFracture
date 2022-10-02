@@ -6,41 +6,52 @@ public class JumpPadScript : MonoBehaviour
 {
 	[SerializeField] float jumpForce;
 	[SerializeField] public bool jumpPadOn = false;
+	[SerializeField] bool onJumpPad;
 	[SerializeField] GameObject character;
+	[SerializeField] float defaultJumpForce;
 	// Start is called before the first frame update
 	void Start()
 	{
 		character = GameObject.FindGameObjectWithTag("Player");
-		
+		defaultJumpForce = character.GetComponent<Character>().jumpForce;
+
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		if(!onJumpPad)
+		{
+			character.GetComponent<Character>().jumpForce = defaultJumpForce;
+		}
 
+		if (onJumpPad)
+		{
+			character.GetComponent<Character>().jumpForce = jumpForce;
+		}
 	}
 
 	private void OnCollisionStay2D(Collision2D col)
 	{
-		print("colliding");
-		if (col.gameObject.CompareTag("Player") && jumpPadOn && character.GetComponent<Character>()._jump )
+		if (col.gameObject.CompareTag("Player") && jumpPadOn)
 		{
-			character.GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-			print("Player launched from Jump Pad");
+			onJumpPad = true;
 		}
+		
+		
+
+		
 	}
 
-	private void OnTriggerExit2D(Collider2D collision)
+	private void OnCollisionExit2D(Collision2D collision)
 	{
-		//if(jumpPadOn)
-		character.GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 
-		//if (collision.gameObject.CompareTag("Player") && jumpPadOn && character.GetComponent<Character>()._jump)
-		//{
-		//	collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-		//	print("Player launched from Jump Pad");
-		//}
-		
+		Invoke("ResetJumpForce", 1);
+	}
+
+	void ResetJumpForce()
+	{
+		onJumpPad = false;
 	}
 
 

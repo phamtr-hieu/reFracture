@@ -35,7 +35,7 @@ public class Character : MonoBehaviour
 
     #region Floats
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float jumpForce;
+    [SerializeField] public float jumpForce;
     [SerializeField] private float checkRadius;
     [SerializeField] float lastAtkAnimLength;
     [SerializeField] private float jumpButtonTimer;
@@ -265,6 +265,9 @@ public class Character : MonoBehaviour
     public void OnDeath()
 	{
         _invulnerable = true;
+        _flipable = false;
+        moveSpeed = 0;
+        attackable = false;
         anim.SetTrigger("isDead");
         Destroy(this, 3.5f);
 	}

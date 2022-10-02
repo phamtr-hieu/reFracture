@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afc29c10ba87c54e8da31e144d9cfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animTimer: 2.2
+  animTimer: 2.1999
 --- !u!4 &296102708
 Transform:
   m_ObjectHideFlags: 0
