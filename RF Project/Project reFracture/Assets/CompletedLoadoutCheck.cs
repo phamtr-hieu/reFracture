@@ -7,10 +7,14 @@ public class CompletedLoadoutCheck : MonoBehaviour
 {
     [SerializeField] DropSlot[] dropSlots = new DropSlot[5];
     [SerializeField] Button button;
+    GameObject loadoutManager;
     private void Start()
     {
         button = GetComponent<Button>();
         button.interactable = false;
+        loadoutManager = GameObject.FindGameObjectWithTag("LoadoutManager");
+        //button.onClick = loadOutManager.GetComponent<SceneLoader>().LoadCardsAndNextLevel();
+        button.onClick.AddListener(loadoutManager.GetComponent<SceneLoader>().LoadCardsAndNextLevel);
     }
 
 

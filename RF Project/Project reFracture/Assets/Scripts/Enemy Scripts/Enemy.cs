@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class Enemy : MonoBehaviour
 {
 	//Enemy Stat
-	public float healthPoints;
 
 	[Header("Attacks Cooldowns")]
 	[SerializeField] float MaxClawCooldown;
@@ -25,12 +24,11 @@ public class Enemy : MonoBehaviour
 	[SerializeField] float _lightningCooldown;
 	[Space]
 
-	[SerializeField] Character character;
-	public GameObject player;
 
 
-
+	[Header("Stats")]
 	#region Floats
+	public float healthPoints;
 	public float chaseDistance;
 	public float stopDistance;
 	public float playerToEnemyDistance;
@@ -38,11 +36,17 @@ public class Enemy : MonoBehaviour
 	public float atkRange;
 	public float timeBtwAttacks;
 	public float startTimeBtwAttacks;
-	[SerializeField] float idleTime;
-	[SerializeField] float currentIdleTime;
+	
 	[SerializeField] float enemyDamage;
 	#endregion
+	[Space]
 
+	[Header("Audios")]
+	[SerializeField] AudioClip _meetingRoar;
+
+	[Header("Others")]
+	[SerializeField] Character character;
+	public GameObject player;
 
 	[SerializeField] public Transform hitboxPos;
 	public Transform enemyPos;
@@ -79,10 +83,7 @@ public class Enemy : MonoBehaviour
 		}
 
 		//Countdown Idle time
-		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-		{
-			idleTime -= Time.deltaTime;
-		}
+		
 		//Countdown Idle time
 		//if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
 		//{
@@ -107,9 +108,10 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-		if (playerToEnemyDistance <= chaseDistance && currentIdleTime <= 0 && playerToEnemyDistance >= stopDistance)
+		if (playerToEnemyDistance <= chaseDistance  && playerToEnemyDistance >= stopDistance)
 		{
 			healthbar.SetActive(true);
+			AudioSource.PlayClipAtPoint(_meetingRoar, transform.position);
 			return true;
 		}
 		else
@@ -121,7 +123,7 @@ public class Enemy : MonoBehaviour
 		playerToEnemyDistance = Vector2.Distance(enemy, player.transform.position);
 
 
-		if (playerToEnemyDistance <= atkRange && currentIdleTime <= 0)
+		if (playerToEnemyDistance <= atkRange )
 		{
 			return true;
 		}

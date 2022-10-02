@@ -5,27 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    PlayerLoadout loadout;
-    void Start()
-    {
-        loadout = GetComponent<PlayerLoadout>();
-    }
+	PlayerLoadout loadout;
+	void Start()
+	{
+		loadout = GetComponent<PlayerLoadout>();
+	}
 
-    void Update()
-    {
+	void Update()
+	{
 
-    }
+	}
 
 
-    public void LoadNextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+	public void LoadNextLevel()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
 
-    public void LoadCardsAndNextLevel()
-    {
-        loadout.WriteAttackList();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
-    }
+	public void LoadCardsAndNextLevel()
+	{
+		if (!loadout.hasLoadout)
+		{
+			loadout.WriteAttackList();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
+		else
+		{
+			loadout.OverwriteAttackList();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+			
+		}
+
+	}
 }

@@ -53,7 +53,6 @@ public class Character : MonoBehaviour
     public bool _attacking = false;
 
     [SerializeField] private Transform GroundCheck;
-
     [SerializeField] private bool onGround;
     [SerializeField] bool attackable = true;
     #endregion
