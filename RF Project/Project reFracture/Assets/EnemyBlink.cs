@@ -14,8 +14,10 @@ public class EnemyBlink : StateMachineBehaviour
 		player = GameObject.FindGameObjectWithTag("Player");
 		if (enemy.PlayerIsTooFarFromEnemy(enemy.transform.position) && enemy.hasMet)
 		{
-			enemy.transform.position = new Vector2(player.transform.position.x + _offset, player.transform.position.y);
+			enemy.transform.position = new Vector2(player.transform.position.x + _offset, player.transform.position.y +_offset);
 		}
+
+		
 
 
 	}
