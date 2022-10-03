@@ -39,7 +39,7 @@ public class Laser : StateMachineBehaviour
 
 		if (timer > beginTime && frameTimer % tickRate == 0 && timer < endTime)
 		{
-			Debug.Log("ticking: " + counter);
+			//Debug.Log("ticking: " + counter);
 			counter++;
 			if (hit != null)
 			{

@@ -11639,7 +11639,7 @@ MonoBehaviour:
   MinLightningCooldown: 5
   _lightningCooldown: 0
   changeDirTimer: 0
-  healthPoints: 1800
+  healthPoints: 2000
   chaseDistance: 20
   stopDistance: 0
   playerToEnemyDistance: 0

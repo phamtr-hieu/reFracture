@@ -209,6 +209,7 @@ public class Character : MonoBehaviour
             StartCoroutine(Damaged(0.5f));
 
             GetComponent<DamageFlashing>().DamageFlash(0.1f);
+            
         }
 
     }

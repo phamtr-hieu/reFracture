@@ -737,7 +737,7 @@ AnimatorStateMachine:
     m_Position: {x: 560, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8630660646584758780}
-    m_Position: {x: 360, y: 340, z: 0}
+    m_Position: {x: 370, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3663920677168092915}
     m_Position: {x: 670, y: 300, z: 0}
@@ -1009,8 +1009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitboxPos: {x: -1.7, y: -1.5}
   hitbox: {x: 8, y: 3.35}
-  damage: 1
-  lungeDistance: 50
+  damage: 10
+  lungeDistance: 40
   beginTime: 1.1666666
   endTime: 1.4166666
   tickRate: 4
