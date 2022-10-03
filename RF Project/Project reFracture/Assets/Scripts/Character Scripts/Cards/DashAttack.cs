@@ -22,6 +22,7 @@ public class DashAttack : StateMachineBehaviour
         character = animator.GetComponent<Character>();
 
         character._attacking = true;
+        character._invulnerable = true;
 
         rb = character.GetComponent<Rigidbody2D>();
         gravity = rb.gravityScale;
@@ -66,6 +67,7 @@ public class DashAttack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        character._invulnerable = false;
         rb.gravityScale = character.gravityScale;
         IEnumerator endAttack = character.EndAttack();
         character.StartCoroutine(endAttack);

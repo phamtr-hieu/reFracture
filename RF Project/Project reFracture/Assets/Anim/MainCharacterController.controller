@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a033d73fa8648744da6b4b33ebc4d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   pushForce: 15
   attackPlacement: {x: 2.25, y: -1.25}
   hitbox: {x: 2.45, y: 5.5}
@@ -189,9 +189,9 @@ MonoBehaviour:
   pushForce: 40
   attackPlacement: {x: 0, y: 0.8}
   hitbox: {x: 9, y: 4.5}
-  beginTime: 0.5833333
-  endTime: 1
-  tickRate: 10
+  beginTime: 0.25
+  endTime: 0.5833333
+  tickRate: 8
 --- !u!1102 &-5330108993303647704
 AnimatorState:
   serializedVersion: 6
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cbeed773aea2f4e98e8330673b46a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   attackPlacement: {x: 0, y: 0}
   hitbox: {x: 3, y: 1}
   flyForce: 2

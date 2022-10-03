@@ -15,8 +15,6 @@ public class Blink : StateMachineBehaviour
 		character._attacking = true;
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 
-		//character._attacking = true;
-
 		//character.transform.localPosition = new Vector3(dash.x,dash.y) * Time.deltaTime * dashSpeed;
 		if (character._facingRight)
 		{
@@ -26,9 +24,6 @@ public class Blink : StateMachineBehaviour
 		{
 			character.transform.localPosition += Vector3.left * blinkDistance;
 		}
-
-
-
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -47,22 +47,26 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NextScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }
 
     public void PreviousScene()
 	{
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void LoadTitleScreen()
 	{
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
 	}
 
