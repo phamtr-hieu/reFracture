@@ -11,16 +11,14 @@ public class CardDisplay : MonoBehaviour
 
     Sprite DisplayCard(int CID)
     {
-        return (cards[CID - 1]);
+        return (cards[CID]);
     }
 
     private void Update()
     {
-        if (cardID > 0)
+        if (cardID >= 0)
 		{
             display.sprite = DisplayCard(cardID);
         }
-        
-            
     }
 }

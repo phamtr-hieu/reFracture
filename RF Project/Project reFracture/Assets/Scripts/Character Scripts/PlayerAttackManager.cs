@@ -8,30 +8,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttackManager : MonoBehaviour
 {
-
     //generate list of random attacks from attack deck
     //(remove attacks as they are drawn from the array)
     GameObject character;
 
     [SerializeField] PlayerLoadout loadout;
 
-    
-    
-
     [SerializeField] int numberOfCards = 5; //adjust this to fit the number of cards available
     public TextMeshProUGUI[] card = new TextMeshProUGUI[3];
     public CardDisplay[] cardDisplays = new CardDisplay[3];
 
-    public int[] attackList; //list of available attacks 
+    public int[] attackList; //list of available attacks, shuffled
 
-    public int[] attackQueue = new int[3];
+    public int[] attackQueue = new int[5];
 
-    int currentAttack = 0;
+    int currentAttackIndex = 0;
 
     int nextAttackID;
 
     bool dying = false;
-    
 
     private void Start()
     {
@@ -40,13 +35,12 @@ public class PlayerAttackManager : MonoBehaviour
         attackList = new int[numberOfCards];
 
         character = GameObject.FindGameObjectWithTag("Player");
+
         //setting player's possible attacks 
         // 0 = null
         //todo: optimize and automate this process based on some datasheet
-        for (int i = 0; i < attackList.Length; i++) //currently just filling in all the cards, adjust to be a customizable array
-        {
-            attackList[i] = i + 1;
-        }
+
+        ShuffleDeck();
 
         //sets all attacks to 0 (no attacks)
         for (int i = 0; i < attackQueue.Length; i++)
@@ -61,16 +55,14 @@ public class PlayerAttackManager : MonoBehaviour
     private void Update()
     {
         DisplayAttackID();
-       
 
         //Death handling
-        
+
         if (character.GetComponent<Character>().healthPoint <= 0 && !dying)
         {
             character.GetComponent<Character>().OnDeath();
             Invoke("NextScene", 3.5f);
             dying = true;
-
         }
 
     }
@@ -80,9 +72,18 @@ public class PlayerAttackManager : MonoBehaviour
         attackQueue[0] = 0;
 
         UpdateAttackQueue();
-        GenerateNextAttack();
+        GenerateNextAttackCycle();
         SortAttackStackID(nextAttackID);
     }
+    public void OnAttack2()
+    {
+        attackQueue[1] = 0;
+
+        UpdateAttackQueue();
+        GenerateNextAttackCycle();
+        SortAttackStackID(nextAttackID);
+    }
+
 
     void InitAttackQueue()
     {
@@ -90,27 +91,45 @@ public class PlayerAttackManager : MonoBehaviour
         {
             if (attackQueue[i] < 1)
             {
-                GenerateNextAttack();
+                GenerateNextAttackCycle();
                 SortAttackStackID(nextAttackID);
             }
         }
     }
 
-    void GenerateNextAttack()
+    void GenerateNextAttackCycle()
     {
-        //todo: add sorting system to cycle through a list of attacks without repeating
-        if (currentAttack >= loadout.attackList.Length)
+        if (currentAttackIndex >= attackList.Length)
         {
-            currentAttack = 0;
+            if (attackQueue[0] <= 0)
+            {
+                currentAttackIndex = 0;
+                ShuffleDeck();
+                InitAttackQueue();
+            }
         }
-        nextAttackID = loadout.attackList[currentAttack];
-        currentAttack++;
-        
+        if (currentAttackIndex < attackList.Length)
+            nextAttackID = attackList[currentAttackIndex];
+        else
+            nextAttackID = 0;
+        currentAttackIndex++;
+        print(currentAttackIndex);
+
+        //if (attackQueue[0] <= 0)
+        //{
+        //    ShuffleDeck();
+        //    InitAttackQueue();
+        //}
     }
 
     void SortAttackStackID(int attackID)
     {
         //check for empty slots
+        if(attackID <= 0)
+        {
+            attackID = 0;
+        }
+
         int stack = 0;
         foreach (int i in attackQueue)
         {
@@ -153,10 +172,23 @@ public class PlayerAttackManager : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 
 
+    void ShuffleDeck()
+    {
+        for (int i = 0; i < loadout.attackList.Length; i++)
+        {
+            attackList[i] = loadout.attackList[i];
+        }
 
+        for (int i = 0; i < attackList.Length; i++)
+        {
+            int rand = Random.Range(0, numberOfCards);
+            int temp = attackList[rand];
+            attackList[rand] = attackList[i];
+            attackList[i] = temp;
+        }
+    }
 
 }

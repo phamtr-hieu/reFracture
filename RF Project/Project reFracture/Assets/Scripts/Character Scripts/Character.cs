@@ -181,7 +181,6 @@ public class Character : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-
         if (!_attacking)
         {
             if (context.started && attackable)
@@ -189,6 +188,19 @@ public class Character : MonoBehaviour
                 attackID = attackManager.attackQueue[0];
                 anim.SetTrigger("attack" + attackID);
                 attackManager.OnAttack();
+            }
+        }
+    }
+
+    public void OnAttack2(InputAction.CallbackContext context)
+    {
+        if (!_attacking)
+        {
+            if (context.started && attackable)
+            {
+                attackID = attackManager.attackQueue[1];
+                anim.SetTrigger("attack" + attackID);
+                attackManager.OnAttack2();
             }
         }
     }
