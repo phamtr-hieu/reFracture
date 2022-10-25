@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitboxPos: {x: -1.7, y: -1.5}
   hitbox: {x: 8, y: 3.35}
-  damage: 10
+  damage: 2
   lungeDistance: 40
   beginTime: 1.1666666
   endTime: 1.4166666

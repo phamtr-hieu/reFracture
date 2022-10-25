@@ -243,9 +243,11 @@ public class Enemy : MonoBehaviour
     {
 
         anim.SetTrigger("Die");
-        healthbar.SetActive(false);
         if (_isViktor)
+        {
             Destroy(this.gameObject, 7);
+            healthbar.SetActive(false);
+        }
         else
         {
             Destroy(gameObject);
